@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
-import type { CaseStudy } from "@/data/content";
+import type { CaseStudy } from "@/data/content-data";
 
 export function CaseStudiesSection({ items }: { items: CaseStudy[] }) {
   return (
-    <section className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
+    <section id="casestudies" className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <motion.div
           variants={fadeUp}

@@ -28,7 +28,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+                <a href="#casestudies" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
                   Case Studies
                 </a>
               </li>

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
-import type { Testimonial } from "@/data/content";
+import type { Testimonial } from "@/data/content-data";
 
 export function Testimonials({ items }: { items: Testimonial[] }) {
   const [idx, setIdx] = useState(0);

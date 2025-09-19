@@ -8,7 +8,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { CtaBanner } from "@/components/CtaBanner";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import { placeholderLogos, services, caseStudies, testimonials } from "@/data/content";
+import { placeholderLogos, services, caseStudies, testimonials } from "@/data/content-data";
 
 export default function Page() {
   return (

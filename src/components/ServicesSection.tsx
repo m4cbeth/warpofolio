@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
-import type { ServiceItem } from "@/data/content";
+import type { ServiceItem } from "@/data/content-data";
 
 function ServiceCard({ item }: { item: ServiceItem }) {
   return (
