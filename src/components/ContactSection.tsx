@@ -145,7 +145,9 @@ export function ContactSection() {
               >
                 {submitting ? "Sending..." : "Send Request"}
               </button>
-              <p className="text-xs text-slate-500 dark:text-slate-400">Or email: hello@example.com</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">Or email: 
+                <a href="mailto:info@jarenwhitehouse.com?subject=I want a better site for a great price today, let's make it happen">info@jarenwhitehouse.com</a>
+              </p>
             </div>
           </form>
         </div>
@@ -153,3 +155,4 @@ export function ContactSection() {
     </section>
   );
 }
+

@@ -11,20 +11,35 @@ export function CtaBanner() {
           whileInView="animate"
           viewport={{ once: true, margin: "-80px" }}
           transition={sectionTransition}
-          className="relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-900 to-slate-700 p-8 text-white shadow-sm dark:border-slate-800 dark:from-white dark:to-slate-100 dark:text-slate-900"
+          className="max-w-4xl mx-auto relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-900 to-slate-700 p-8 text-white shadow-sm dark:border-slate-800 dark:from-slate-300 dark:to-gray-500 dark:text-slate-900"
         >
           <div className="relative z-10">
-            <h3 className="text-2xl font-semibold">Get a 48-Hour Website Audit & Fix Package</h3>
-            <p className="mt-2 max-w-2xl text-slate-200 dark:text-slate-700">
-              Fast turnaround with a prioritized punchlist and implementation. Start with the highest-impact wins.
-            </p>
-            <div className="mt-6">
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-medium text-slate-900 shadow-sm transition hover:bg-slate-100 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
-              >
-                Start My Audit
-              </a>
+            <div className="hidden w-10 h h-10 right-0.5 bottom-1/2 -z-10 bg-green-400">
+              image/icon could go here
+            </div>
+            <div className="relative inline-block">
+            <div className="absolute w-full h-full bg-gray-300 translate-3 -z-10"></div>
+              <h3 className="text-4xl font-thing tracking-tighter">
+                Get a 48-Hour Website Audit & Fix Package
+              </h3>
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="mt-5 font-bold text-lg max-w-2xl text-slate-200 dark:text-slate-800">
+                Fast turnaround with a prioritized punchlist and implementation.
+              </p>
+              <p className="mt-2 font-bold text-lg max-w-2xl text-slate-200 dark:text-slate-800 text-center">
+                Start with the highest-impact wins.
+              </p>
+            </div>
+            <div className="flex">
+              <div className="mt-6 mx-auto">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-lg font-thing italic text-slate-900 shadow-sm transition hover:bg-slate-100 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800"
+                >
+                  Start My Audit
+                </a>
+              </div>
             </div>
           </div>
 

@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 
 const siteTitle = "Calgary Web Dev + SEO for Advisors | JW";
 const siteDescription =
-  "Fix your website. Win more clients. I modernize, optimize, and turn traffic into booked calls for Calgary financial advisors.";
-const siteUrl = "https://www.example.com/";
+  "Fix your website, Win more clients. I modernize, optimize, and turn traffic into booked calls for Calgary financial advisors.";
+const siteUrl = "https://www.jarenwhitehouse.com/";
 const ogImage = "https://www.example.com/og-image.jpg";
 
 export const metadata: Metadata = {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "JW Web & SEO",
+  name: "Jaren Whitehouse Web Development & SEO",
   url: siteUrl,
   image: ogImage,
   telephone: "+1-403-000-0000",
