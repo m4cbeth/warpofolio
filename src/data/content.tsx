@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export type Testimonial = {
-  quote: string;
+  quote: string[];
   name: string;
   role?: string;
 };
@@ -73,19 +73,19 @@ export const caseStudies: CaseStudy[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Working with JW was seamless. Our site looks modern and we’re seeing more booked calls already.",
+      ["Working with JW was seamless.", "Our site looks modern and we’re seeing more booked calls already."],
     name: "Alex P.",
     role: "Principal, Wealth Advisory",
   },
   {
     quote:
-      "He found quick wins we missed. The booking form and copy changes made a clear difference.",
+      ["He found quick wins we missed.", "The booking form and copy changes made a clear difference."],
     name: "Sandra L.",
     role: "Operations, Investment Firm",
   },
   {
     quote:
-      "Practical SEO, not fluff. Local visibility improved within weeks — highly recommend.",
+      ["Practical SEO, not fluff.", "Local visibility improved within weeks — highly recommend."],
     name: "Mohammed R.",
     role: "Founder, Boutique Finance",
   },
