@@ -237,7 +237,7 @@ export default function Page() {
             </a>
             <a
               href="#contact"
-              className="rounded-md bg-slate-900 px-3 py-2 text-sm font-medium text-white transition hover:bg-slate-800 dark:bg:white dark:text-slate-900 dark:hover:bg-slate-200"
+className="rounded-md bg-slate-900 px-3 py-2 text-sm font-medium text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
             >
               Book a Free Site Audit
             </a>
@@ -265,7 +265,7 @@ export default function Page() {
 
       <main>
         {/* Hero */}
-        <section id="home" className="relative overflow-hidden">
+<section id="home" className="relative overflow-hidden scroll-mt-24">
           <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/40 dark:to-slate-950" />
           <div className="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
             <motion.div
@@ -332,7 +332,7 @@ transition={{ duration: 0.7, ease: easeOut }}
         </section>
 
         {/* Services */}
-        <section id="services" className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
+<section id="services" className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20 scroll-mt-24">
           <div className="mx-auto max-w-7xl px-4 md:px-6">
             <motion.div
               variants={fadeUp}
@@ -498,7 +498,7 @@ transition={{ duration: 0.7, ease: easeOut }}
         </section>
 
         {/* Contact */}
-        <section id="contact" className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
+<section id="contact" className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20 scroll-mt-24">
           <div className="mx-auto max-w-7xl px-4 md:px-6">
             <motion.div
               variants={fadeUp}
@@ -508,7 +508,7 @@ transition={{ duration: 0.7, ease: easeOut }}
               transition={sectionTransition}
               className="mx-auto max-w-2xl text-center"
             >
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text:white">
+<h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Book a Free Site Audit
               </h2>
               <p className="mt-3 text-slate-700 dark:text-slate-300">
@@ -548,7 +548,7 @@ transition={{ duration: 0.7, ease: easeOut }}
                       required
                       value={form.email}
                       onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
-                      className="block w-full rounded-md border border-slate-300 bg:white px-3 py-2 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-600"
+className="block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-400 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-500 dark:focus:border-slate-600"
                       placeholder="you@company.com"
                     />
                   </div>
