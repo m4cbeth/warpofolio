@@ -8,24 +8,9 @@ import { Testimonials } from "@/components/Testimonials";
 import { CtaBanner } from "@/components/CtaBanner";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import { problemPoints, services, reasons, testimonials, Whoami,
-  whoamiBlurb
- } from "@/data/content-data";
+import { WhoAMI } from "@/components/WhoAmI";
+import { problemPoints, services, reasons, testimonials, whoamiBlurb } from "@/data/content-data";
 
- type WhoamiProps = {
-  whoamiBlurb: Whoami;
- }
-
-const WhoAMI = ({whoamiBlurb}: WhoamiProps) => (
-  <div className="">
-    <p>
-      {whoamiBlurb.himynameis}
-    </p>
-    <p>
-      {whoamiBlurb.other}
-    </p>
-  </div>
-)
 
 export default function Page() {
   return (

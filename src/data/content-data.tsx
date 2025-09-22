@@ -28,7 +28,7 @@ export type Whoami = {
 }
 
 export const whoamiBlurb: Whoami = {
-  himynameis: "My name is Jaren Whitehouse, former Investment Associate and life long web developer,",
+  himynameis: "My name is Jaren Whitehouse, former Investment Associate, and life long web developer",
   other: "Formerly registered with IIROC, I understand how challenging it is to get prospects to notice and engage with your business. I help investment advisors and portfolio managers modernize their online presence — from professional, interactive websites to content and ad strategies — so your practice becomes visible, approachable, and growing",
 }
 

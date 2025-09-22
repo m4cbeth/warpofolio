@@ -45,7 +45,7 @@ export function ContactSection() {
         const data = await res.json().catch(() => ({}));
         throw new Error(data?.error || "Failed to send");
       }
-      setFormSuccess("Thanks! I’ll get back to you within 1 business day.");
+      setFormSuccess("Thanks! I’ll get back to you within 1-2 business days.");
       setForm({ name: "", email: "", business: "", website: "", message: "" });
     } catch (err) {
       setFormError(err instanceof Error ? err.message : "Something went wrong. Please try again, or email me directly.");
