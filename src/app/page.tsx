@@ -3,12 +3,29 @@
 import { StickyHeader } from "@/components/StickyHeader";
 import { Hero } from "@/components/Hero";
 import { ServicesSection } from "@/components/ServicesSection";
-import { CaseStudiesSection } from "@/components/CaseStudiesSection";
+import { ReasonsSection } from "@/components/ReasonsSection";
 import { Testimonials } from "@/components/Testimonials";
 import { CtaBanner } from "@/components/CtaBanner";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import { problemPoints, services, caseStudies, testimonials } from "@/data/content-data";
+import { problemPoints, services, reasons, testimonials, Whoami,
+  whoamiBlurb
+ } from "@/data/content-data";
+
+ type WhoamiProps = {
+  whoamiBlurb: Whoami;
+ }
+
+const WhoAMI = ({whoamiBlurb}: WhoamiProps) => (
+  <div className="">
+    <p>
+      {whoamiBlurb.himynameis}
+    </p>
+    <p>
+      {whoamiBlurb.other}
+    </p>
+  </div>
+)
 
 export default function Page() {
   return (
@@ -17,8 +34,9 @@ export default function Page() {
       <StickyHeader />
       <main>
         <Hero points={problemPoints} />
+        <WhoAMI whoamiBlurb={whoamiBlurb} />
         <ServicesSection items={services} />
-        <CaseStudiesSection items={caseStudies} />
+        <ReasonsSection items={reasons} />
         <Testimonials items={testimonials} />
         <CtaBanner />
         <ContactSection />

@@ -9,7 +9,7 @@ export function CtaBanner() {
           variants={fadeUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: false, margin: "-80px" }}
           transition={sectionTransition}
           className="max-w-4xl mx-auto relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-900 to-slate-700 p-8 text-white shadow-sm dark:border-slate-800 dark:from-slate-300 dark:to-gray-500 dark:text-slate-900"
         >

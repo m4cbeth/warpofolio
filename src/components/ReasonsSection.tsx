@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
-import type { CaseStudy } from "@/data/content-data";
+import type { Reasons } from "@/data/content-data";
 
-export function CaseStudiesSection({ items }: { items: CaseStudy[] }) {
+export function ReasonsSection({ items }: { items: Reasons[] }) {
   return (
-    <section id="casestudies" className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
+    <section id="reasons" className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <motion.div
           variants={fadeUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: false, margin: "-80px" }}
           transition={sectionTransition}
           className="mx-auto max-w-2xl text-center"
         >
@@ -25,7 +25,7 @@ export function CaseStudiesSection({ items }: { items: CaseStudy[] }) {
               variants={fadeUp}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true, margin: "-80px" }}
+              viewport={{ once: false, margin: "-80px" }}
               transition={sectionTransition}
               className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
             >

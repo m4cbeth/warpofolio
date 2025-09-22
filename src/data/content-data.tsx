@@ -6,7 +6,7 @@ export type Testimonial = {
   role?: string;
 };
 
-export type CaseStudy = {
+export type Reasons = {
   title: string;
   result: string;
 };
@@ -17,9 +17,19 @@ export type ServiceItem = {
   icon: ReactNode;
 };
 
-export interface ProblemPoint {
+export type ProblemPoint = {
   question: string;
   blurb: string;
+}
+
+export type Whoami = {
+  himynameis: string;
+  other: string;
+}
+
+export const whoamiBlurb: Whoami = {
+  himynameis: "My name is Jaren Whitehouse, former Investment Associate and life long web developer,",
+  other: "Formerly registered with IIROC, I understand how challenging it is to get prospects to notice and engage with your business. I help investment advisors and portfolio managers modernize their online presence — from professional, interactive websites to content and ad strategies — so your practice becomes visible, approachable, and growing",
 }
 
 export const problemPoints: ProblemPoint[] = [
@@ -81,7 +91,7 @@ export const services: ServiceItem[] = [
   },
 ];
 
-export const caseStudies: CaseStudy[] = [
+export const reasons: Reasons[] = [
   { title: "Dentist site refresh", result: "→ 40% more bookings" },
   { title: "Law firm SEO", result: "→ Top 3 for “Calgary Family Lawyer”" },
   { title: "Advisor funnel add-ons", result: "→ 2.1x consult requests" },

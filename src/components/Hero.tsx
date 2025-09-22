@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
 import { YourQuickChecklist } from "@/components/ProblemPoints";
+import { ProblemPoint } from "@/data/content-data";
 
-export function Hero({ points }: { points: string[] }) {
+export function Hero({ points }: { points: ProblemPoint[] }) {
   return (
     <section id="home" className="relative overflow-hidden scroll">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/40 dark:to-slate-950" />

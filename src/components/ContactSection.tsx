@@ -61,7 +61,7 @@ export function ContactSection() {
           variants={fadeUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: false, margin: "-80px" }}
           transition={sectionTransition}
           className="mx-auto max-w-2xl text-center"
         >

@@ -8,7 +8,7 @@ function ServiceCard({ item }: { item: ServiceItem }) {
       variants={fadeUp}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: false, margin: "-80px" }}
       transition={sectionTransition}
       className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
     >
@@ -32,7 +32,7 @@ export function ServicesSection({ items }: { items: ServiceItem[] }) {
           variants={fadeUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: false, margin: "-80px" }}
           transition={sectionTransition}
           className="mx-auto max-w-2xl text-center"
         >

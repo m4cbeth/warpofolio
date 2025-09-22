@@ -76,7 +76,7 @@ export async function POST(req: Request) {
   }
 }
 
-function escapeHtml(str: string) {
+export function escapeHtml(str: string) {
   return str
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")

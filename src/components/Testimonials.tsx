@@ -21,7 +21,7 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
           variants={fadeUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: false, margin: "-80px" }}
           transition={sectionTransition}
           className="text-center"
         >
