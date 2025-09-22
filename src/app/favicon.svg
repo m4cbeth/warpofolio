@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Black circle background -->
+  <circle cx="32" cy="32" r="32" fill="black"/>
+
+  <!-- White JW text -->
+  <text x="30%" y="50%" text-anchor="middle" dominant-baseline="central"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="bold"
+        font-size="26"
+        fill="white">
+    J 
+  </text>
+  <text x="49%" y="50%" text-anchor="middle" dominant-baseline="central"
+        font-family="Arial, Helvetica, sans-serif"
+        font-weight="bold"
+        font-size="30"
+        fill="white">
+    _W
+  </text>
+</svg>

@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { fadeIn, sectionTransition } from "@/lib/animations";
+import { ProblemPoint } from "@/data/content-data";
 
-export function YourQuickChecklist({ points }: { points: string[] }) {
+export function YourQuickChecklist({ points }: { points: ProblemPoint[] }) {
   return (
     <motion.div
       variants={fadeIn}
@@ -15,14 +16,14 @@ export function YourQuickChecklist({ points }: { points: string[] }) {
         Does your website
       </p>
       <div className="mt-5 grid grid-cols-2 items-center gap-6 opacity-80 sm:grid-cols-4">
-        {points.map((name) => (
+        {points.map((point) => (
           <div
-            key={name}
+            key={point.question}
             className="flex h-10 items-center justify-center rounded border border-slate-200 bg-white font-lg text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
-            aria-label={name}
-            title={name}
+            aria-label={point.question}
+            title={point.question}
           >
-            {name}
+            {point.question}
           </div>
         ))}
       </div>

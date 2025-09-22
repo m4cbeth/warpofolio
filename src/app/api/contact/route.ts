@@ -38,7 +38,10 @@ export async function POST(req: Request) {
 
     // Basic validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!name || !name.trim()) return NextResponse.json({ error: "Name required" }, { status: 400 });
     if (!email || !emailRegex.test(email)) return NextResponse.json({ error: "Valid email required" }, { status: 400 });
+    if (!business || !business.trim()) return NextResponse.json({ error: "Business required" }, { status: 400 });
+    if (!message || !message.trim()) return NextResponse.json({ error: "Message required" }, { status: 400 });
 
     // Build email
     sgMail.setApiKey(SENDGRID_API_KEY);

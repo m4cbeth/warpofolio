@@ -17,11 +17,28 @@ export type ServiceItem = {
   icon: ReactNode;
 };
 
-export const problemPoints: string[] = [
-  "Load instantly, from any device?",
-  "Have a high bounce rate?",
-  "Get consistant traffic?",
-  "Connect you with new prospects?",
+export interface ProblemPoint {
+  question: string;
+  blurb: string;
+}
+
+export const problemPoints: ProblemPoint[] = [
+  { 
+    question: "Load instantly, from any device?",
+    blurb: "example",
+  },
+  { 
+    question: "Have a high bounce rate?",
+    blurb: "example",
+  },
+  { 
+    question: "Get consistent traffic?",
+    blurb: "example",
+  },
+  { 
+    question: "Connect you with new prospects?",
+    blurb: "example",
+  },
 ];
 
 export const services: ServiceItem[] = [

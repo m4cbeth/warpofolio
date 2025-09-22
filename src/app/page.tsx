@@ -13,6 +13,7 @@ import { problemPoints, services, caseStudies, testimonials } from "@/data/conte
 export default function Page() {
   return (
     <div className="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       <StickyHeader />
       <main>
         <Hero points={problemPoints} />
