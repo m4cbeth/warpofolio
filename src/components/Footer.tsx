@@ -39,7 +39,7 @@ export function Footer() {
             <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-400">
               <li>Calgary, AB</li>
               <li>info@jarenwhitehouse.com</li>
-              <li>+1 (403) 000-0000</li>
+              <li>+1 (403) 510-2768</li>
             </ul>
           </div>
           <div>

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
 import type { Reasons } from "@/data/content-data";
+import Image from "next/image";
+
 
 export function ReasonsSection({ items }: { items: Reasons[] }) {
   return (
@@ -29,7 +31,14 @@ export function ReasonsSection({ items }: { items: Reasons[] }) {
               transition={sectionTransition}
               className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
             >
-              <div className="aspect-[16/9] w-full rounded-md bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900" />
+             <div className="relative w-full aspect-[16/9] rounded-md overflow-hidden">
+              <Image
+                src={improvement.image}
+                alt="Descriptive alt text"
+                fill
+                className="object-cover"
+              />
+              </div>
               <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">
                 {improvement.title} <span className="text-slate-500 dark:text-slate-400">{improvement.result}</span>
               </h3>

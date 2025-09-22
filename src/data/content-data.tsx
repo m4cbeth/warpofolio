@@ -1,15 +1,12 @@
 import { ReactNode } from "react";
 
-export type Testimonial = {
-  quote: string[];
-  name: string;
-  role?: string;
-};
 
 export type Reasons = {
   title: string;
   result: string;
   explain: string;
+  image: string;
+  imgalt: string;
 };
 
 export type ServiceItem = {
@@ -115,41 +112,63 @@ const extra = [
 
 export const reasons: Reasons[] = [
   { 
-    title: "Lighting Fast Sites, Stronger Impressions", 
+    title: "⚡ Lighting Fast Sites, Stronger Impressions", 
     result: "→ visitors stick, bounce drops", 
-    explain: "Outdated platforms slow you down. Modern builds not only cut page weight but also give visitors (and Google) the instant experience they expect" 
+    explain: "Outdated platforms slow you down. Modern builds not only cut page weight but also give visitors (and Google) the instant experience they expect" ,
+    image: "/lightning.jpg",
+    imgalt: "",
   },
   { 
-    title: "SEO and AI Catering", 
+    title: "🤖 SEO and AI Catering", 
     result: "→ Become the Professional AIs suggest to prospects", 
-    explain: "As search shifts to AI, the voices that win are the ones with authority. Long-form, useful content establishes you as the expert algorithms recommend first." 
+    explain: "As search shifts to AI, the voices that win are the ones with authority. Long-form, useful content establishes you as the expert algorithms recommend first." ,
+    image: "/brain-digital.jpg",
+    imgalt: "",
 
   },
   { 
-    title: "Evergreen Content Systems", 
+    title: "🌱 Evergreen Content Systems", 
     result: "→ A steady drip that converts", 
-    explain: "Consistent publishing builds trust and momentum. With the right structure, one idea becomes a pipeline of consults, requests, and inbound leads" 
+    explain: "Consistent publishing builds trust and momentum. With the right structure, one idea becomes a pipeline of consults, requests, and inbound leads" ,
+    image: "/plant.jpg",
+    imgalt: "",
 
   },
 ];
 
+
+
+export type Testimonial = {
+  quote: string[];
+  name: string;
+  role?: string;
+};
 export const testimonials: Testimonial[] = [
   {
     quote:
-      ["Working with JW was seamless.", "Our site looks modern and we’re seeing more booked calls already."],
-    name: "Alex P.",
-    role: "Principal, Wealth Advisory",
+      [
+        "Working with JW was seamless.", 
+        "Our site looks modern and we’re seeing more booked calls already."
+      ],
+    name: "A.P.",
+    role: "Owner, Operations Company",
   },
   {
     quote:
-      ["He found quick wins we missed.", "The booking form and copy changes made a clear difference."],
-    name: "Sandra L.",
+      [
+        "He found quick wins we missed.", 
+        "The booking form and copy changes made a clear difference."        
+      ],
+    name: "S.L.",
     role: "Operations, Investment Firm",
   },
   {
     quote:
-      ["Practical SEO, not fluff.", "Local visibility improved within weeks — highly recommend."],
-    name: "Mohammed R.",
-    role: "Founder, Boutique Finance",
+      [
+        "Practical SEO, not fluff.", 
+        "Local visibility improved within weeks — highly recommend."
+      ],
+    name: "M.R.",
+    role: "Founder, Boutique Finance Firm",
   },
 ];
