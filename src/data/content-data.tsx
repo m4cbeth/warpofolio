@@ -27,7 +27,7 @@ export type Whoami = {
 
 export const whoamiBlurb: Whoami = {
   himynameis: "My name is Jaren Whitehouse, former Investment Associate, and life long web developer",
-  other: "Formerly registered with IIROC, I understand how challenging it is to get prospects to notice and engage with your business. I help investment advisors and portfolio managers modernize their online presence — from professional, interactive websites to content and ad strategies — so your practice becomes visible, approachable, and growing",
+  other: "As a formerly registered IIROC Investment Associate, I understand how challenging it is to get prospects to notice and engage with your business. I help investment advisors and portfolio managers modernize their online presence — from professional, interactive websites to content and ad strategies — so your practice becomes visible, approachable, and growing",
 }
 
 export const problemPoints: ProblemPoint[] = [
@@ -113,8 +113,8 @@ const extra = [
 export const reasons: Reasons[] = [
   { 
     title: "⚡ Lighting Fast Sites, Stronger Impressions", 
-    result: "→ visitors stick, bounce drops", 
-    explain: "Outdated platforms slow you down. Modern builds not only cut page weight but also give visitors (and Google) the instant experience they expect" ,
+    result: "→ visitors stick, bounce rates drops", 
+    explain: "Outdated platforms slow you down. Modern builds not only cut page weight but also give visitors (and Google) the instant experience they expect.",
     image: "/lightning.jpg",
     imgalt: "",
   },
@@ -129,7 +129,7 @@ export const reasons: Reasons[] = [
   { 
     title: "🌱 Evergreen Content Systems", 
     result: "→ A steady drip that converts", 
-    explain: "Consistent publishing builds trust and momentum. With the right structure, one idea becomes a pipeline of consults, requests, and inbound leads" ,
+    explain: "Consistent publishing builds trust and momentum. With the right structure, one idea becomes a pipeline of consults, requests, and inbound leads." ,
     image: "/plant.jpg",
     imgalt: "",
 
