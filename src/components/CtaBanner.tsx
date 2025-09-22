@@ -18,16 +18,17 @@ export function CtaBanner() {
               image/icon could go here
             </div>
             <div className="relative inline-block">
-            <div className="absolute w-full h-full bg-gray-300 translate-3 -z-10"></div>
-              <h3 className="text-4xl font-thing tracking-tighter">
+              {/* highlight block */}
+            <div className="absolute w-full h-full bg-slate-600 dark:bg-gray-300 translate-3 -z-10"></div>
+              <h3 className="text-4xl font-light tracking-tighter">
                 Get a 48-Hour Website Audit & Fix Package
               </h3>
             </div>
             <div className="flex flex-col items-center">
-              <p className="mt-5 font-bold text-lg max-w-2xl text-slate-200 dark:text-slate-800">
+              <p className="mt-5 font-semibold text-lg max-w-2xl text-slate-200 dark:text-slate-800">
                 Fast turnaround with a prioritized punchlist and implementation.
               </p>
-              <p className="mt-2 font-bold text-lg max-w-2xl text-slate-200 dark:text-slate-800 text-center">
+              <p className="mt-2 font-semibold text-lg max-w-2xl text-slate-200 dark:text-slate-800 text-center">
                 Start with the highest-impact wins.
               </p>
             </div>
