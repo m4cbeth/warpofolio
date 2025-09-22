@@ -116,14 +116,14 @@ export const reasons: Reasons[] = [
     result: "→ visitors stick, bounce rates drops", 
     explain: "Outdated platforms slow you down. Modern builds not only cut page weight but also give visitors (and Google) the instant experience they expect.",
     image: "/lightning.jpg",
-    imgalt: "",
+    imgalt: "Lightning bolt representing fast-loading websites",
   },
   { 
     title: "🤖 SEO and AI Catering", 
     result: "→ Become the Professional AIs suggest to prospects", 
     explain: "As search shifts to AI, the voices that win are the ones with authority. Long-form, useful content establishes you as the expert algorithms recommend first." ,
     image: "/brain-digital.jpg",
-    imgalt: "",
+    imgalt: "Digital brain symbolizing SEO and AI-driven content strategy",
 
   },
   { 
@@ -131,7 +131,7 @@ export const reasons: Reasons[] = [
     result: "→ A steady drip that converts", 
     explain: "Consistent publishing builds trust and momentum. With the right structure, one idea becomes a pipeline of consults, requests, and inbound leads." ,
     image: "/plant.jpg",
-    imgalt: "",
+    imgalt: "Sprouting plant illustrating consistent, long-term content growth",
 
   },
 ];
