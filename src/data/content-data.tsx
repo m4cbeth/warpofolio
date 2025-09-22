@@ -38,7 +38,7 @@ export const problemPoints: ProblemPoint[] = [
     blurb: "example",
   },
   { 
-    question: "Have a high bounce rate?",
+    question: "Have a low bounce rate?",
     blurb: "example",
   },
   { 

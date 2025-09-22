@@ -15,11 +15,11 @@ export function YourQuickChecklist({ points }: { points: ProblemPoint[] }) {
       <p className="text-center text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400">
         Does your website
       </p>
-      <div className="mt-5 grid grid-cols-2 items-center gap-6 opacity-80 sm:grid-cols-4">
+      <div className="mt-5 flex flex-col items-center gap-6 opacity-80 md:flex-row">
         {points.map((point) => (
           <div
             key={point.question}
-            className="flex h-10 items-center justify-center rounded border border-slate-200 bg-white font-lg text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
+            className="flex w-full h-10 items-center justify-center rounded border border-slate-200 bg-white font-lg text-slate-900 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100"
             aria-label={point.question}
             title={point.question}
           >
