@@ -9,6 +9,7 @@ export type Testimonial = {
 export type Reasons = {
   title: string;
   result: string;
+  explain: string;
 };
 
 export type ServiceItem = {
@@ -91,10 +92,45 @@ export const services: ServiceItem[] = [
   },
 ];
 
+export const reasonsNames = [
+  "Opportunities",
+  "Growth Paths",
+  "Strategies in Action",
+  "Potential Wins",
+  "Sample Playbooks",
+  "What’s Possible",
+  "Quick Wins",
+  "Vision in Practice",
+  "Idea Sparks",
+  "Future Scenarios",
+  "Proven Approaches",
+  "Strategic Angles",
+  "Blueprints",
+  "Pathways to Growth"
+]
+
+const extra = [
+  "Faster Sites, Stronger Impressions",
+]
+
 export const reasons: Reasons[] = [
-  { title: "Dentist site refresh", result: "→ 40% more bookings" },
-  { title: "Law firm SEO", result: "→ Top 3 for “Calgary Family Lawyer”" },
-  { title: "Advisor funnel add-ons", result: "→ 2.1x consult requests" },
+  { 
+    title: "Lighting Fast Sites, Stronger Impressions", 
+    result: "→ visitors stick, bounce drops", 
+    explain: "Outdated platforms slow you down. Modern builds not only cut page weight but also give visitors (and Google) the instant experience they expect" 
+  },
+  { 
+    title: "SEO and AI Catering", 
+    result: "→ Become the Professional AIs suggest to prospects", 
+    explain: "As search shifts to AI, the voices that win are the ones with authority. Long-form, useful content establishes you as the expert algorithms recommend first." 
+
+  },
+  { 
+    title: "Evergreen Content Systems", 
+    result: "→ A steady drip that converts", 
+    explain: "Consistent publishing builds trust and momentum. With the right structure, one idea becomes a pipeline of consults, requests, and inbound leads" 
+
+  },
 ];
 
 export const testimonials: Testimonial[] = [
