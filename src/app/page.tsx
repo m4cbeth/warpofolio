@@ -8,14 +8,14 @@ import { Testimonials } from "@/components/Testimonials";
 import { CtaBanner } from "@/components/CtaBanner";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
-import { placeholderLogos, services, caseStudies, testimonials } from "@/data/content-data";
+import { problemPoints, services, caseStudies, testimonials } from "@/data/content-data";
 
 export default function Page() {
   return (
     <div className="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
       <StickyHeader />
       <main>
-        <Hero logos={placeholderLogos} />
+        <Hero points={problemPoints} />
         <ServicesSection items={services} />
         <CaseStudiesSection items={caseStudies} />
         <Testimonials items={testimonials} />

@@ -36,11 +36,19 @@ export function ContactSection() {
 
     setSubmitting(true);
     try {
-      await new Promise((r) => setTimeout(r, 800));
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, _honey: (document.getElementById("_honey") as HTMLInputElement)?.value || "" }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error || "Failed to send");
+      }
       setFormSuccess("Thanks! I’ll get back to you within 1 business day.");
       setForm({ name: "", email: "", business: "", website: "", message: "" });
-    } catch {
-      setFormError("Something went wrong. Please try again, or email me directly.");
+    } catch (err) {
+      setFormError(err instanceof Error ? err.message : "Something went wrong. Please try again, or email me directly.");
     } finally {
       setSubmitting(false);
     }
@@ -63,7 +71,17 @@ export function ContactSection() {
 
         <div className="mx-auto mt-8 max-w-2xl">
           <form onSubmit={onSubmit} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-            <div className="grid gap-4 sm:grid-cols-2">
+<div className="grid gap-4 sm:grid-cols-2">
+              {/* Honeypot field */}
+              <input
+                type="text"
+                id="_honey"
+                name="_honey"
+                tabIndex={-1}
+                autoComplete="off"
+                className="hidden"
+                aria-hidden="true"
+              />
               <div className="sm:col-span-1">
                 <label htmlFor="name" className="mb-1 block text-sm font-medium">Name</label>
                 <input

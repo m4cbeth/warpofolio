@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
-import { SocialProof } from "@/components/SocialProof";
+import { YourQuickChecklist } from "@/components/ProblemPoints";
 
-export function Hero({ logos }: { logos: string[] }) {
+export function Hero({ points }: { points: string[] }) {
   return (
     <section id="home" className="relative overflow-hidden scroll">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/40 dark:to-slate-950" />
@@ -24,8 +24,11 @@ export function Hero({ logos }: { logos: string[] }) {
           >
             Fix Your Website. Win More Clients.
           </motion.h1>
+          <p className="mx-auto mt-4 max-w-2xl pt-5 text-pretty text-2xl text-slate-700 dark:text-slate-300">
+            Most Calgary financial advisors have outdated sites.
+          </p>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-slate-700 dark:text-slate-300">
-            Most Calgary financial advisors have outdated sites. I help you modernize, optimize, and convert visitors
+            I help you modernize, optimize, and convert visitors
             into booked calls.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -44,7 +47,7 @@ export function Hero({ logos }: { logos: string[] }) {
           </div>
         </motion.div>
 
-        <SocialProof logos={logos} />
+        <YourQuickChecklist points={points} />
       </div>
     </section>
   );

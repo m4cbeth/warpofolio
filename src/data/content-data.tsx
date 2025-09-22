@@ -17,11 +17,11 @@ export type ServiceItem = {
   icon: ReactNode;
 };
 
-export const placeholderLogos: string[] = [
-  "YYC Finance Network",
-  "Prairie Portfolio",
-  "Mountain Wealth",
-  "Stampede Advisory",
+export const problemPoints: string[] = [
+  "Load instantly, from any device?",
+  "Have a high bounce rate?",
+  "Get consistant traffic?",
+  "Connect you with new prospects?",
 ];
 
 export const services: ServiceItem[] = [
