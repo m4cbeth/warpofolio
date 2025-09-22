@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,11 +60,11 @@ const jsonLd = {
     name: "Calgary",
   },
   sameAs: [
-    "https://www.linkedin.com/in/example",
-    "https://www.youtube.com/@example",
+    "https://www.linkedin.com/in/jaren-whitehouse/",
+    // "https://www.youtube.com/@example",
   ],
   priceRange: "$$",
-  serviceType: ["Web Development", "SEO", "Copywriting", "CRO"],
+  serviceType: ["Web Development", "SEO", "Copywriting", "Digital Marketing", "Google Ads Managment", "Google Business Profile Optimization"],
   description:
     "Webdev/SEO/copywriter helping Calgary financial advisors modernize, optimize, and convert website traffic into booked calls.",
 };
@@ -80,6 +81,7 @@ export default function RootLayout({
           {JSON.stringify(jsonLd)}
         </Script>
         {children}
+        <Analytics />
       </body>
     </html>
   );
