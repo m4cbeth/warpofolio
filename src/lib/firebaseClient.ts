@@ -5,17 +5,14 @@ import { initializeApp, getApps, type FirebaseApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
-function required(name: string, value: string | undefined) {
-  if (!value) {
-    throw new Error(`Missing required env var ${name} (client). Add it to .env.local`);
-  }
-  return value;
-}
 
 const firebaseConfig = {
-  apiKey: required('NEXT_PUBLIC_FIREBASE_API_KEY', process.env.NEXT_PUBLIC_FIREBASE_API_KEY),
-  authDomain: required('NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN', process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN),
-  projectId: required('NEXT_PUBLIC_FIREBASE_PROJECT_ID', process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID),
+  apiKey: "AIzaSyCHHrV4Qrg4JSz8MoBpWtsrwoN-5xZcMYY",
+  authDomain: "jarenwhitehouse.firebaseapp.com",
+  projectId: "jarenwhitehouse",
+  storageBucket: "jarenwhitehouse.firebasestorage.app",
+  messagingSenderId: "1097374959314",
+  appId: "1:1097374959314:web:841657efe06b2a91760f0b"
 };
 
 let app: FirebaseApp;
