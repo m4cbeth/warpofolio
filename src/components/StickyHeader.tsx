@@ -31,6 +31,9 @@ export function StickyHeader() {
           </a>
           <ThemeToggle />
         </nav>
+        <div className="md:hidden">
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
