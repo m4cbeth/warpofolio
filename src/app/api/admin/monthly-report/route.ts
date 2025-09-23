@@ -5,6 +5,7 @@ import { getUidFromRequest } from '@/lib/auth';
 import { adminDb } from '@/lib/firebaseAdmin';
 import { stripe } from '@/lib/stripe';
 import dayjs from 'dayjs';
+import type Stripe from 'stripe';
 
 function firstLastOfMonth(input?: string) {
   const d = input ? dayjs(input) : dayjs();
@@ -36,10 +37,13 @@ export async function POST(req: Request) {
       if (inv.status === 'paid') {
         paymentCount += 1;
         for (const line of inv.lines.data) {
-          const priceId = line.price?.id || 'unknown';
+          // Stripe's InvoiceLineItem typing may omit `price` depending on API version/expansions.
+          // Use a safe typed access via unknown cast to avoid `any` and satisfy ESLint.
+          const price = (line as unknown as { price?: { id?: string; currency?: string } }).price;
+          const priceId = price?.id ?? 'unknown';
           const amount = line.amount || line.amount_excluding_tax || 0;
           totalsByPrice[priceId] = (totalsByPrice[priceId] || 0) + amount;
-          if (line.price?.currency) currencyByPrice[priceId] = line.price.currency;
+          if (price?.currency) currencyByPrice[priceId] = price.currency;
         }
       }
       if (inv.subscription) subscriptionCount += 1;
