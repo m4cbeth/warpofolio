@@ -134,3 +134,7 @@ Finish by committing files to a branch `feature/stripe-checkout-firebase` and op
 
 This is the goal, beginning to end.
 Let's start with you scanning these instructions, asking any questions for clarification, and suggest a first step.
+Also in this project, @src/data/stripe-sample-code-from-stripe-docs
+There is direct docs supplied by https://docs.stripe.com/checkout/embedded/quickstart?client=next
+The information and approach in there should override anything conflicting above.
+Begin.
