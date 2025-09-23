@@ -15,7 +15,7 @@ export async function POST(req: Request) {
 
     const session = await createCheckoutSessionSubscription({ priceId, uid, email });
     return NextResponse.json({ clientSecret: session.client_secret }, { status: 200 });
-  } catch (err: any) {
+  } catch (err) {
     if (err instanceof Response) return err;
     console.error('create-checkout-session-subscription error', err);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });

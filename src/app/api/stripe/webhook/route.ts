@@ -4,20 +4,21 @@ export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
 import { verifyWebhookEvent, stripe } from '@/lib/stripe';
 import { adminDb } from '@/lib/firebaseAdmin';
+import type Stripe from 'stripe';
 
 export async function POST(req: Request) {
   let rawBody: string;
   try {
     rawBody = await req.text();
-  } catch (e) {
+  } catch {
     return NextResponse.json({ error: 'Invalid body' }, { status: 400 });
   }
   const signature = req.headers.get('stripe-signature');
 
-  let event;
+  let event: Stripe.Event;
   try {
     event = verifyWebhookEvent(rawBody, signature);
-  } catch (err: any) {
+  } catch (err) {
     console.error('Webhook signature verification failed:', err.message);
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });
   }
@@ -25,13 +26,13 @@ export async function POST(req: Request) {
   try {
     switch (event.type) {
       case 'checkout.session.completed': {
-        const session = event.data.object as any; // Stripe.Checkout.Session
-        const uid: string | undefined = session.metadata?.uid || session.client_reference_id || undefined;
-        const customerId: string | null = session.customer || null;
-        const mode: string = session.mode;
+        const session = event.data.object as Stripe.Checkout.Session;
+        const uid: string | undefined = (session.metadata?.uid as string | undefined) || (session.client_reference_id as string | undefined) || undefined;
+        const customerId: string | null = typeof session.customer === 'string' ? session.customer : session.customer?.id ?? null;
+        const mode = session.mode;
         if (uid) {
           const userRef = adminDb.collection('users').doc(uid);
-          const updates: Record<string, any> = { updatedAt: new Date() };
+          const updates: Record<string, unknown> = { updatedAt: new Date() };
           if (customerId) updates.stripeCustomerId = customerId;
 
           if (mode === 'payment') {
@@ -63,8 +64,8 @@ export async function POST(req: Request) {
       }
 
       case 'invoice.payment_succeeded': {
-        const invoice = event.data.object as any; // Stripe.Invoice
-        const uid: string | undefined = invoice.metadata?.uid;
+        const invoice = event.data.object as Stripe.Invoice;
+        const uid: string | undefined = invoice.metadata?.uid as string | undefined;
         if (uid) {
           const userRef = adminDb.collection('users').doc(uid);
           await userRef.set(
@@ -80,8 +81,8 @@ export async function POST(req: Request) {
       }
 
       case 'invoice.payment_failed': {
-        const invoice = event.data.object as any;
-        const uid: string | undefined = invoice.metadata?.uid;
+        const invoice = event.data.object as Stripe.Invoice;
+        const uid: string | undefined = invoice.metadata?.uid as string | undefined;
         if (uid) {
           const userRef = adminDb.collection('users').doc(uid);
           await userRef.set(
@@ -97,8 +98,8 @@ export async function POST(req: Request) {
 
       case 'customer.subscription.updated':
       case 'customer.subscription.deleted': {
-        const sub = event.data.object as any; // Stripe.Subscription
-        const uid: string | undefined = sub.metadata?.uid;
+        const sub = event.data.object as Stripe.Subscription;
+        const uid: string | undefined = sub.metadata?.uid as string | undefined;
         if (uid) {
           const userRef = adminDb.collection('users').doc(uid);
           await userRef.set(

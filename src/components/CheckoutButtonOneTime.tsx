@@ -21,8 +21,8 @@ export default function CheckoutButtonOneTime({ priceId }: { priceId?: string })
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Failed to create session');
       setClientSecret(data.clientSecret);
-    } catch (e: any) {
-      setError(e.message);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Failed to create session');
     }
   }, [priceId]);
 
