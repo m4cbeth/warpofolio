@@ -4,9 +4,9 @@ import EmailLink from "./EmailLink";
 export function Footer() {
   return (
     <footer className="py-10 border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950">
-      <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
+      <div className="border flex flex-col justify-between border-white mx-auto max-w-7xl px-4 md:px-6">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="">
             <div className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-md bg-slate-900 font-semibold text-white dark:bg-white dark:text-slate-900">
                 JW
@@ -28,6 +28,7 @@ export function Footer() {
               <li>Calgary, AB</li>
             </ul>
           </div>
+
           <div>
             <h4 className="text-sm font-semibold text-slate-900 dark:text-white">Follow</h4>
             <div className="mt-3 flex items-center gap-3">
@@ -62,10 +63,10 @@ export function Footer() {
           </div>
         </div>
 
+      </div>
         <div className="mx-auto mt-8 max-w-7xl px-4 md:px-6">
           <p className="text-xs text-slate-500 dark:text-slate-400">© {new Date().getFullYear()} JW Web & SEO. All rights reserved.</p>
         </div>
-      </div>
     </footer>
   );
 }
