@@ -8,7 +8,7 @@ export function Footer() {
         <div className=" max-w-xl flex flex-col md:grid md:grid-cols-3 md:gap-6 md">
 
 
-          <div className="mt-10 md:mt-5">
+          <div className="mt-1 md:mt-5">
             <div className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-md bg-slate-900 font-semibold text-white dark:bg-white dark:text-slate-900">
                 JW
