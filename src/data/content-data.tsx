@@ -192,26 +192,26 @@ export const servicespage = {
     sections: [],
 }
 const quickWinSection: ServiceSection = {
-    h1: "",
+    h1: "Fix Major Issues First",
     h2: "",
     body: "",
     img: "",
 }
 const seoSection: ServiceSection = {
-    h1: "",
-    h2: "",
-    body: "",
+    h1: "Holistic <em>Internet</em> Optimization",
+    h2: "SEO has always been a buzzword",
+    body: "Optimizing a site for the web—be it AltaVista, AskJeeves, Yahoo!, Google, or ChatGPT—has always been about one thing: content. Meaningful, high-quality content that users want to engage with. The real 'optimization' is trivial but important, boring, work that is simply often neglected. But when both But when both engines, quality content and properly structured metadata, are humming along together. Not only do you get a page that ranks, you get a website that people find themselves on when they're looking for answers to hard questions.",
     img: "",
 }
 const copywritingSection: ServiceSection = {
-    h1: "",
-    h2: "",
-    body: "",
+    h1: "Convinced Yet?",
+    h2: "If this approach is starting to sound like it makes sense...",
+    body: "Well that's because we're very good at copywriting, an oft overlooked part of 'web development'. People spend thousands of dollars getting a functional and sometimes even fancy website, but they've lost the plot. They're burried in the technical details. When Copywriting is layered in with the web development process, you end up with a website that isn't just a nice pretty thing to have, but a living breathing part of your business",
     img: "",
 }
 const contentSection: ServiceSection = {
-    h1: "",
-    h2: "",
-    body: "",
+    h1: "Content === Steroids for your Business",
+    h2: "In the ever expanding ocean of information we live, be a raft",
+    body: "when advisors write a lot of content they exponentially become authority and it becomes self fulfilling procphecy",
     img: "",
 }
