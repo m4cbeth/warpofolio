@@ -13,6 +13,7 @@ export type ServiceItem = {
   title: string;
   desc: string;
   icon: ReactNode;
+  href: string;
 };
 
 export type ProblemPoint = {
@@ -58,6 +59,7 @@ export const services: ServiceItem[] = [
         <path d="M4 6h16M4 12h16M4 18h10" strokeLinecap="round" />
       </svg>
     ),
+    href: "/services",
   },
   {
     title: "SEO & Visibility",
@@ -68,6 +70,7 @@ export const services: ServiceItem[] = [
         <path d="M20 20l-3.5-3.5" strokeLinecap="round" />
       </svg>
     ),
+    href: "/services",
   },
   {
     title: "Conversion Copywriting",
@@ -77,6 +80,7 @@ export const services: ServiceItem[] = [
         <path d="M4 5h16M7 9h10M7 13h10M7 17h7" strokeLinecap="round" />
       </svg>
     ),
+    href: "/services",
   },
   {
     title: "Funnel Add-ons",
@@ -86,6 +90,7 @@ export const services: ServiceItem[] = [
         <path d="M4 4h16l-6 8v6l-4-2v-4L4 4z" />
       </svg>
     ),
+    href: "/services",
   },
 ];
 
