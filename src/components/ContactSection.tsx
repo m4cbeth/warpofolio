@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
+import EmailLink from "./EmailLink";
 
 type FormData = {
   name: string;
@@ -163,8 +164,8 @@ export function ContactSection() {
               >
                 {submitting ? "Sending..." : "Send Request"}
               </button>
-              <p className="text-xs text-slate-500 dark:text-slate-400">Or email: 
-                <a href="mailto:info@jarenwhitehouse.com?subject=I want a better site for a great price today, let's make it happen">info@jarenwhitehouse.com</a>
+              <p className="text-xs text-slate-500 dark:text-slate-400">{`Or email: `} 
+                <EmailLink />
               </p>
             </div>
           </form>

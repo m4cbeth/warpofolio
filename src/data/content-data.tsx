@@ -51,7 +51,7 @@ export const services: ServiceItem[] = [
         <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
       </svg>
     ),
-    href: "/services",
+    href: "/services#wins",
   },
   {
     title: "SEO & Visibility",
@@ -62,7 +62,7 @@ export const services: ServiceItem[] = [
         <path d="M20 20l-3.5-3.5" strokeLinecap="round" />
       </svg>
     ),
-    href: "/services",
+    href: "/services#seo",
   },
   {
     title: "Conversion Copywriting",
@@ -72,7 +72,7 @@ export const services: ServiceItem[] = [
         <path d="M4 5h16M7 9h10M7 13h10M7 17h7" strokeLinecap="round" />
       </svg>
     ),
-    href: "/services",
+    href: "/services#copy",
   },
   {
     title: "Content Strategy",
@@ -83,7 +83,7 @@ export const services: ServiceItem[] = [
         <path d="M4 4h16l-6 8v6l-4-2v-4L4 4z" />
       </svg>
     ),
-    href: "/services",
+    href: "/services#content",
 },
 ];
 
@@ -184,36 +184,46 @@ export type ServicesPage = {
 export type ServiceSection = {
     h1: string;
     h2: string;
+    id: string;
     body: string;
     img: string;
+    imgalt: string;
 }
 
 const quickWinSection: ServiceSection = {
     h1: "Fix Major Issues First",
     h2: "No strategy survives a broken foundation",
+    id: "wins",
     body: "Before we talk about scaling your reach or building a long-term growth plan, we fix the obvious roadblocks. For advisors, that usually means websites that are slow, outdated, or confusing to navigate. Think broken links, clunky mobile layouts, or compliance disclaimers buried where no one can find them. These are simple fixes—but until they’re addressed, no amount of marketing will matter. Quick wins build trust, momentum, and a platform you can actually grow from.",
     img: "/chart-screen.jpg",
+    imgalt: "Your website is your credibility piece online",
 }
 
 const seoSection: ServiceSection = {
     h1: "Holistic Internet Optimization",
     h2: "SEO has always been a buzzword",
+    id: "seo",
     body: "Search optimization has never been about tricking algorithms—it’s about proving relevance. For advisors, that means publishing content investors actually search for, and making sure your site’s structure and metadata don’t get in the way. Do both, and you get more than rankings. You get discovery. You become the answer when clients are asking the hard questions.",
     img: "/brain-digital.jpg",
+    imgalt: "Digital knowledge is a commodity",
 }
 
 const copywritingSection: ServiceSection = {
     h1: "Convinced Yet?",
     h2: "The right words turn prospects into clients",
+    id: "copy",
     body: "Advisors are in the trust business. Prospects don’t judge you by your portfolio—they judge you by how clearly you explain it. That’s copywriting. Most advisor websites read like compliance documents: safe, vague, and instantly forgettable. We flip that script. By pairing sharp, compliant messaging with design, your site becomes persuasive, not just pretty. It’s the difference between someone closing the tab and someone booking a call.",
     img: "/lightning.jpg",
+    imgalt: "Electrifying ideas excite prospects",
 }
 
 const contentSection: ServiceSection = {
     h1: "Content Is Your Compounding Interest",
     h2: "The authority you build online compounds, just like capital",
+    id: "content",
     body: "When advisors consistently publish valuable insights, they stop chasing prospects and start attracting them. Every article, explainer, or market update builds authority. Over time, the search engines notice—and so do investors. The result is a self-reinforcing loop: your content ranks, your credibility grows, and new opportunities come to you. In the noise of financial advice online, content is how you rise above and stay there.",
     img: "/plant.jpg",
+    imgalt: "Growing content grows businesses",
 }
 
 export const servicespage: ServicesPage = {

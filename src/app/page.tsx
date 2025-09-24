@@ -1,20 +1,19 @@
 "use client";
 
-import { StickyHeader } from "@/components/StickyHeader";
 import { Hero } from "@/components/Hero";
 import { ServicesSection } from "@/components/ServicesSection";
-import { ReasonsSection } from "@/components/ProvenSection";
+import { ReasonsSection } from "@/components/ReasonsSection";
 import { Testimonials } from "@/components/Testimonials";
 import { CtaBanner } from "@/components/CtaBanner";
 import { ContactSection } from "@/components/ContactSection";
-import { Footer } from "@/components/Footer";
 import { WhoAMI } from "@/components/WhoAmI";
 import { problemPoints, services, reasons, testimonials, whoamiBlurb } from "@/data/content-data";
+import { motion } from 'framer-motion';
 
 
 export default function Page() {
   return (    
-    <main>
+    <motion.main>
       <Hero points={problemPoints} />
       <WhoAMI whoamiBlurb={whoamiBlurb} />
       <ReasonsSection items={reasons} />
@@ -22,6 +21,6 @@ export default function Page() {
       <Testimonials items={testimonials} />
       <CtaBanner />
       <ContactSection />
-    </main>      
+    </motion.main>      
   );
 }

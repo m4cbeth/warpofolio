@@ -1,4 +1,5 @@
 import { FaBluesky, FaGithubAlt, FaLinkedinIn } from "react-icons/fa6";
+import EmailLink from "./EmailLink";
 
 export function Footer() {
   return (
@@ -16,32 +17,15 @@ export function Footer() {
               Calgary-based web development, SEO, and conversion copywriting for financial advisors.
             </p>
           </div>
-          <div>
-            <h4 className="text-sm font-semibold text-slate-900 dark:text-white">Quick Links</h4>
-            <ul className="mt-3 space-y-2 text-sm">
-              <li>
-                <a href="/" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+          
           <div>
             <h4 className="text-sm font-semibold text-slate-900 dark:text-white">Contact</h4>
             <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-400">
-              <li>Calgary, AB</li>
-              <li>info@jarenwhitehouse.com</li>
+              <li>
+                <EmailLink />
+              </li>
               <li>+1 (403) 510-2768</li>
+              <li>Calgary, AB</li>
             </ul>
           </div>
           <div>

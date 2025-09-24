@@ -17,7 +17,7 @@ export function StickyHeader() {
           <a href="/#home" className="text-sm hover:text-slate-900/80 dark:hover:text-slate-100/80">
             Home
           </a>
-          <a href="#services" className="text-sm hover:text-slate-900/80 dark:hover:text-slate-100/80">
+          <a href="/services" className="text-sm hover:text-slate-900/80 dark:hover:text-slate-100/80">
             Services
           </a>
           <a href="#contact" className="text-sm hover:text-slate-900/80 dark:hover:text-slate-100/80">

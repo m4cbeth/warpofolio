@@ -34,7 +34,7 @@ export function ReasonsSection({ items }: { items: Reasons[] }) {
              <div className="relative w-full aspect-[16/9] rounded-md overflow-hidden">
               <Image
                 src={improvement.image}
-                alt="Descriptive alt text"
+                alt={improvement.imgalt}
                 fill
                 className="object-cover"
               />
