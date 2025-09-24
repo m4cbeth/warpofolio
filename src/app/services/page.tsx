@@ -5,9 +5,9 @@ export default function ServicesPage() {
     return (
         <main>
             <section className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
-                <div className="mx-auto max-w-7xl px-4 md:px-6">
+                <div className="mx-auto max-w-4xl px-4 md:px-6">
                     <div className="mx-auto max-w-3xl text-center">
-                        <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+                        <h1 className="text-5xl border-b-2 font-bold tracking-tight text-slate-900 dark:text-white">
                             {servicespage.heading}
                         </h1>
                     </div>

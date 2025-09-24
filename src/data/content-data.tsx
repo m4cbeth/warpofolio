@@ -196,7 +196,7 @@ const quickWinSection: ServiceSection = {
 }
 
 const seoSection: ServiceSection = {
-    h1: "Holistic <em>Internet</em> Optimization",
+    h1: "Holistic Internet Optimization",
     h2: "SEO has always been a buzzword",
     body: "Search optimization has never been about tricking algorithms—it’s about proving relevance. For advisors, that means publishing content investors actually search for, and making sure your site’s structure and metadata don’t get in the way. Do both, and you get more than rankings. You get discovery. You become the answer when clients are asking the hard questions.",
     img: "/brain-digital.jpg",
