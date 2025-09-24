@@ -23,7 +23,7 @@ const siteTitle = "Calgary Web Dev + SEO for Advisors | JW";
 const siteDescription =
   "Fix your website, Win more clients. I modernize, optimize, and turn traffic into booked calls for Calgary financial advisors.";
 const siteUrl = "https://www.jarenwhitehouse.com/";
-const ogImage = "https://www.example.com/og-image.jpg";
+const ogImage = "https://www.jarenwhitehouse.com/brain-digital.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

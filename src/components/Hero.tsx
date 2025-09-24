@@ -23,7 +23,7 @@ export function Hero({ points }: { points: ProblemPoint[] }) {
             transition={sectionTransition}
             className="text-balance text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl dark:text-white"
           >
-            Fix Your Website. Win More Clients.
+            Fix Your Website,<br/> Win More Clients.
           </motion.h1>
           <p className="mx-auto mt-4 max-w-2xl pt-5 text-pretty text-2xl text-slate-700 dark:text-slate-300">
             Most Calgary financial advisors have outdated sites.
