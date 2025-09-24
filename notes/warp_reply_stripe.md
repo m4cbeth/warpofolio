@@ -120,17 +120,6 @@ found 0 vulnerabilities
 sed -n '1,200p' .env.local
 ```
 
-**Output:**
-```
-# Environment variables for local dev
-# Obtain an API key from Twilio SendGrid: https://app.sendgrid.com/settings/api_keys
-# Never commit a real API key to version control.
-
-# SendGrid
-SENDGRID_API_KEY=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
-EMAIL_TO=jarenwhitehouse@gmail.com
-EMAIL_FROM=websiteinquiry@jarenwhitehouse.com
-
 ```
 
 
@@ -193,70 +182,7 @@ drwxr-xr-x 1 infin 197609   0 Sep 22 23:51 return/
 @@ -7,3 +7,27 @@
  EMAIL_TO=jarenwhitehouse@gmail.com
  EMAIL_FROM=websiteinquiry@jarenwhitehouse.com
- 
-+# Stripe Embedded Checkout
-+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
-+STRIPE_SECRET_KEY=
-+STRIPE_WEBHOOK_SECRET=
-+ONE_TIME_PRICE_ID=
-+SUBSCRIPTION_PRICE_ID_MONTHLY=
-+SUBSCRIPTION_PRICE_ID_ANNUAL=
-+VERCEL_PROJECT_URL=
-+
-+# Firebase Admin (server)
-+FIREBASE_PROJECT_ID=
-+FIREBASE_CLIENT_EMAIL=
-+# Escape newlines as \n in this private key
-+FIREBASE_PRIVATE_KEY=
-+
-+# Firebase Client (browser)
-+NEXT_PUBLIC_FIREBASE_API_KEY=
-+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=
-+NEXT_PUBLIC_FIREBASE_PROJECT_ID=
-+
-+# Optional
-+MAINTENANCE_EMAIL=
-+OPENAI_API_KEY=
-+
 
-```
-
-
-
-
-
-**Diff:**
-```diff
---- c:\Users\infin\documents\github\freelancerSite2025\.env.example
-+++ c:\Users\infin\documents\github\freelancerSite2025\.env.example
-@@ -0,0 +1,27 @@
-+# Example env file for local dev. Copy to .env.local and fill values.
-+
-+# Stripe Embedded Checkout
-+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
-+STRIPE_SECRET_KEY=sk_test_...
-+STRIPE_WEBHOOK_SECRET=whsec_...
-+ONE_TIME_PRICE_ID=price_...
-+SUBSCRIPTION_PRICE_ID_MONTHLY=price_monthly_...
-+SUBSCRIPTION_PRICE_ID_ANNUAL=price_annual_...
-+# For success/cancel absolute URLs in hosted flows (not needed for embedded)
-+VERCEL_PROJECT_URL=http://localhost:3000
-+
-+# Firebase Admin (server)
-+FIREBASE_PROJECT_ID=your-project-id
-+FIREBASE_CLIENT_EMAIL=firebase-adminsdk-abc@your-project-id.iam.gserviceaccount.com
-+# IMPORTANT: Encode newlines as \n in the private key
-+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
-+
-+# Firebase Client (browser)
-+NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSy...
-+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
-+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
-+
-+# Optional
-+MAINTENANCE_EMAIL=ops@example.com
-+OPENAI_API_KEY=
-+
 
 ```
 
