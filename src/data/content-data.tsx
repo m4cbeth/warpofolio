@@ -175,3 +175,43 @@ export const testimonials: Testimonial[] = [
     role: "President, Boutique Calgary-based Finance Firm",
   },
 ];
+
+// ---------services page--------------
+export type ServicesPage = {
+    heading: string;
+    sections: ServiceSection[];
+}
+export type ServiceSection = {
+    h1: string;
+    h2: string;
+    body: string;
+    img: string;
+}
+export const servicespage = {
+    heading: "Services",
+    sections: [],
+}
+const quickWinSection: ServiceSection = {
+    h1: "",
+    h2: "",
+    body: "",
+    img: "",
+}
+const seoSection: ServiceSection = {
+    h1: "",
+    h2: "",
+    body: "",
+    img: "",
+}
+const copywritingSection: ServiceSection = {
+    h1: "",
+    h2: "",
+    body: "",
+    img: "",
+}
+const contentSection: ServiceSection = {
+    h1: "",
+    h2: "",
+    body: "",
+    img: "",
+}
