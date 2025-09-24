@@ -187,35 +187,36 @@ export type ServiceSection = {
     body: string;
     img: string;
 }
-export const servicespage = {
-    heading: "Services",
-    sections: [],
-}
+
 const quickWinSection: ServiceSection = {
     h1: "Fix Major Issues First",
     h2: "No strategy survives a broken foundation",
     body: "Before we talk about scaling your reach or building a long-term growth plan, we fix the obvious roadblocks. For advisors, that usually means websites that are slow, outdated, or confusing to navigate. Think broken links, clunky mobile layouts, or compliance disclaimers buried where no one can find them. These are simple fixes—but until they’re addressed, no amount of marketing will matter. Quick wins build trust, momentum, and a platform you can actually grow from.",
-    img: "",
+    img: "/chart-screen.jpg",
 }
 
 const seoSection: ServiceSection = {
     h1: "Holistic <em>Internet</em> Optimization",
     h2: "SEO has always been a buzzword",
     body: "Search optimization has never been about tricking algorithms—it’s about proving relevance. For advisors, that means publishing content investors actually search for, and making sure your site’s structure and metadata don’t get in the way. Do both, and you get more than rankings. You get discovery. You become the answer when clients are asking the hard questions.",
-    img: "",
+    img: "/brain-digital.jpg",
 }
-
 
 const copywritingSection: ServiceSection = {
     h1: "Convinced Yet?",
     h2: "The right words turn prospects into clients",
     body: "Advisors are in the trust business. Prospects don’t judge you by your portfolio—they judge you by how clearly you explain it. That’s copywriting. Most advisor websites read like compliance documents: safe, vague, and instantly forgettable. We flip that script. By pairing sharp, compliant messaging with design, your site becomes persuasive, not just pretty. It’s the difference between someone closing the tab and someone booking a call.",
-    img: "",
+    img: "/lightning.jpg",
 }
 
 const contentSection: ServiceSection = {
     h1: "Content Is Your Compounding Interest",
     h2: "The authority you build online compounds, just like capital",
     body: "When advisors consistently publish valuable insights, they stop chasing prospects and start attracting them. Every article, explainer, or market update builds authority. Over time, the search engines notice—and so do investors. The result is a self-reinforcing loop: your content ranks, your credibility grows, and new opportunities come to you. In the noise of financial advice online, content is how you rise above and stay there.",
-    img: "",
+    img: "/plant.jpg",
+}
+
+export const servicespage: ServicesPage = {
+    heading: "Services",
+    sections: [quickWinSection, seoSection, copywritingSection, contentSection],
 }

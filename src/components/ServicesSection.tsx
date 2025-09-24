@@ -10,18 +10,18 @@ function ServiceCard({ item }: { item: ServiceItem }) {
       whileInView="animate"
       viewport={{ once: false, margin: "-80px" }}
       transition={sectionTransition}
-      className="hover:cursor-pointer group rounded-xl border border-slate-200 bg-white  p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
+      className="hover:cursor-pointer relative group rounded-xl border border-slate-200 bg-white  p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
     >
-      <a href={`${item.href}`}>
-        <div className="flex h-10 w-10 items-center justify-center rounded-md bg-slate-900 text-white transition group-hover:scale-110 dark:bg-white dark:text-slate-900">
-          {item.icon}
-        </div>
-        <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">{item.title}</h3>
-        <p className="mt-2 text-md text-slate-700 dark:text-slate-300">{item.desc}</p>
-        <div className="mt-4 text-xs font-medium text-slate-500 opacity-0 transition group-hover:opacity-100 dark:text-slate-400">
-          Learn more →
-        </div>
+      <a href={`${item.href}`}><span className="absolute inset-0"></span>
       </a>
+      <div className="flex h-10 w-10 items-center justify-center rounded-md bg-slate-900 text-white transition group-hover:scale-110 dark:bg-white dark:text-slate-900">
+        {item.icon}
+      </div>
+      <h3 className="mt-4 text-lg font-semibold text-slate-900 dark:text-white">{item.title}</h3>
+      <p className="mt-2 text-md text-slate-700 dark:text-slate-300">{item.desc}</p>
+      <div className="mt-4 text-xs font-medium text-slate-500 opacity-0 transition group-hover:opacity-100 dark:text-slate-400">
+        Learn more →
+      </div>
     </motion.div>
   );
 }
