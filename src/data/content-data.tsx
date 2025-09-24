@@ -104,7 +104,7 @@ export const reasonsNames = [
   "Blueprints",
   "Pathways to Growth"
 ]
-const extra = [
+export const extra = [
   "Faster Sites, Stronger Impressions",
 ]
 export type Reasons = {

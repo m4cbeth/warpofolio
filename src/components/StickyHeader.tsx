@@ -14,9 +14,9 @@ export function StickyHeader() {
           <span className="sr-only">JW</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
-          <a href="/#home" className="text-sm hover:text-slate-900/80 dark:hover:text-slate-100/80">
+          <Link href="/#home" className="text-sm hover:text-slate-900/80 dark:hover:text-slate-100/80">
             Home
-          </a>
+          </Link>
           <a href="/services" className="text-sm hover:text-slate-900/80 dark:hover:text-slate-100/80">
             Services
           </a>

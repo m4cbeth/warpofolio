@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { fadeIn, fadeUp, sectionTransition } from "@/lib/animations";
-import { ProblemPoint } from "@/data/content-data";
 import { Whoami } from "@/data/content-data";
 import Image from "next/image";
 
