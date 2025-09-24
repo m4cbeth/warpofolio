@@ -2,7 +2,7 @@ import { FaBluesky, FaGithubAlt, FaLinkedinIn } from "react-icons/fa6";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 py-10 dark:border-slate-800">
+    <footer className="py-10 border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
@@ -20,7 +20,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-slate-900 dark:text-white">Quick Links</h4>
             <ul className="mt-3 space-y-2 text-sm">
               <li>
-                <a href="#home" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+                <a href="/" className="text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
                   Home
                 </a>
               </li>

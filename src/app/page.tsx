@@ -3,7 +3,7 @@
 import { StickyHeader } from "@/components/StickyHeader";
 import { Hero } from "@/components/Hero";
 import { ServicesSection } from "@/components/ServicesSection";
-import { ReasonsSection } from "@/components/ReasonsSection";
+import { ReasonsSection } from "@/components/ProvenSection";
 import { Testimonials } from "@/components/Testimonials";
 import { CtaBanner } from "@/components/CtaBanner";
 import { ContactSection } from "@/components/ContactSection";
@@ -17,8 +17,8 @@ export default function Page() {
     <main>
       <Hero points={problemPoints} />
       <WhoAMI whoamiBlurb={whoamiBlurb} />
-      <ServicesSection items={services} />
       <ReasonsSection items={reasons} />
+      <ServicesSection items={services} />
       <Testimonials items={testimonials} />
       <CtaBanner />
       <ContactSection />

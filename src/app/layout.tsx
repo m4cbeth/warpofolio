@@ -83,11 +83,11 @@ export default function RootLayout({
         <Script id="ld-json" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(jsonLd)}
         </Script>
-        <div className="min-h-dvh bg-white text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
-              <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-              <StickyHeader />
-              {children}
-              <Footer />
+        <div className="min-h-fit bg-gray-200 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+          <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+          <StickyHeader />
+          {children}
+          <Footer />
         </div>
         <Analytics />
         <SpeedInsights />

@@ -25,8 +25,12 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
           transition={sectionTransition}
           className="text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">What clients say</h2>
-          <p className="mt-3 text-slate-700 dark:text-slate-300">Short, specific testimonials build trust and credibility.</p>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            What you'll be saying
+          </h2>
+          <p className="mt-3 text-slate-700 dark:text-slate-300">
+            Impressions shared by those I’ve worked with.
+          </p>
         </motion.div>
 
         <div className="relative mx-auto mt-10 max-w-3xl">

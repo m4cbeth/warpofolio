@@ -1,36 +1,20 @@
 import { ReactNode } from "react";
 
-
-export type Reasons = {
-  title: string;
-  result: string;
-  explain: string;
-  image: string;
-  imgalt: string;
-};
-
-export type ServiceItem = {
-  title: string;
-  desc: string;
-  icon: ReactNode;
-  href: string;
-};
-
-export type ProblemPoint = {
-  question: string;
-  blurb: string;
-}
-
+// --------------------------WHOAMI------------------------------------------
 export type Whoami = {
   himynameis: string;
   other: string;
 }
-
 export const whoamiBlurb: Whoami = {
   himynameis: "My name is Jaren Whitehouse, former Investment Associate, and life long web developer",
-  other: "As a formerly registered IIROC Investment Associate, I understand how challenging it is to get prospects to notice and engage with your business. I help investment advisors and portfolio managers modernize their online presence — from professional, interactive websites to content and ad strategies — so your practice becomes visible, approachable, and growing",
+  other: "As a formerly CIRO registered Investment Associate, I understand how challenging it is to get prospects to notice and engage with your business. I help investment advisors and portfolio managers modernize their online presence — from professional, interactive websites to content and ad strategies — so your practice becomes visible, approachable, and growing",
 }
 
+// --------------------------PROBLEMS------------------------------------------
+export type ProblemPoint = {
+  question: string;
+  blurb: string;
+}
 export const problemPoints: ProblemPoint[] = [
   { 
     question: "Load instantly, from any device?",
@@ -50,20 +34,28 @@ export const problemPoints: ProblemPoint[] = [
   },
 ];
 
+// --------------------------SERVICES------------------------------------------
+export type ServiceItem = {
+  title: string;
+  desc: string;
+  icon: ReactNode;
+  href: string;
+};
 export const services: ServiceItem[] = [
   {
     title: "Quick Win Website Fixes",
-    desc: "Homepage refresh, booking form install, analytics setup.",
+    desc: "Get a modern, fast, interactive, mobile-friendly site, with analytics, where everything works seamlessly.",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M4 6h16M4 12h16M4 18h10" strokeLinecap="round" />
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
       </svg>
     ),
     href: "/services",
   },
   {
     title: "SEO & Visibility",
-    desc: "Keyword optimization, Local SEO for Calgary, Google My Business tune-up.",
+    desc: "Optimize your site for search and AI, improve your visibility in Calgary, and get your content seen by the right clients.",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="11" cy="11" r="7" />
@@ -74,7 +66,7 @@ export const services: ServiceItem[] = [
   },
   {
     title: "Conversion Copywriting",
-    desc: "Sharper headlines, CTA rewrites, email tripwires.",
+    desc: "Turn your site from a static brochure into a client funnel. Headlines, CTAs, and page flow all built to book meetings.",
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M4 5h16M7 9h10M7 13h10M7 17h7" strokeLinecap="round" />
@@ -83,17 +75,19 @@ export const services: ServiceItem[] = [
     href: "/services",
   },
   {
-    title: "Funnel Add-ons",
-    desc: "Lead magnets, review widgets, waitlist builders.",
+    title: "Content Strategy",
+    desc: "Position yourself as the trusted voice in your field by building authority through insightful content that converts readers into clients.",
+    
     icon: (
       <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M4 4h16l-6 8v6l-4-2v-4L4 4z" />
       </svg>
     ),
     href: "/services",
-  },
+},
 ];
 
+// --------------------------REASONS------------------------------------------
 export const reasonsNames = [
   "Opportunities",
   "Growth Paths",
@@ -110,22 +104,27 @@ export const reasonsNames = [
   "Blueprints",
   "Pathways to Growth"
 ]
-
 const extra = [
   "Faster Sites, Stronger Impressions",
 ]
-
+export type Reasons = {
+  title: string;
+  result: string;
+  explain: string;
+  image: string;
+  imgalt: string;
+};
 export const reasons: Reasons[] = [
   { 
-    title: "⚡ Lighting Fast Sites, Stronger Impressions", 
-    result: "→ visitors stick, bounce rates drops", 
+    title: "⚡ Lighting Fast Sites", 
+    result: "→ Stronger First Impressions", 
     explain: "Outdated platforms slow you down. Modern builds not only cut page weight but also give visitors (and Google) the instant experience they expect.",
     image: "/lightning.jpg",
     imgalt: "Lightning bolt representing fast-loading websites",
   },
   { 
     title: "🤖 SEO and AI Catering", 
-    result: "→ Become the Professional AIs suggest to prospects", 
+    result: "→ Become the Professional AIs suggest", 
     explain: "As search shifts to AI, the voices that win are the ones with authority. Long-form, useful content establishes you as the expert algorithms recommend first." ,
     image: "/brain-digital.jpg",
     imgalt: "Digital brain symbolizing SEO and AI-driven content strategy",
@@ -141,8 +140,7 @@ export const reasons: Reasons[] = [
   },
 ];
 
-
-
+// --------------------------TESTIMONIALS------------------------------------------
 export type Testimonial = {
   quote: string[];
   name: string;
@@ -152,11 +150,11 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       [
-        "Working with JW was seamless.", 
+        "Working with Jaren was seamless.", 
         "Our site looks modern and we’re seeing more booked calls already."
       ],
-    name: "A.P.",
-    role: "Owner, Operations Company",
+    name: "M.T.",
+    role: "Owner, Calgary-based Retail Company",
   },
   {
     quote:
@@ -164,8 +162,8 @@ export const testimonials: Testimonial[] = [
         "He found quick wins we missed.", 
         "The booking form and copy changes made a clear difference."        
       ],
-    name: "S.L.",
-    role: "Operations, Investment Firm",
+    name: "R.L.",
+    role: "Calgary-based Portofolio Manager, Major Canadian Investment Firm",
   },
   {
     quote:
@@ -173,7 +171,7 @@ export const testimonials: Testimonial[] = [
         "Practical SEO, not fluff.", 
         "Local visibility improved within weeks — highly recommend."
       ],
-    name: "M.R.",
-    role: "Founder, Boutique Finance Firm",
+    name: "B.P",
+    role: "President, Boutique Calgary-based Finance Firm",
   },
 ];
