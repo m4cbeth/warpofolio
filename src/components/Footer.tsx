@@ -1,4 +1,4 @@
-import { FaBluesky, FaGithubAlt, FaLinkedinIn } from "react-icons/fa6";
+import { FaBluesky, FaGithubAlt, FaLinkedinIn, FaX } from "react-icons/fa6";
 import EmailLink from "./EmailLink";
 
 export function Footer() {
@@ -60,6 +60,15 @@ export function Footer() {
                 className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-slate-200 text-slate-600 transition hover:bg-slate-50 dark:border-slate-800 dark:text-slate-300 dark:hover:bg-slate-900"
               >
                 <FaGithubAlt />
+              </a>
+              <a
+                href="https://x.com/JarenWhitehouse"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="X"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-slate-200 text-slate-600 transition hover:bg-slate-50 dark:border-slate-800 dark:text-slate-300 dark:hover:bg-slate-900"
+              >
+                <FaX />
               </a>
             </div>
           </div>
