@@ -54,7 +54,7 @@ export default function GetStartedModal() {
                             <div className="w-full max-w-md rounded-lg bg-white p-6 shadow-xl ring-1 ring-black/5 dark:bg-slate-950 dark:ring-white/10">
                                 <div className="flex items-center justify-between">
                                     <h2 className="text-lg italic font-semibold text-slate-900 dark:text-white">
-                                        Let's Get Started
+                                        Let’s Get Started
                                     </h2>
                                     <button
                                         type="button"
