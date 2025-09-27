@@ -17,20 +17,20 @@ export type ProblemPoint = {
 }
 export const problemPoints: ProblemPoint[] = [
   { 
-    question: "Load instantly, from any device?",
-    blurb: "example",
+    question: "Make it clear you’re a fiduciary?",
+    blurb: "If your independence and duty to act in clients’ best interest isn’t obvious in seconds, prospects may assume you’re just like everyone else."
   },
   { 
-    question: "Have a low bounce rate?",
-    blurb: "example",
+    question: "Show why transparency matters?",
+    blurb: "Clients want to know how you’re different. Explaining your fee structure and independence builds confidence before the first conversation."
   },
   { 
-    question: "Get consistent traffic?",
-    blurb: "example",
+    question: "Educate instead of just sell?",
+    blurb: "Advisors who teach, publish, and share insights attract clients who value guidance—not just performance promises."
   },
   { 
-    question: "Connect you with new prospects?",
-    blurb: "example",
+    question: "Build trust?",
+    blurb: "Your website should work like an introduction: approachable, credible, and confidence-building—so the first meeting feels like a continuation, not a cold start."
   },
 ];
 

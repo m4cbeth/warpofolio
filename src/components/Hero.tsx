@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
 import { YourQuickChecklist } from "@/components/ProblemPoints";
 import { ProblemPoint } from "@/data/content-data";
+import GetStartedModal from "./GetStartedModal";
 
 export function Hero({ points }: { points: ProblemPoint[] }) {
   return (
@@ -23,25 +24,24 @@ export function Hero({ points }: { points: ProblemPoint[] }) {
             transition={sectionTransition}
             className="text-balance text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl dark:text-white"
           >
-            Fix Your Website,<br/> Win More Clients.
+            Become the professional AI recommends
           </motion.h1>
           <p className="mx-auto mt-4 max-w-2xl pt-5 text-pretty text-2xl text-slate-700 dark:text-slate-300">
-            Most Calgary financial advisors have outdated sites.
+            AI, investors, and prospects all look for the same thing: 
+            <br/>
+            clarity, independence, and trust. 
+            <br/>
+            Let’s make sure your website communicates that.
           </p>
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-slate-700 dark:text-slate-300">
             I help you modernize, optimize, and convert visitors
             into booked calls.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-md bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
-            >
-              Book a Free Site Audit
-            </a>
+            <GetStartedModal />
             <a
               href="#services"
-              className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+              className="ihnline-flex hidden items-center justify-center rounded-md border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
             >
               Explore Services
             </a>

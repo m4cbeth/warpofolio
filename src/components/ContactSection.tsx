@@ -56,7 +56,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20 scroll">
+    <section id="contact" className="border-t border-slate-100 dark:border-slate-900 md:py-20 scroll">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <motion.div
           variants={fadeUp}

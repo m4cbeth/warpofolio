@@ -73,11 +73,12 @@ export function Footer() {
             </div>
           </div>
         </div>
-
       </div>
-        <div className="text-center mt-8 max-w-7xl px-4 md:px-6">
-          <p className="text-xs text-slate-500 dark:text-slate-400">© {new Date().getFullYear()} JW Web & SEO. All rights reserved.</p>
-        </div>
+
+      <div className="text-center mx-auto mt-8 max-w-7xl px-4 md:px-6">
+        <p className="text-xs text-slate-500 dark:text-slate-400">© {new Date().getFullYear()} JW Web & SEO. All rights reserved.</p>
+      </div>
+
     </footer>
   );
 }
