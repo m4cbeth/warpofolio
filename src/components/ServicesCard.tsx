@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
-import Image from "next/image";
+// import Image from "next/image";
 import type { ServiceSection } from "@/data/content-data";
 
 export function ServicesCard({ section }: { section: ServiceSection }) {

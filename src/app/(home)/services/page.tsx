@@ -14,7 +14,7 @@ export default function ServicesPage() {
                     </div>
                     <div className="mt-10 grid gap-6">
                         {servicespage.sections.map((section, idx) => (
-                            <div className="relative">
+                            <div key={`${section}+${idx}`} className="relative">
                                 <div className="absolute z-10 mt-5 ml-10 text-9xl font-black opacity-50 text-white">
                                     {idx+1}
                                 </div>

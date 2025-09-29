@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { fadeUp, sectionTransition } from "@/lib/animations";
 import EmailLink from "./EmailLink";
 
 type FormData = {
