@@ -26,33 +26,35 @@ export function ReasonsSection({ items }: { items: Reasons[] }) {
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((improvement) => (
-            <motion.article
-              key={improvement.title}
-              variants={fadeUp}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: false, margin: "-80px" }}
-              transition={sectionTransition}
-              className="rounded-xl border hoverTHISNEEDSWRAPPER:glow-card border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-            >
-             <div className="relative w-full aspect-[16/9] rounded-md overflow-hidden">
-              <Image
-                src={improvement.image}
-                alt={improvement.imgalt}
-                fill
-                className="object-cover"
-              />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-slate-950 dark:text-white">
-                {improvement.title} 
-                <div className="text-slate-600 dark:text-slate-400">
-                  {improvement.result}
+            <div className="eminem relative bg-amber-500/0 glow-card ">
+              <motion.article
+                key={improvement.title}
+                variants={fadeUp}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: false, margin: "-80px" }}
+                transition={sectionTransition}
+                className="rounded-xl border relative hover:scale-105 transition border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+              >
+               <div className="relative w-full aspect-[16/9] rounded-md overflow-hidden">
+                <Image
+                  src={improvement.image}
+                  alt={improvement.imgalt}
+                  fill
+                  className="object-cover"
+                />
                 </div>
-              </h3>
-              <p className="mt-2 text-md text-slate-950 dark:text-slate-300">
-                {improvement.explain}
-              </p>
-            </motion.article>
+                <h3 className="mt-4 text-lg font-semibold text-slate-950 dark:text-white">
+                  {improvement.title}
+                  <div className="text-slate-600 dark:text-slate-400">
+                    {improvement.result}
+                  </div>
+                </h3>
+                <p className="mt-2 text-md text-slate-950 dark:text-slate-300">
+                  {improvement.explain}
+                </p>
+              </motion.article>
+            </div>
           ))}
         </div>
       </div>
