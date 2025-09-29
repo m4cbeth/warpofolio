@@ -29,7 +29,9 @@ export function Hero({ points }: { points: ProblemPoint[] }) {
           <p className="mx-auto mt-4 max-w-2xl pt-5 text-pretty text-2xl text-slate-700 dark:text-slate-300">
             AI, investors, and prospects all look for the same thing: 
             <br/>
-            clarity, independence, and trust. 
+            <span className="font-black">
+              clarity, independence, and trust.
+            </span>
             <br/>
             Let’s make sure your website communicates that.
           </p>

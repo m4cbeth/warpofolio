@@ -16,8 +16,12 @@ export function ReasonsSection({ items }: { items: Reasons[] }) {
           transition={sectionTransition}
           className="mx-auto max-w-2xl text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Proven Approaches</h2>
-          <p className="mt-3 text-slate-950 dark:text-slate-300">Simple, focused improvements lead to real outcomes</p>
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Proven Approaches
+          </h2>
+          <p className="mt-3 text-slate-950 dark:text-slate-300">
+            Simple, focused improvements lead to real outcomes
+          </p>
         </motion.div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -29,7 +33,7 @@ export function ReasonsSection({ items }: { items: Reasons[] }) {
               whileInView="animate"
               viewport={{ once: false, margin: "-80px" }}
               transition={sectionTransition}
-              className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+              className="rounded-xl border hover:glow-card border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
             >
              <div className="relative w-full aspect-[16/9] rounded-md overflow-hidden">
               <Image

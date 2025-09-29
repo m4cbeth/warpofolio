@@ -81,6 +81,11 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --synth1: #023788;
+  --synth2: #650D89;
+  --synth3: #920075;
+  --synth4: #F6019D;
+  --synth5: #D40078;
 }
 
 .dark {
@@ -116,6 +121,38 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+
+@layer components {
+  .glow-card {
+    position: relative;
+    z-index: 0;
+  }
+  .glow-card::before{
+    filter: blur(5rem);
+    opacity: 50%;
+  }
+  .glow-card::after {
+    filter: blur(2rem);
+    opacity: 10%;
+  }
+  .glow-card::after,
+  .glow-card::before {
+    content: "";
+    position: absolute;
+    inset: -.5rem;
+    background: conic-gradient(from 180deg, #06b6d4, #3b82f6, #9333ea, #06b6d4);
+    border-radius: inherit;
+    z-index: -1;
+  }
+}
+
 
 @layer base {
   html {

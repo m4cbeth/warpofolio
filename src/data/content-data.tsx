@@ -26,13 +26,43 @@ export const problemPoints: ProblemPoint[] = [
   },
   { 
     question: "Educate instead of just sell?",
-    blurb: "Advisors who teach, publish, and share insights attract clients who value guidance—not just performance promises."
+    blurb: "Advisors who teach, publish, and share insights attract clients who value guidance—not just performance promises. Education positions you as a trusted authority, not just another salesperson."
   },
   { 
     question: "Build trust?",
     blurb: "Your website should work like an introduction: approachable, credible, and confidence-building—so the first meeting feels like a continuation, not a cold start."
   },
 ];
+export const universalProblemPoints: ProblemPoint[] = [
+  { 
+    question: "Make it clear what sets you apart?",
+    blurb: "If visitors can’t tell in seconds why you’re different, they’ll assume you’re the same as everyone else. Your site should highlight your strengths before prospects ever dig deeper."
+  },
+  { 
+    question: "Show prospects the value you provide?",
+    blurb: "People don’t just want services—they want to understand how you solve their problems. A site that communicates your value helps turn visitors into qualified conversations."
+  },
+  { 
+    question: "Educate instead of just sell?",
+    blurb: "Professionals who share insights and guidance earn trust faster. Education builds authority and credibility, while hard selling pushes prospects away before you even meet."
+  },
+  { 
+    question: "Build trust before you ever get on a call?",
+    blurb: "Your website should work like a warm introduction: approachable, informative, and confidence-building. When trust starts online, every call begins on stronger footing."
+  },
+];
+// //------- HERO -------------
+// export type HeroCopy = {
+//   title: string;
+//   biline: string[];
+//   body: string;
+// }
+// export const heroCopy: HeroCopy = {
+//   title: "",
+//   biline: [],
+//   body: "",
+// }
+
 
 // --------------------------SERVICES------------------------------------------
 export type ServiceItem = {
