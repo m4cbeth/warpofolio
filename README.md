@@ -1,6 +1,8 @@
 # README
 
-This is the source code for my sales first portfolio site. Realizing I've had years of experience in both sales in the financial services industry, and specific experience managing websites for that sector, I thought I might as well put those arguments into action for myself and see where it goes.
+This is the source code for my sales first portfolio site*. Realizing I've had years of experience in both sales in the financial services industry, and specific experience managing websites for that sector, I thought I might as well put those arguments into action for myself and see where it goes.
+
+(Yes, not my "first sales portfolio...", but yes, "sales first". I think this is the second time I've reread that and gone, "why in the world am I saying this is my first?". A wonderful example of the importance of copy hahahahahahahaha.)
 
 For a reminder to self and the future:
 
