@@ -35,19 +35,19 @@ export const problemPoints: ProblemPoint[] = [
 ];
 export const universalProblemPoints: ProblemPoint[] = [
   { 
-    question: "Make it clear what sets you apart?",
+    question: "Set you apart?",
     blurb: "If visitors can’t tell in seconds why you’re different, they’ll assume you’re the same as everyone else. Your site should highlight your strengths before prospects ever dig deeper."
   },
   { 
-    question: "Show prospects the value you provide?",
+    question: "Highlight your value?",
     blurb: "People don’t just want services—they want to understand how you solve their problems. A site that communicates your value helps turn visitors into qualified conversations."
   },
   { 
-    question: "Educate instead of just sell?",
+    question: "Educate, not just sell?",
     blurb: "Professionals who share insights and guidance earn trust faster. Education builds authority and credibility, while hard selling pushes prospects away before you even meet."
   },
   { 
-    question: "Build trust before you ever get on a call?",
+    question: "Build trust?",
     blurb: "Your website should work like a warm introduction: approachable, informative, and confidence-building. When trust starts online, every call begins on stronger footing."
   },
 ];

@@ -33,7 +33,7 @@ export function ReasonsSection({ items }: { items: Reasons[] }) {
               whileInView="animate"
               viewport={{ once: false, margin: "-80px" }}
               transition={sectionTransition}
-              className="rounded-xl border hover:glow-card border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+              className="rounded-xl border hoverTHISNEEDSWRAPPER:glow-card border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
             >
              <div className="relative w-full aspect-[16/9] rounded-md overflow-hidden">
               <Image

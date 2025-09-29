@@ -7,7 +7,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { CtaBanner } from "@/components/CtaBanner";
 import { ContactSection } from "@/components/ContactSection";
 import { WhoAMI } from "@/components/WhoAmI";
-import { problemPoints, services, reasons, testimonials, whoamiBlurb, universalProblemPoints } from "@/data/content-data";
+import {  services, reasons, testimonials, whoamiBlurb, universalProblemPoints } from "@/data/content-data";
 import { motion } from 'framer-motion';
 
 
