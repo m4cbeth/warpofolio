@@ -14,11 +14,11 @@ export function ServicesCard({ section }: { section: ServiceSection }) {
       whileInView="animate"
       viewport={{ once: false, margin: "-80px" }}
       transition={sectionTransition}
-      className="mb-10 rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+      className="mb-10 rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 glow-card"
     >
 
       <div
-        className="md: relative w-full py-10 bg-center bg-cover"
+        className="relative w-full py-10 bg-center bg-cover"
         style={{ backgroundImage: `url('${section.img}')` }}
       >
         {/* Black overlay */}

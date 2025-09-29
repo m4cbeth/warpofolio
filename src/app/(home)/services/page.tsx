@@ -23,8 +23,11 @@ export default function ServicesPage() {
                         ))}
                     </div>
                     <div key={"cta"} className="relative">
-                        <div className=" z-10 mt-5 ml-10 text-9xl font-black opacity-50">
+                        <div className=" z-10 mt-5 ml-10 text-9xl font-black opacity-50 bordder border-white">
                             5
+                        </div>
+                        <div className="pl-5 pt-5 text-6xl absolute inset-0 bordder border-white text-white opacity-100 z-10">
+                            get in touch
                         </div>
                         <ContactForm />
                     </div>
