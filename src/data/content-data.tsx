@@ -248,7 +248,7 @@ const copywritingSection: ServiceSection = {
 }
 
 const contentSection: ServiceSection = {
-    h1: "Content Is Your Compounding Interest",
+    h1: "Content Is You Compound Interest",
     h2: "The authority you build online compounds, just like capital",
     id: "content",
     body: "When advisors consistently publish valuable insights, they stop chasing prospects and start attracting them. Every article, explainer, or market update builds authority. Over time, the search engines notice—and so do investors. The result is a self-reinforcing loop: your content ranks, your credibility grows, and new opportunities come to you. In the noise of financial advice online, content is how you rise above and stay there.",

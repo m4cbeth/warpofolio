@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion"
 import { useEffect, useState } from "react"
-import { ContactSection } from "./ContactSection"
+import { ContactForm } from "./ContactForm"
 
 export default function GetStartedModal() {
     const [isVisible, setIsVisible] = useState(false)
@@ -50,12 +50,14 @@ export default function GetStartedModal() {
                             initial={{ opacity: 0, scale: 0.95, y: 8 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.95, y: 8 }}
+                            onClick={() => setIsVisible(false)}
                         >
-                            <div className="w-full max-w-md rounded-lg bg-white p-6 shadow-xl ring-1 ring-black/5 dark:bg-slate-950 dark:ring-white/10">
+                            <div
+                                className="w-full max-w-xl rounded-lg bg-white p-5 shadow-xl ring-1 ring-black/5 dark:bg-slate-900 dark:ring-white/10"
+                                onClick={(e) => e.stopPropagation()}
+                            >
                                 <div className="flex items-center justify-between">
-                                    <h2 className="text-lg italic font-semibold text-slate-900 dark:text-white">
-                                        Let’s Get Started
-                                    </h2>
+                                    <h2 className="text-lg font-semibold text-slate-900 dark:text-white">Get started</h2>
                                     <button
                                         type="button"
                                         aria-label="Close"
@@ -65,31 +67,17 @@ export default function GetStartedModal() {
                                         ✕
                                     </button>
                                 </div>
-                                <div className="mt-4 text-sm text-slate-600 dark:text-slate-300">
-                                    <ContactSection/>
+                                <div className=" text-sm text-slate-600 dark:text-slate-300">
+                                    <ContactForm/>
                                 </div>
                                 <button
-                                        type="button"
-                                        onClick={() => setIsVisible(false)}
-                                        className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700"
-                                    >
-                                        Close
-                                    </button>
-                                <div className="mt-6 flexx hidden justify-end gap-2">
-                                    <button
-                                        type="button"
-                                        onClick={() => setIsVisible(false)}
-                                        className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700"
-                                    >
-                                        Close
-                                    </button>
-                                    <button
-                                        type="button"
-                                        className="inline-flex items-center justify-center rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400 dark:bg:white dark:text-slate-900 dark:hover:bg-slate-200"
-                                    >
-                                        Continue
-                                    </button>
-                                </div>
+                                    type="button"
+                                    onClick={() => setIsVisible(false)}
+                                    className="inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700"
+                                >
+                                    Close
+                                </button>
+                                
                             </div>
                         </motion.div>
                     </>

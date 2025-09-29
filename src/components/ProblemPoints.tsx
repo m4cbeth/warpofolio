@@ -21,7 +21,7 @@ export function YourQuickChecklist({ points }: { points: ProblemPoint[] }) {
             <h2 className=" font-bold text-2xl border-b-2">
               {point.question}
             </h2>
-            <p className="font-thin text-pretty mx-4">
+            <p className="font-thin text-pretty mx-1 sm:ml-3">
               {point.blurb}
             </p>
           </div>

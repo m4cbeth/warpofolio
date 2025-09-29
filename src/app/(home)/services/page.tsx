@@ -1,6 +1,6 @@
 import { servicespage } from "@/data/content-data";
 import { ServicesCard } from "@/components/ServicesCard";
-import { ContactSection } from "@/components/ContactSection";
+import { ContactForm } from "@/components/ContactForm";
 
 export default function ServicesPage() {
     return (
@@ -14,11 +14,19 @@ export default function ServicesPage() {
                     </div>
                     <div className="mt-10 grid gap-6">
                         {servicespage.sections.map((section, idx) => (
-                            <ServicesCard key={idx} section={section} />
+                            <div className="relative">
+                                <div className="absolute z-10 mt-5 ml-10 text-9xl font-black opacity-50 text-white">
+                                    {idx+1}
+                                </div>
+                                <ServicesCard key={idx} section={section} />
+                            </div>
                         ))}
                     </div>
-                    <div className="">
-                        <ContactSection />
+                    <div key={"cta"} className="relative">
+                        <div className=" z-10 mt-5 ml-10 text-9xl font-black opacity-50">
+                            5
+                        </div>
+                        <ContactForm />
                     </div>
                 </div>
             </section>

@@ -30,7 +30,7 @@ export function Hero({ points }: { points: ProblemPoint[] }) {
             AI, investors, and prospects all look for the same thing: 
             <br/>
             <span className="font-black">
-              clarity, independence, and trust.
+              clarity and trust.
             </span>
             <br/>
             Let’s make sure your website communicates that.
