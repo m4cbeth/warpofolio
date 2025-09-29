@@ -33,20 +33,21 @@ export function WhoAMI({whoamiBlurb}: WhoamiProps) {
               {whoamiBlurb.himynameis}
             </motion.h1>
           
-            <div className="mx-auto px-5 mt-4 pb-5 max-w-lg text-left text-lg text-slate-700 dark:text-slate-300">
+            <div className="mx-auto px-5 mt-4 pb-5 max-w-lg text-left text-lg text-slate-700 dark:text-slate-300 ">
               {whoamiBlurb.other}
             </div>
           
           </motion.div>
         </div>
-        <div className="w-80 h-80 overflow-hidden aspect-square rounded-full mr-5">
+        <div className="  bosrder border-white    w-80 h-80 overflow-hidden aspect-square rounded-full mr-5 relative z-0  ">
           <Image
             src="/jarenwhitehouse.jpg"
             alt="Jaren Whitehouse, Calgary based freelance web developer"
             width={500}
             height={500}
-            className="profile-pic rounded-full"
+            className="profile-pic rounded-full z-0"
           />
+          {/* <div className="addbox relative glowing z-20"></div> */}
         </div>        
       </section>
 )}
