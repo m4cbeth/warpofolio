@@ -48,48 +48,54 @@ const Resume: React.FC = () => {
   }
   
   type Experience = {
-    place: string;
-    positions: Position[];
+    title: string;
+    desc: Position;
   }
   type Position = {
-    title: string;
+    timeandplace: string;
     points: string[];
   }
   const experienceData: Experience[] = [
     {
-      place: "NBF",
-      positions: [
+      title: "Fullstack Next.js Developer",
+      desc: 
         {
-          title: "asssociate",
+          timeandplace: "Self Employed · Calgary, AB · 2018 – Present",
           points: [
-            "one",
-            "two",
-            "three",
+            "Built production-ready web applications using Next.js, React, TypeScript, and Tailwind CSS.",
+            "Designed and deployed responsive, accessible UIs with dynamic content and API integration.",
+            "Managed projects end-to-end, from GitHub version control to deployment on Vercel.",
+
           ]
-        },
-        {
-          title: "advise",
-          points: [
-            "one",
-            "two",
-            "three",
-          ]
-        },
-      ]
+        }      
     },
     {
-      place: "Freelance",
-      positions: [
+      title: "Investment Advisor",
+      desc: 
         {
-          title: "",
+          timeandplace: "National Bank Financial · Calgary, AB · Jan 2017 – Sep 2018",
           points: [
-            "one",
-            "one",
-            "one",
+            "Transitioned into advisory role with focus on client acquisition, retention, and education.",
+            "Formalized engagement workflows, ensuring repeatable, measurable, and compliant processes.",
+            "Built lasting client relationships grounded in transparency and authenticity.",
           ]
-        }
-      ]
-    }
+        },
+      
+    },
+    {
+      title: "Investment Associate",
+      desc:
+        {
+          timeandplace: "National Bank Financial · Calgary, AB · Mar 2015 – Jan 2017",
+          points: [
+            "Completed all CSI licensing requirements at accelerated pace while supporting advisors.",
+            "Educated clients on fee-based fiduciary models and modern portfolio theory.",
+            "Building account administration and client onboarding processes from first contact to transfers.",
+            "Automated documentation using HTML/CSS, Puppeteer, and headless PDF rendering."
+          ]
+        },
+    },
+    
   ]
 
   return (
@@ -110,7 +116,7 @@ const Resume: React.FC = () => {
       {/* Summary */}
       <section className="mb-6">
         <HeadingTwo section_name={"Summary"} />
-        <p className=' font-light'>
+        <p className=' font'>
           Full-stack developer fluent in Next.js, React, TypeScript, and Tailwind. 
           Former Investment Professional with 3+ years experience building client acquisition and retention frameworks. 
           I combine financial insight with modern front-end expertise to deliver scalable, polished applications.
@@ -122,32 +128,29 @@ const Resume: React.FC = () => {
         <HeadingTwo section_name={"Experience"} />
 
         {
-          experienceData.map((experience, idx) => {
+          experienceData.map((experience) => {
             return (
               <div className="mb-4">
-                <h3 className="font text-xl">{experience.place}</h3>
-                <p className="text-sm font-thin italic">National Bank Financial · Calgary, AB · Mar 2015 – Sep 2018</p>
+                <h3 className="font text-xl">{experience.title}</h3>
+                <p className="text-sm font-light italic">{experience.desc.timeandplace}</p>
+                <ul className="list-disc list-inside font-light">
+                {experience.desc.points.map((point) => {
+                  return (
+                    <li>{point}</li>                    
+                  )
+                })}
+                </ul>
               </div>
             )
           })
         }
 
 
-          <ul className="list-disc list-inside font-extralight">
-            <li>Developed and refined client acquisition and onboarding processes from first contact to onboarding.</li>
+          {/* <ul className="list-disc list-inside font-extralight">
             <li>Formalized processes into repeatable frameworks ensuring consistency, efficiency, and measurable results.</li>
             <li>Built strong client relationships through structured, reliable workflows.</li>
-          </ul>
+          </ul> */}
 
-        <div className="mb-4">
-          <h3 className="font text-xl">Freelance Web Developer</h3>
-          <p className="text-sm font-thin italic">Self-Employed · Calgary, AB · 2018 – Present</p>
-          <ul className="list-disc list-inside font-extralight">
-            <li>Built production-ready web applications using Next.js, React, TypeScript, and Tailwind CSS.</li>
-            <li>Designed and deployed responsive, accessible UIs with dynamic content and API integration.</li>
-            <li>Managed projects end-to-end, including GitHub version control, deployment, and portfolio presentation.</li>
-          </ul>
-        </div>
       </section>
 
       {/* Skills */}
@@ -164,11 +167,31 @@ const Resume: React.FC = () => {
       </section>
 
       {/* Education */}
-      <section>
+      {/* <section>
         <HeadingTwo section_name={"Education"} />
         <p className="mb-1">Self-taught and bootcamp-style training in modern web development</p>
         <p>Professional development courses in Tailwind CSS and TypeScript</p>
+      </section> */}
+      <section>
+        <HeadingTwo section_name={"Education"} />
+
+        {/* Formal Education */}
+        <div className="mb-4">
+          <h3 className="font text-xl">B.A. Sociology, Minor in Psychology </h3>
+          <p className="text-sm font-thin italic">University of Calgary · Specialization in Criminology · Graduated with Distinction · 2003 – 2012</p>
+        </div>
+
+        {/* Web Development */}
+        <div className="mb-2">
+          <h3 className="font text-xl">Web Development (Self-Taught 1995-Present)</h3>
+          <ul className="list-disc list-inside font-extralight">
+            <li>Extensive experience in HTML, CSS, JavaScript, React, Next.js, and TypeScript.</li>
+            <li>Backend experience, including Node.js, Express, REST APIs, and both SQL and NoSQL databases.</li>
+            <li>Deployed applications on Vercel, Netlify, Render, and Heroku with modern CI/CD workflows.</li>
+          </ul>
+        </div>
       </section>
+
     </div>
   );
 };
