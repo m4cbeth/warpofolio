@@ -6,6 +6,10 @@ For a reminder to self and the future:
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## This App is Deployed on Vercel
+
+Available at [Vercel Platform](https://webdevandseosite.vercel.app/), the source for [www.jarenwhitehouse.com](https://www.jarenwhitehouse.com)
+
 ## Getting Started
 
 First, run the development server:
@@ -32,10 +36,6 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## This App is Deployed on Vercel
-
-Available at [Vercel Platform](https://webdevandseosite.vercel.app/), the source for [www.jarenwhitehouse.com](https://www.jarenwhitehouse.com)
 
 If you need a refresher:
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
