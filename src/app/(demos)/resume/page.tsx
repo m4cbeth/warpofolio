@@ -1,4 +1,5 @@
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { Metadata } from 'next';
 import React, { ReactElement } from 'react';
 import { 
   SiTypescript,
@@ -12,9 +13,20 @@ import {
   SiGit,
   SiCss3,
   SiPostgresql,
+  SiGraphql,
+  SiNodedotjs,
+  SiExpress,
+  SiNetlify,
  } from "react-icons/si";
 
-const Resume: React.FC = () => {
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  }
+}
+export default function Resume(): ReactElement {
 
   type Tech = {
     name: string;
@@ -27,12 +39,17 @@ const Resume: React.FC = () => {
     {name: "TypeScript", icon: <SiTypescript/> },
     {name: "Tailwind", icon: <SiTailwindcss/> },
     {name: "JavaScript", icon: <SiJavascript/> },
+    {name: "Node.js", icon: <SiNodedotjs/> },
+    {name: "Express.js", icon: <SiExpress/> },
     {name: "Git", icon: <SiGit/> },
     {name: "HTML", icon: <SiHtml5/> },
     {name: "CSS", icon: <SiCss3/> },
     {name: "Vercel", icon: <SiVercel/> },
+    {name: "Netlify", icon: <SiNetlify/> },
     {name: "Firebase", icon: <SiFirebase/> },
     {name: "PostgreSQL", icon: <SiPostgresql/> },
+    {name: "GraphQL", icon: <SiGraphql/> },
+        
     // {name: "Stripe", icon: <SiStripe/> },
   ]
 
@@ -130,7 +147,7 @@ const Resume: React.FC = () => {
         {
           experienceData.map((experience) => {
             return (
-              <div className="mb-4">
+              <div key={experience.title} className="mb-4">
                 <h3 className="font text-xl">{experience.title}</h3>
                 <p className="text-sm font-light italic">{experience.desc.timeandplace}</p>
                 <ul className="list-disc list-inside font-light">
@@ -158,8 +175,8 @@ const Resume: React.FC = () => {
         <HeadingTwo section_name={"Technical Skills"} />
         <div className="flex flex-wrap gap-2">
           {tech_exp.map(skill => (
-            <div key={skill.name} className="flex gap-1  p-3 rounded bg-slate-800 text-slate-100 dark:bg-blue-950 text-xl">
-              <div className="">{skill.icon}</div>
+            <div key={skill.name} className="flex gap-1 items-center p-3 rounded bg-slate-800 text-slate-100 dark:bg-blue-950 text-xl">
+              <div className="pr-1">{skill.icon}</div>
               {skill.name}
             </div>
           ))}
@@ -179,6 +196,11 @@ const Resume: React.FC = () => {
         <div className="mb-4">
           <h3 className="font text-xl">B.A. Sociology, Minor in Psychology </h3>
           <p className="text-sm font-thin italic">University of Calgary · Specialization in Criminology · Graduated with Distinction · 2003 – 2012</p>
+          <ul className="list-disc list-inside font-extralight">
+            <li>Completed first-year Computer Science courses in programming (Pascal), UNIX systems, and core computing concepts</li>
+            <li>Also studied linguistics, and philosophy extensively</li>
+          </ul>
+
         </div>
 
         {/* Web Development */}
@@ -196,4 +218,4 @@ const Resume: React.FC = () => {
   );
 };
 
-export default Resume;
+// export default Resume;
