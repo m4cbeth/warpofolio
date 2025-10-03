@@ -4,9 +4,8 @@ import Script from "next/script";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Footer } from "@/components/Footer";
-import { StickyHeader } from "@/components/StickyHeader";
 import { ThemeProvider } from "@/components/theme-provider";
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 
 const geistSans = Geist({
@@ -93,6 +92,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
+        <GoogleAnalytics gaId="G-RPDGXS3WCB"  />
       </body>
     </html>
   );
