@@ -14,7 +14,7 @@ export function ServicesCard({ section }: { section: ServiceSection }) {
       whileInView="animate"
       viewport={{ once: false, margin: "-80px" }}
       transition={sectionTransition}
-      className="mb-10 rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 glow-card"
+      className="mb-10 rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 glow-cardd"
     >
 
       <div

@@ -26,7 +26,7 @@ export function ReasonsSection({ items }: { items: Reasons[] }) {
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((improvement) => (
-            <div key={improvement.title} className="eminem relative bg-amber-500/0 glow-card ">
+            <div key={improvement.title} className="eminem relative bg-amber-500/0 glow-cardd ">
               <motion.article
                 key={improvement.title}
                 variants={fadeUp}
