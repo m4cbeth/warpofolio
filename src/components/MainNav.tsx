@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 type MainNavProps = {
   orientation?: "horizontal" | "vertical";

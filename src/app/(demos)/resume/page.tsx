@@ -153,7 +153,7 @@ export default function Resume(): ReactElement {
                 <ul className="list-disc list-inside font-light">
                 {experience.desc.points.map((point) => {
                   return (
-                    <li>{point}</li>                    
+                    <li key={point}>{point}</li>                    
                   )
                 })}
                 </ul>
