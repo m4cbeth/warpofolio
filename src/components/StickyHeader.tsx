@@ -4,15 +4,17 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { MainNav } from "@/components/MainNav";
 import { JwBadge } from "@/components/jwBadge";
 import Link from "next/link";
+import { useState } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export function StickyHeader() {
+  const [menuOpen, setMenuOpen] = useState(false)
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/60 bg-white/85 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-slate-800 dark:bg-slate-950/85 dark:supports-[backdrop-filter]:bg-slate-950/60">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
 
         {/* BADGE FOR MOBILE, WITH NAV DROPDOWN ON TAP */}
-        <DropdownMenu>
+        <DropdownMenu open={menuOpen} onOpenChange={setMenuOpen}>
           <DropdownMenuTrigger asChild>
             <button type="button" aria-label="Open menu">
               <JwBadge className="block sm:hidden" />
@@ -20,7 +22,7 @@ export function StickyHeader() {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56 p-2">
             {/* Render MainNav vertically inside dropdown */}
-            <MainNav orientation="vertical" />
+            <MainNav orientation="vertical" onLinkClick={() => setMenuOpen(false)} />
           </DropdownMenuContent>
         </DropdownMenu>
 
