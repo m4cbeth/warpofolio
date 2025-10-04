@@ -4,6 +4,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { MainNav } from "@/components/MainNav";
 import { JwBadge } from "@/components/jwBadge";
 import Link from "next/link";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export function StickyHeader() {
   return (
@@ -11,14 +12,24 @@ export function StickyHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
 
         {/* BADGE FOR MOBILE, WITH NAV DROPDOWN ON TAP */}
-        <JwBadge className="block sm:hidden" />
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <button type="button" aria-label="Open menu">
+              <JwBadge className="block sm:hidden" />
+            </button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-56 p-2">
+            {/* Render MainNav vertically inside dropdown */}
+            <MainNav orientation="vertical" />
+          </DropdownMenuContent>
+        </DropdownMenu>
 
         {/*  BADGE FOR NOT MOBILE, LINK TO #HOME */}
         <Link href="/#home">
         <JwBadge className="hidden sm:block " />        
         </Link>
 
-        <div className="flex-1 flex justify-end pr-10">
+        <div className="flex-1 hidden sm:flex justify-end pr-10">
           <MainNav />
         </div>
         <ThemeToggle />
