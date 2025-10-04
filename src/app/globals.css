@@ -2,8 +2,8 @@
 @import "tw-animate-css";
 
 * {
-  /* border: 1px solid black !important;
-  border: 1px solid white !important; */
+  border: 1px solid black !important;
+  border: 1px solid white !important;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -174,24 +174,36 @@
       --gradient-angle: 360deg;
     }
   }
-
-  .glow-card::before {
-    filter: blur(5rem);
-  }
-
-  .glow-card::after {
-    filter: blur(2rem);
-  }
-
-  /* Show on hover */
-  .glow-card:hover::before {
-    opacity: 0.5;
-  }
-
-  .glow-card:hover::after {
-    opacity: 0.1;
-  }
 }
+
+.glow-card::before {
+  filter: blur(5rem);
+}
+
+.glow-card::after {
+  filter: blur(2rem);
+}
+
+/* Show on hover */
+.glow-card:hover::before {
+  opacity: 0.5;
+}
+
+.glow-card:hover::after {
+  opacity: 0.1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @layer base {
@@ -206,11 +218,34 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 .addbox::after {
