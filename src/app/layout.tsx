@@ -80,6 +80,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <GoogleAnalytics gaId="G-RPDGXS3WCB"  />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Script id="ld-json" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(jsonLd)}
@@ -92,7 +95,6 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
-        <GoogleAnalytics gaId="G-RPDGXS3WCB"  />
       </body>
     </html>
   );
