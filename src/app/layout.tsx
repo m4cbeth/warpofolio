@@ -73,12 +73,6 @@ const jsonLd = {
     "Webdev/SEO/copywriter helping Calgary financial advisors modernize, optimize, and convert website traffic into booked calls.",
 };
 
-  // const gtagSnippet = `
-  //   window.dataLayer = window.dataLayer || [];
-  //   function gtag(){dataLayer.push(arguments);}
-  //   gtag('js', new Date());
-  //   gtag('config', 'G-RPDGXS3WCB');
-  // `;
 
 export default function RootLayout({
   children,
@@ -87,22 +81,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <GoogleAnalytics gaId="G-SH89CT3HJG"  />
-
-        {/* <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-RPDGXS3WCB" />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {gtagSnippet}
-        </Script> */}
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPDGXS3WCB"></script> */}
-        {/* <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-RPDGXS3WCB');
-        </script> */}
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Script id="ld-json" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(jsonLd)}
@@ -115,6 +93,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
+        <GoogleAnalytics gaId="G-SH89CT3HJG" />
       </body>
     </html>
   );
