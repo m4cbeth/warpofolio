@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { MdAttachMoney, MdPieChart, MdSavings, MdTrendingUp } from "react-icons/md";
 
 export const metadata: Metadata = {
@@ -59,7 +60,7 @@ export default function DemosPage() {
             style={{ textDecoration: "none" }}
           >
             <div className="relative h-40 w-full overflow-hidden bg-slate-100 dark:bg-slate-900 flex items-center justify-center">
-              <img
+              <Image
                 src={card.img}
                 alt={card.title}
                 className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
