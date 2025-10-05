@@ -212,7 +212,7 @@ export default function RetirementProjectionCalculatorPage() {
               {results.yearsSavingsLast >= 30 && (
                 <li className="text-green-600 dark:text-green-400">• Excellent! You're on track for a comfortable retirement</li>
               )}
-              <li>• Consider maximizing employer 401(k) matching</li>
+              <li>• Consider maximizing employer RRSP matching</li>
               <li>• Review and adjust your asset allocation as you age</li>
             </ul>
           </div>
