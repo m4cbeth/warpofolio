@@ -2,13 +2,16 @@
 
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { MainNav } from "@/components/MainNav";
-import { JwBadge } from "@/components/jwBadge";
+import { JwBadge } from "@/components/JWBadge";
 import Link from "next/link";
 import { useState } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { useAuth } from "@/hooks/useAuth";
+
 
 export function StickyHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const { user, isAuthenticated, isLoading, logout } = useAuth();
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/60 bg-white/85 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-slate-800 dark:bg-slate-950/85 dark:supports-[backdrop-filter]:bg-slate-950/60">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
@@ -31,12 +34,26 @@ export function StickyHeader() {
         <JwBadge className="hidden sm:block " />        
         </Link>
 
+        {/* MAIN NAV */}
         <div className="flex-1 hidden sm:flex justify-end pr-10">
           <MainNav />
         </div>
+
+        {/* USER PROFILE */}
+        {isAuthenticated && (
+          <div className="flex items-center">
+            <p>{user?.name}</p>
+          </div>
+        )}
+
+        {/* LOGOUT BUTTON */}
+        {isAuthenticated && (
+          <button onClick={logout}>Logout</button>
+        )}
+
+        {/* THEME TOGGLE */}
         <ThemeToggle />
-        {/* <div className="hidden">
-        </div> */}
+
       </div>
     </header>
   );

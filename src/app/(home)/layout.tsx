@@ -1,7 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { StickyHeader } from "@/components/StickyHeader";
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
