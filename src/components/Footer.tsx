@@ -1,5 +1,6 @@
 import { FaBluesky, FaGithubAlt, FaLinkedinIn, FaX } from "react-icons/fa6";
 import EmailLink from "./EmailLink";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -70,6 +71,21 @@ export function Footer() {
               >
                 <FaX />
               </a>
+            </div>
+            <div className="flex mt-5 justify-center text-sm text-slate-600 dark:text-slate-400">
+              <div className="">
+                <Link href={"/terms"}>
+                Terms
+                </Link>
+              </div>
+              <div className="px-2">
+                |
+              </div>
+              <div className="">
+                <Link href="/privacy">
+                Privacy
+                </Link>
+              </div>
             </div>
           </div>
         </div>

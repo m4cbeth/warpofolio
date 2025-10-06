@@ -1,8 +1,8 @@
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:text-gray-100 dark:bg-black">
       <div className="max-w-3xl mx-auto px-6 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">Privacy Policy</h1>
         
         <div className="text-sm text-gray-500 mb-8">
           Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
 
         <div className="prose prose-gray max-w-none space-y-8 text-gray-700 leading-relaxed">
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Overview</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Overview</h2>
             <p>
               By using this website, you agree to the collection and use of information in accordance with 
               this Privacy Policy. We are committed to protecting your privacy and being transparent about 
@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Information We Collect</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Information We Collect</h2>
             <p>
               We collect minimal information necessary to provide and improve our services:
             </p>
@@ -38,7 +38,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Cookies & Tracking</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Cookies & Tracking</h2>
             <p>
               We use cookies and similar technologies for basic site functionality and analytics:
             </p>
@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">How We Use Your Information</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">How We Use Your Information</h2>
             <p>We use collected information to:</p>
             <ul className="list-disc pl-6 mt-3 space-y-2">
               <li>Provide and maintain our services</li>
@@ -69,7 +69,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Data Storage & Security</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Data Storage & Security</h2>
             <p>
               Data you enter into our applications is stored locally on your device using browser localStorage. 
               We do not collect, store, or transmit this data to our servers. You are responsible for backing 
@@ -82,7 +82,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Third-Party Services</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Third-Party Services</h2>
             <p>
               We may use third-party analytics services to help us understand site usage. These services 
               collect anonymous, aggregated data and are subject to their own privacy policies.
@@ -90,7 +90,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Your Rights</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Your Rights</h2>
             <p>You have the right to:</p>
             <ul className="list-disc pl-6 mt-3 space-y-2">
               <li>Clear your locally stored data at any time through your browser settings</li>
@@ -100,7 +100,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Children's Privacy</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Children's Privacy</h2>
             <p>
               Our services are not directed to individuals under the age of 13. We do not knowingly collect 
               personal information from children.
@@ -108,7 +108,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Changes to This Policy</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Changes to This Policy</h2>
             <p>
               We may update this Privacy Policy from time to time. Changes will be posted on this page with 
               an updated revision date. Continued use of the site after changes constitutes acceptance of 
@@ -117,7 +117,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Contact</h2>
             <p>
               If you have questions about this Privacy Policy or how we handle your data, please contact 
               us through the information provided on this site.
