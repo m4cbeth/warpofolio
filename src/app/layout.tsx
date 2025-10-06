@@ -7,6 +7,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from "@/components/theme-provider";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { CookieConsent } from "@/components/CookieConsent";
+import { AuthProvider } from "@/components/AuthProvider";
 
 
 const geistSans = Geist({
@@ -87,10 +88,12 @@ export default function RootLayout({
           {JSON.stringify(jsonLd)}
         </Script>
         <ThemeProvider>
-          <div className="min-h-fit bg-gray-200 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
-            <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-            {children}
-          </div>
+          <AuthProvider>
+            <div className="min-h-fit bg-gray-200 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100">
+              <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+              {children}
+            </div>
+          </AuthProvider>
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
