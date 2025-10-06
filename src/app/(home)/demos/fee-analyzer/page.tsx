@@ -1,47 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useAtom } from 'jotai';
+import { 
+  initialInvestmentAtom,
+  monthlyContributionAtom,
+  annualReturnAtom,
+  yearsAtom,
+  feePercentageAtom,
+  feeAnalysisResultsAtom
+} from '@/data/atoms/fee-analyzer-atoms';
 
 export default function InvestmentFeeAnalyzerPage() {
-  const [initialInvestment, setInitialInvestment] = useState(10000);
-  const [monthlyContribution, setMonthlyContribution] = useState(500);
-  const [annualReturn, setAnnualReturn] = useState(7);
-  const [years, setYears] = useState(30);
-  const [feePercentage, setFeePercentage] = useState(1);
-
-  const calculateProjection = () => {
-    const monthlyReturn = annualReturn / 100 / 12;
-    const monthlyFee = feePercentage / 100 / 12;
-    const netMonthlyReturn = monthlyReturn - monthlyFee;
-    
-    let balance = initialInvestment;
-    let totalContributions = initialInvestment;
-    
-    for (let month = 0; month < years * 12; month++) {
-      balance = balance * (1 + netMonthlyReturn) + monthlyContribution;
-      totalContributions += monthlyContribution;
-    }
-    
-    const totalFees = (balance * (feePercentage / 100)) * years;
-    let balanceWithoutFees = initialInvestment;
-    let contributionsWithoutFees = initialInvestment;
-    
-    for (let month = 0; month < years * 12; month++) {
-      balanceWithoutFees = balanceWithoutFees * (1 + monthlyReturn) + monthlyContribution;
-      contributionsWithoutFees += monthlyContribution;
-    }
-    
-    return {
-      finalBalance: Math.round(balance),
-      totalContributions: Math.round(totalContributions),
-      totalGains: Math.round(balance - totalContributions),
-      totalFees: Math.round(totalFees),
-      balanceWithoutFees: Math.round(balanceWithoutFees),
-      feeImpact: Math.round(balanceWithoutFees - balance)
-    };
-  };
-
-  const results = calculateProjection();
+  const [initialInvestment, setInitialInvestment] = useAtom(initialInvestmentAtom);
+  const [monthlyContribution, setMonthlyContribution] = useAtom(monthlyContributionAtom);
+  const [annualReturn, setAnnualReturn] = useAtom(annualReturnAtom);
+  const [years, setYears] = useAtom(yearsAtom);
+  const [feePercentage, setFeePercentage] = useAtom(feePercentageAtom);
+  const [results] = useAtom(feeAnalysisResultsAtom);
 
   return (
     <main className="max-w-4xl mx-auto p-6">
@@ -173,7 +148,7 @@ export default function InvestmentFeeAnalyzerPage() {
             <h3 className="font-semibold mb-2">Key Insights</h3>
             <ul className="text-sm space-y-1">
               <li>• Fees reduced your portfolio by ${results.feeImpact.toLocaleString()}</li>
-              <li>• That’s {((results.feeImpact / results.balanceWithoutFees) * 100).toFixed(1)}% of your potential wealth</li>
+              <li>• That's {((results.feeImpact / results.balanceWithoutFees) * 100).toFixed(1)}% of your potential wealth</li>
               <li>• Consider low-cost index funds (0.1% or less)</li>
             </ul>
           </div>

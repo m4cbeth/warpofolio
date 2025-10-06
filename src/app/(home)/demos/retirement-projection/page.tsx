@@ -1,51 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useAtom } from 'jotai';
+import { 
+  currentAgeAtom,
+  retirementAgeAtom,
+  currentSavingsAtom,
+  monthlyContributionAtom,
+  annualReturnAtom,
+  inflationRateAtom,
+  retirementSpendingAtom,
+  retirementProjectionAtom
+} from '@/data/atoms/retirement-atoms';
 
 export default function RetirementProjectionCalculatorPage() {
-  const [currentAge, setCurrentAge] = useState(30);
-  const [retirementAge, setRetirementAge] = useState(65);
-  const [currentSavings, setCurrentSavings] = useState(25000);
-  const [monthlyContribution, setMonthlyContribution] = useState(500);
-  const [annualReturn, setAnnualReturn] = useState(7);
-  const [inflationRate, setInflationRate] = useState(3);
-  const [retirementSpending, setRetirementSpending] = useState(50000);
-
-  const calculateProjection = () => {
-    const yearsToRetirement = retirementAge - currentAge;
-    const monthlyReturn = annualReturn / 100 / 12;
-    
-    // Calculate retirement savings
-    let retirementSavings = currentSavings;
-    for (let month = 0; month < yearsToRetirement * 12; month++) {
-      retirementSavings = retirementSavings * (1 + monthlyReturn) + monthlyContribution;
-    }
-    
-    // Calculate future value of retirement spending (inflation-adjusted)
-    const futureSpending = retirementSpending * Math.pow(1 + inflationRate / 100, yearsToRetirement);
-    
-    // Calculate how long savings will last
-    const monthlySpending = futureSpending / 12;
-    const monthlyReturnRetirement = annualReturn / 100 / 12;
-    
-    let yearsSavingsLast = 0;
-    let remainingSavings = retirementSavings;
-    
-    while (remainingSavings > monthlySpending && yearsSavingsLast < 50) {
-      remainingSavings = remainingSavings * (1 + monthlyReturnRetirement) - monthlySpending;
-      yearsSavingsLast += 1/12;
-    }
-    
-    return {
-      retirementSavings: Math.round(retirementSavings),
-      futureSpending: Math.round(futureSpending),
-      yearsSavingsLast: Math.round(yearsSavingsLast * 10) / 10,
-      totalContributions: Math.round(currentSavings + (monthlyContribution * yearsToRetirement * 12)),
-      totalGains: Math.round(retirementSavings - (currentSavings + (monthlyContribution * yearsToRetirement * 12)))
-    };
-  };
-
-  const results = calculateProjection();
+  const [currentAge, setCurrentAge] = useAtom(currentAgeAtom);
+  const [retirementAge, setRetirementAge] = useAtom(retirementAgeAtom);
+  const [currentSavings, setCurrentSavings] = useAtom(currentSavingsAtom);
+  const [monthlyContribution, setMonthlyContribution] = useAtom(monthlyContributionAtom);
+  const [annualReturn, setAnnualReturn] = useAtom(annualReturnAtom);
+  const [inflationRate, setInflationRate] = useAtom(inflationRateAtom);
+  const [retirementSpending, setRetirementSpending] = useAtom(retirementSpendingAtom);
+  const [results] = useAtom(retirementProjectionAtom);
 
   return (
     <main className="max-w-6xl mx-auto p-6">
@@ -143,7 +118,7 @@ export default function RetirementProjectionCalculatorPage() {
 
             <div>
               <label className="block font-medium mb-2" htmlFor="retirement-spending">
-                Annual Retirement Spending (Today’s $)
+                Annual Retirement Spending (Today's $)
               </label>
               <input
                 id="retirement-spending"
@@ -210,9 +185,9 @@ export default function RetirementProjectionCalculatorPage() {
                 <li className="text-yellow-600 dark:text-yellow-400">• Your savings should last through retirement</li>
               )}
               {results.yearsSavingsLast >= 30 && (
-                <li className="text-green-600 dark:text-green-400">• Excellent! You’re on track for a comfortable retirement</li>
+                <li className="text-green-600 dark:text-green-400">• Excellent! You're on track for a comfortable retirement</li>
               )}
-              <li>• Consider maximizing employer RRSP matching</li>
+              <li>• Consider maximizing employer 401(k) matching</li>
               <li>• Review and adjust your asset allocation as you age</li>
             </ul>
           </div>

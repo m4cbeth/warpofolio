@@ -1,6 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useAtom } from 'jotai';
+import { 
+  goalsAtom,
+  newGoalAtom,
+  addGoalAtom,
+  removeGoalAtom,
+  totalMonthlySavingsAtom,
+  type Goal
+} from '@/data/atoms/goal-planner-atoms';
 
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
@@ -11,53 +19,12 @@ const formatDate = (dateString: string) => {
   });
 };
 
-type Goal = {
-  id: string;
-  name: string;
-  targetAmount: number;
-  targetDate: string;
-  priority: "high" | "medium" | "low";
-};
-
 export default function GoalBasedSavingsPlannerPage() {
-  const [goals, setGoals] = useState<Goal[]>([
-    {
-      id: "1",
-      name: "Emergency Fund",
-      targetAmount: 10000,
-      targetDate: "2025-12-31",
-      priority: "high"
-    },
-    {
-      id: "2", 
-      name: "Home Down Payment",
-      targetAmount: 50000,
-      targetDate: "2026-06-30",
-      priority: "high"
-    }
-  ]);
-
-  const [newGoal, setNewGoal] = useState<Omit<Goal, "id">>({
-    name: "",
-    targetAmount: 0,
-    targetDate: "",
-    priority: "medium"
-  });
-
-  const addGoal = () => {
-    if (newGoal.name && newGoal.targetAmount > 0 && newGoal.targetDate) {
-      const goal: Goal = {
-        id: new Date().getTime().toString(),
-        ...newGoal
-      };
-      setGoals([...goals, goal]);
-      setNewGoal({ name: "", targetAmount: 0, targetDate: "", priority: "medium" });
-    }
-  };
-
-  const removeGoal = (id: string) => {
-    setGoals(goals.filter(goal => goal.id !== id));
-  };
+  const [goals] = useAtom(goalsAtom);
+  const [newGoal, setNewGoal] = useAtom(newGoalAtom);
+  const [, addGoal] = useAtom(addGoalAtom);
+  const [, removeGoal] = useAtom(removeGoalAtom);
+  const [totalMonthlySavings] = useAtom(totalMonthlySavingsAtom);
 
   const calculateMonthlySavings = (goal: Goal) => {
     const targetDate = new Date(goal.targetDate);
@@ -76,8 +43,6 @@ export default function GoalBasedSavingsPlannerPage() {
       default: return "text-gray-600 dark:text-gray-400";
     }
   };
-
-  const totalMonthlySavings = goals.reduce((sum, goal) => sum + calculateMonthlySavings(goal), 0);
 
   return (
     <main className="max-w-6xl mx-auto p-6">
@@ -127,7 +92,6 @@ export default function GoalBasedSavingsPlannerPage() {
               />
             </div>
 
-
             <div>
               <label className="block font-medium mb-2" htmlFor="target-date">
                 Target Date
@@ -158,7 +122,7 @@ export default function GoalBasedSavingsPlannerPage() {
             </div>
 
             <button
-              onClick={addGoal}
+              onClick={() => addGoal()}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
             >
               Add Goal
