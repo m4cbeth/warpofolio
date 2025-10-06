@@ -39,6 +39,8 @@ export function StickyHeader() {
         <div className="flex-1 hidden sm:flex justify-end pr-10">
           <MainNav />
         </div>
+        {/* EMPTY SPACER DIV FOR SM SCREENS TO MAKE NAV LINKS ALIGN TO THE RIGHT */}
+        <div className="flex-1 sm:hidden"></div>
 
         {/* USER PROFILE */}
         <div className="flex items-center mr-5">

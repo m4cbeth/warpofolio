@@ -46,18 +46,20 @@ export default function GetStartedModal() {
                         <motion.div
                             role="dialog"
                             aria-modal="true"
-                            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+                            className="fixed inset-0 z-50 flex items-center justify-center"
                             initial={{ opacity: 0, scale: 0.95, y: 8 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.95, y: 8 }}
                             onClick={() => setIsVisible(false)}
                         >
                             <div
-                                className="w-full max-w-xl rounded-lg bg-white p-5 shadow-xl ring-1 ring-black/5 dark:bg-slate-900 dark:ring-white/10"
+                                className="w-full max-w-xl rounded-lg bg-white shadow-xl ring-1 ring-black/5 dark:bg-slate-900 dark:ring-white/10"
                                 onClick={(e) => e.stopPropagation()}
                             >
                                 <div className="flex items-center justify-between">
-                                    <h2 className="text-lg font-semibold text-slate-900 dark:text-white">Get started</h2>
+                                    <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
+                                        Get Your Free 48-Hour Website Audit
+                                    </h2>
                                     <button
                                         type="button"
                                         aria-label="Close"

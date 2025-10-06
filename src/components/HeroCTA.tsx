@@ -1,11 +1,30 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 
-// Shared animation settings
+// animation settings
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
   transition: { duration: 0.6, ease: 'easeOut' }
+}
+
+
+export default function HeroChallenger() {  
+  return (
+  <section className="flex flex-col items-center text-center border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
+    <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-bold max-w-3xl">
+      If Your Website Were a Salesperson, You’d Have Fired It Already.
+    </motion.h1>
+    <motion.p variants={fadeIn} transition={{ delay: 0.2 }} className="mt-6 text-lg max-w-2xl ">
+      Let’s fix that. Get your free 48-Hour Audit — I’ll pinpoint the dead weight, prioritize what matters, and map out the wins that move the needle.
+    </motion.p>
+    <motion.div variants={fadeIn} transition={{ delay: 0.4 }} className="mt-8">
+      <Button size="lg" className="text-lg font-semibold px-8 py-6">
+        → Show Me the Fixes
+      </Button>
+    </motion.div>
+  </section>
+  )
 }
 
 export const HeroStraightShooter = () => (
@@ -24,21 +43,6 @@ export const HeroStraightShooter = () => (
   </section>
 )
 
-export const HeroChallenger = () => (
-  <section className="flex flex-col items-center text-center py-24 px-6 bg-neutral-950 text-white rounded-2xl shadow-xl">
-    <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-bold max-w-3xl">
-      If Your Website Were a Salesperson, You’d Have Fired It Already.
-    </motion.h1>
-    <motion.p variants={fadeIn} transition={{ delay: 0.2 }} className="mt-6 text-lg max-w-2xl text-neutral-300">
-      Let’s fix that. Get your free 48-Hour Audit — I’ll pinpoint the dead weight, prioritize what matters, and map out the wins that move the needle.
-    </motion.p>
-    <motion.div variants={fadeIn} transition={{ delay: 0.4 }} className="mt-8">
-      <Button size="lg" className="text-lg font-semibold px-8 py-6">
-        → Show Me the Fixes
-      </Button>
-    </motion.div>
-  </section>
-)
 
 export const HeroStrategist = () => (
   <section className="flex flex-col items-center text-center py-24 px-6 bg-black text-white rounded-2xl shadow-xl">
@@ -57,7 +61,7 @@ export const HeroStrategist = () => (
   </section>
 )
 
-export default function HeroVariants() {
+export function HeroVariants() {
   return (
     <div className="space-y-16">
       <HeroStraightShooter />

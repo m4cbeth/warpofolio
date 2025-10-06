@@ -54,14 +54,14 @@ export function ContactForm() {
   };
 
   return (
-    <section id="contact" className="border-t border-slate-100 dark:border-slate-900 p-5 scroll">
+    <section id="contact" className=" border-slate-100 dark:border-slate-900 scroll">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         
 
         {/* Form */}
         
         <div className="mx-auto mt-8 max-w-2xl">
-          <form onSubmit={onSubmit} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <form onSubmit={onSubmit} className="rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
           <div className="grid gap-4 sm:grid-cols-2">
               {/* Honeypot field */}
               <input
