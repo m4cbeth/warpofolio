@@ -17,7 +17,7 @@ export default function TermsOfService() {
             </p>
           </section>
 
-          <section>
+          <section> 
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Use of Service</h2>
             <p>
               This site provides web applications and tools for personal and professional use. You agree to use 

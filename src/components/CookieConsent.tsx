@@ -10,7 +10,7 @@ export function CookieConsent() {
 
   useEffect(() => {
     // Check if user has already consented
-    const hasConsented = localStorage.getItem("cookie-consents");
+    const hasConsented = localStorage.getItem("cookie-consent");
     if (!hasConsented) {
       setIsVisible(true);
     }

@@ -3,7 +3,8 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { SiGithub, SiGoogle } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
+import { FaGoogle } from "react-icons/fa";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -144,7 +145,7 @@ export default function LoginPage() {
                   disabled={isLoading}
                   className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-slate-700 text-sm font-medium text-gray-500 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <SiGoogle className="w-5 h-5" />
+                  <FaGoogle className="w-5 h-5" />
                   <span className="ml-2">Sign in with Google</span>
                 </button>
               </div>

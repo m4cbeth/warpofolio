@@ -9,7 +9,7 @@ import  ContactSection  from "@/components/ContactSection";
 import { WhoAMI } from "@/components/WhoAmI";
 import {  services, reasons, testimonials, whoamiBlurb, universalProblemPoints } from "@/data/content-data";
 import { motion } from 'framer-motion';
-
+import HeroVariants from "@/components/HeroCTA";
 
 export default function Page() {
   return (    
@@ -20,6 +20,7 @@ export default function Page() {
       <ServicesSection items={services} />
       <Testimonials items={testimonials} />
       <CtaBanner />
+      <HeroVariants />
       <ContactSection />
     </motion.main>      
   );
