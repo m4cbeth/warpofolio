@@ -8,7 +8,7 @@ import { Testimonials } from "@/components/Testimonials";
 import  ContactSection  from "@/components/ContactSection";
 import { WhoAMI } from "@/components/WhoAmI";
 import {  services, reasons, testimonials, whoamiBlurb, universalProblemPoints } from "@/data/content-data";
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import HeroCTA from "@/components/HeroCTA";
 
 export default function Page() {

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
 import type { Testimonial } from "@/data/content-data";
 

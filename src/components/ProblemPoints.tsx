@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { fadeIn, sectionTransition } from "@/lib/animations";
 import { ProblemPoint } from "@/data/content-data";
 

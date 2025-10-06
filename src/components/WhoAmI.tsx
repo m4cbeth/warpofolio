@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { fadeIn, fadeUp, sectionTransition } from "@/lib/animations";
 import { Whoami } from "@/data/content-data";
 import Image from "next/image";

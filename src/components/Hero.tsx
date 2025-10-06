@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
 import { YourQuickChecklist } from "@/components/ProblemPoints";
 import { ProblemPoint } from "@/data/content-data";

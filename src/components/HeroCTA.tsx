@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 // animation settings
 const fadeIn = {
@@ -19,8 +20,10 @@ export default function HeroChallenger() {
       Let’s fix that. Get your free 48-Hour Audit — I’ll pinpoint the dead weight, prioritize what matters, and map out the wins that move the needle.
     </motion.p>
     <motion.div variants={fadeIn} transition={{ delay: 0.4 }} className="mt-8">
-      <Button size="lg" className="text-lg font-semibold px-8 py-6">
-        → Show Me the Fixes
+      <Button  size="lg" className="text-lg font-semibold px-8 py-6">
+        <Link href="/#contact" >
+          Show Me the Fixes →
+        </Link>
       </Button>
     </motion.div>
   </section>
@@ -37,7 +40,9 @@ export const HeroStraightShooter = () => (
     </motion.p>
     <motion.div variants={fadeIn} transition={{ delay: 0.4 }} className="mt-8">
       <Button size="lg" className="text-lg font-semibold px-8 py-6">
+      <Link href="/#contact" >
         → Start My 48-Hour Audit
+      </Link> 
       </Button>
     </motion.div>
   </section>

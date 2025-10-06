@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
 
 export function CtaBanner() {
