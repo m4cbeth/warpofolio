@@ -15,19 +15,22 @@ export function MainNav({ orientation = "horizontal", onLinkClick }: MainNavProp
       <Link href="/#home" className={baseLink} onClick={onLinkClick}>
         Home
       </Link>
-      <a href="/services" className={baseLink} onClick={onLinkClick}>
+      <Link href="/services" className={baseLink} onClick={onLinkClick}>
         Services
-      </a>
-      <a href="/#contact" className={baseLink} onClick={onLinkClick}>
+      </Link>
+      <Link href="/demos" className={baseLink} onClick={onLinkClick}>
+        Demos
+      </Link>
+      <Link href="/#contact" className={baseLink} onClick={onLinkClick}>
         Contact
-      </a>
-      <a
+      </Link>
+      <Link
         href="#contact"
         className="hidden sm:block rounded-md bg-slate-900 px-3 py-2 font-medium text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
         onClick={onLinkClick}
       >
         Get a Free Site Audit
-      </a>
+      </Link>
     </nav>
   );
 }

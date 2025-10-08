@@ -12,7 +12,7 @@ const fadeIn = {
 
 export default function HeroChallenger() {  
   return (
-  <section className="flex flex-col mx-6 items-center text-center border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
+  <section className="flex flex-col mx-6 mb-15 items-center text-center border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
     <m.h1 variants={fadeIn} className="text-4xl md:text-6xl font-bold max-w-3xl">
       If Your Website <br/>
       Were a Salesperson, <br/>
