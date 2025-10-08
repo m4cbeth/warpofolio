@@ -125,7 +125,7 @@ export default function RetirementProjectionCalculatorPage() {
 
             <div>
               <label className="block font-medium mb-2" htmlFor="retirement-spending">
-                Annual Retirement Spending (Today's $)
+                {`Annual Retirement Spending (Today's $)`}
               </label>
               <CurrencyInput
                 id="retirement-spending"
@@ -192,10 +192,14 @@ export default function RetirementProjectionCalculatorPage() {
                 <li className="text-red-600 dark:text-red-400">• Consider increasing monthly contributions</li>
               )}
               {results.yearsSavingsLast >= 20 && results.yearsSavingsLast < 30 && (
-                <li className="text-yellow-600 dark:text-yellow-400">• Your savings should last through retirement</li>
+                <li className="text-yellow-600 dark:text-yellow-400">
+                  {`• Your savings should last through retirement`}
+                </li>
               )}
               {results.yearsSavingsLast >= 30 && (
-                <li className="text-green-600 dark:text-green-400">• Excellent! You're on track for a comfortable retirement</li>
+                <li className="text-green-600 dark:text-green-400">
+                  {`• Excellent! You're on track for a comfortable retirement`}
+                </li>
               )}
               <li>• Consider maximizing employer RRSP matching</li>
               <li>• Review and adjust your asset allocation as you age</li>

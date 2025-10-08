@@ -27,11 +27,9 @@ export const feeAnalysisResultsAtom = atom((get) => {
   
   const totalFees = (balance * (feePercentage / 100)) * years;
   let balanceWithoutFees = initialInvestment;
-  let contributionsWithoutFees = initialInvestment;
   
   for (let month = 0; month < years * 12; month++) {
     balanceWithoutFees = balanceWithoutFees * (1 + monthlyReturn) + monthlyContribution;
-    contributionsWithoutFees += monthlyContribution;
   }
   
   return {

@@ -12,7 +12,7 @@ import { useAuth } from "@/hooks/useAuth";
 
 export function StickyHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const { user, isAuthenticated } = useAuth();
+  const { isAuthenticated } = useAuth();
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/60 bg-white/85 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-slate-800 dark:bg-slate-950/85 dark:supports-[backdrop-filter]:bg-slate-950/60">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">

@@ -53,8 +53,8 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Disclaimer of Warranties</h2>
             <p>
-              This service is provided "as is" and "as available" without warranties of any kind, either 
-              express or implied. We do not warrant that the service will be uninterrupted, secure, or error-free.
+              {`This service is provided "as is" and "as available" without warranties of any kind, either 
+              express or implied. We do not warrant that the service will be uninterrupted, secure, or error-free.`}
             </p>
           </section>
 

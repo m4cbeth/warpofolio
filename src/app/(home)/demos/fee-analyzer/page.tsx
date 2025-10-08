@@ -148,7 +148,7 @@ export default function InvestmentFeeAnalyzerPage() {
             <h3 className="font-semibold mb-2">Key Insights</h3>
             <ul className="text-sm space-y-1">
               <li>• Fees reduced your portfolio by ${results.feeImpact.toLocaleString()}</li>
-              <li>• That's {((results.feeImpact / results.balanceWithoutFees) * 100).toFixed(1)}% of your potential wealth</li>
+              <li>• That&apos;s {((results.feeImpact / results.balanceWithoutFees) * 100).toFixed(1)}% of your potential wealth</li>
               <li>• Consider low-cost index funds (0.1% or less)</li>
             </ul>
           </div>

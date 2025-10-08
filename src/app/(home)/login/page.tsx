@@ -34,6 +34,7 @@ export default function LoginPage() {
       }
     } catch (error) {
       setError("An error occurred. Please try again.");
+      console.error(error);
     } finally {
       setIsLoading(false);
     }
@@ -46,6 +47,7 @@ export default function LoginPage() {
     } catch (error) {
       setError("An error occurred with Google sign-in");
       setIsLoading(false);
+      console.error(error);
     }
   };
 
@@ -56,6 +58,7 @@ export default function LoginPage() {
     } catch (error) {
       setError("An error occurred with GitHub sign-in");
       setIsLoading(false);
+      console.error(error);
     }
   };
 
@@ -162,6 +165,7 @@ export default function LoginPage() {
                 </button>
               </div>
 
+              
               
             </div>
           </form>
