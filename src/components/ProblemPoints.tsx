@@ -4,7 +4,7 @@ import { ProblemPoint } from "@/data/content-data";
 
 export function YourQuickChecklist({ points }: { points: ProblemPoint[] }) {
   return (
-    <motion.div
+    <m.div
       variants={fadeIn}
       initial="initial"
       whileInView="animate"
@@ -27,6 +27,6 @@ export function YourQuickChecklist({ points }: { points: ProblemPoint[] }) {
           </div>
         ))}
       </div>
-    </motion.div>
+    </m.div>
   );
 }

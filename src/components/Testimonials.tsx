@@ -17,7 +17,7 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
   return (
     <section className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
       <div className="mx-auto max-w-5xl px-4 md:px-6">
-        <motion.div
+        <m.div
           variants={fadeUp}
           initial="initial"
           whileInView="animate"
@@ -31,10 +31,10 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
           <p className="mt-3 text-slate-700 dark:text-slate-300">
             Impressions shared by those I’ve worked with.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="relative mx-auto mt-10 max-w-3xl">
-          <motion.blockquote
+          <m.blockquote
             key={idx}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export function Testimonials({ items }: { items: Testimonial[] }) {
             <p className="text-pretty text-lg text-slate-900 dark:text-white">“{current.quote[0]}</p>
             <p className="text-pretty text-lg text-slate-900 dark:text-white">{current.quote[1]}”</p>
             <footer className="mt-4 text-sm text-slate-600 dark:text-slate-300">— {current.name}{current.role ? `, ${current.role}` : ""}</footer>
-          </motion.blockquote>
+          </m.blockquote>
 
           <div className="mt-6 flex items-center justify-center gap-2">
             {items.map((_, i) => (

@@ -11,21 +11,21 @@ export function Hero({ points }: { points: ProblemPoint[] }) {
     <section id="home" className="relative overflow-hidden scroll">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900/40 dark:to-slate-950" />
       <div className="mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24">
-        <motion.div
+        <m.div
           variants={fadeUp}
           initial="initial"
           animate="animate"
           transition={sectionTransition}
           className="mx-auto max-w-3xl text-center"
         >
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={sectionTransition}
             className="text-balance text-4xl font-extrabold tracking-tight text-slate-900 md:text-5xl dark:text-white"
           >
             Become the professional AI recommends
-          </motion.h1>
+          </m.h1>
           <p className="mx-auto mt-4 max-w-2xl pt-5 text-pretty text-2xl text-slate-700 dark:text-slate-300">
             AI, investors, and prospects all look for the same thing: 
             <br/>
@@ -48,7 +48,7 @@ export function Hero({ points }: { points: ProblemPoint[] }) {
               Explore Services
             </a>
           </div>
-        </motion.div>
+        </m.div>
 
         <YourQuickChecklist points={points} />
       </div>

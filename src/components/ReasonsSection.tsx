@@ -8,7 +8,7 @@ export function ReasonsSection({ items }: { items: Reasons[] }) {
   return (
     <section id="reasons" className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <motion.div
+        <m.div
           variants={fadeUp}
           initial="initial"
           whileInView="animate"
@@ -22,12 +22,12 @@ export function ReasonsSection({ items }: { items: Reasons[] }) {
           <p className="mt-3 text-slate-950 dark:text-slate-300">
             Simple, focused improvements lead to real outcomes
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((improvement) => (
             <div key={improvement.title} className="eminem relative bg-amber-500/0 glow-card ">
-              <motion.article
+              <m.article
                 key={improvement.title}
                 variants={fadeUp}
                 initial="initial"
@@ -53,7 +53,7 @@ export function ReasonsSection({ items }: { items: Reasons[] }) {
                 <p className="mt-2 text-md text-slate-950 dark:text-slate-300">
                   {improvement.explain}
                 </p>
-              </motion.article>
+              </m.article>
             </div>
           ))}
         </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, m } from "framer-motion"
 import { useEffect, useState } from "react"
 import { ContactForm } from "./ContactForm"
 
@@ -19,7 +19,7 @@ export default function GetStartedModal() {
     return (
         <div className="relative">
             {/* Trigger */}
-            <motion.button
+            <m.button
                 type="button"
                 aria-haspopup="dialog"
                 aria-expanded={isVisible}
@@ -28,13 +28,13 @@ export default function GetStartedModal() {
                 whileTap={{ y: 0.9 }}
             >
                 Let’s get you started
-            </motion.button>
+            </m.button>
 
             <AnimatePresence initial={false}>
                 {isVisible ? (
                     <>
                         {/* Backdrop */}
-                        <motion.div
+                        <m.div
                             className="fixed inset-0 z-40 bg-black/50 backdrop-blur-[5px]"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -43,7 +43,7 @@ export default function GetStartedModal() {
                         />
 
                         {/* Dialog */}
-                        <motion.div
+                        <m.div
                             role="dialog"
                             aria-modal="true"
                             className="fixed inset-0 z-50 flex items-center justify-center"
@@ -81,7 +81,7 @@ export default function GetStartedModal() {
                                 </button>
                                 
                             </div>
-                        </motion.div>
+                        </m.div>
                     </>
                 ) : null}
             </AnimatePresence>

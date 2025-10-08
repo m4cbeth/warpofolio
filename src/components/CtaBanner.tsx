@@ -5,7 +5,7 @@ export function CtaBanner() {
   return (
     <section className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <motion.div
+        <m.div
           variants={fadeUp}
           initial="initial"
           whileInView="animate"
@@ -45,7 +45,7 @@ export function CtaBanner() {
           </div>
 
           <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-white/10 blur-3xl dark:bg-slate-900/10" />
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

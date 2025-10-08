@@ -61,7 +61,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-slate-900 py-12 px-4 sm:px-6 lg:px-8">
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -166,7 +166,7 @@ export default function LoginPage() {
             </div>
           </form>
         </div>
-      </motion.div>
+      </m.div>
     </div>
   );
 }

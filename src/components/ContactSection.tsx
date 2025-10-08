@@ -8,7 +8,7 @@ export default function ContactSection() {
     return (
     <section id="contact" className="border-t border-slate-100 dark:border-slate-900 md:py-20 scroll">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <motion.div
+        <m.div
           variants={fadeUp}
           initial="initial"
           whileInView="animate"
@@ -25,7 +25,7 @@ export default function ContactSection() {
           <p className="mt-3 text-slate-700 dark:text-slate-300">
             Fill out the form and I’ll reply within one business day.
           </p>
-        </motion.div>
+        </m.div>
         <ContactForm />
       </div>
     </section>

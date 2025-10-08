@@ -4,7 +4,7 @@ import type { ServiceItem } from "@/data/content-data";
 
 function ServiceCard({ item }: { item: ServiceItem }) {
   return (
-    <motion.div
+    <m.div
       variants={fadeUp}
       initial="initial"
       whileInView="animate"
@@ -22,7 +22,7 @@ function ServiceCard({ item }: { item: ServiceItem }) {
       <div className="mt-4 text-xs font-medium text-slate-500 opacity-0 transition group-hover:opacity-100 dark:text-slate-400">
         Learn more →
       </div>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -30,7 +30,7 @@ export function ServicesSection({ items }: { items: ServiceItem[] }) {
   return (
     <section id="services" className="border-t border-slate-100 py-16 dark:border-slate-900 md:py-20 scroll">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <motion.div
+        <m.div
           variants={fadeUp}
           initial="initial"
           whileInView="animate"
@@ -44,7 +44,7 @@ export function ServicesSection({ items }: { items: ServiceItem[] }) {
           <p className="mt-3 text-slate-700 dark:text-slate-300">
             Quick wins first, then sustainable growth through SEO and conversion-focused copy.
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((s) => (

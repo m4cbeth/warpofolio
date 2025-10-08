@@ -7,7 +7,7 @@ import type { ServiceSection } from "@/data/content-data";
 
 export function ServicesCard({ section }: { section: ServiceSection }) {
   return (
-    <motion.article
+    <m.article
       id={section.id}
       variants={fadeUp}
       initial="initial"
@@ -41,7 +41,7 @@ export function ServicesCard({ section }: { section: ServiceSection }) {
         {section.body}
       </p>
       
-    </motion.article>
+    </m.article>
     
   );
 }

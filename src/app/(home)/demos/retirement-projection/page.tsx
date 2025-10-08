@@ -11,6 +11,7 @@ import {
   retirementSpendingAtom,
   retirementProjectionAtom
 } from '@/data/atoms/retirement-atoms';
+import CurrencyInput from 'react-currency-input-field';
 
 export default function RetirementProjectionCalculatorPage() {
   const [currentAge, setCurrentAge] = useAtom(currentAgeAtom);
@@ -66,11 +67,14 @@ export default function RetirementProjectionCalculatorPage() {
               <label className="block font-medium mb-2" htmlFor="current-savings">
                 Current Retirement Savings ($)
               </label>
-              <input
+              <CurrencyInput
                 id="current-savings"
-                type="number"
+                name="current-savings"
+                prefix="$"
                 value={currentSavings}
-                onChange={(e) => setCurrentSavings(Number(e.target.value))}
+                placeholder="Please enter your current retirement savings"
+                allowDecimals={false}
+                onValueChange={(value: string | undefined) => setCurrentSavings(value ? Number(value) : 0)}
                 className="border rounded px-3 py-2 w-full dark:bg-slate-800 dark:border-slate-700"
               />
             </div>
@@ -79,11 +83,14 @@ export default function RetirementProjectionCalculatorPage() {
               <label className="block font-medium mb-2" htmlFor="monthly-contribution">
                 Monthly Contribution ($)
               </label>
-              <input
+              <CurrencyInput
                 id="monthly-contribution"
-                type="number"
+                name="monthly-contribution"
+                prefix="$"
                 value={monthlyContribution}
-                onChange={(e) => setMonthlyContribution(Number(e.target.value))}
+                placeholder="Please enter your monthly contribution"
+                allowDecimals={false}
+                onValueChange={(value: string | undefined) => setMonthlyContribution(value ? Number(value) : 0)}
                 className="border rounded px-3 py-2 w-full dark:bg-slate-800 dark:border-slate-700"
               />
             </div>
@@ -120,11 +127,14 @@ export default function RetirementProjectionCalculatorPage() {
               <label className="block font-medium mb-2" htmlFor="retirement-spending">
                 Annual Retirement Spending (Today's $)
               </label>
-              <input
+              <CurrencyInput
                 id="retirement-spending"
-                type="number"
+                name="retirement-spending"
+                prefix="$"
                 value={retirementSpending}
-                onChange={(e) => setRetirementSpending(Number(e.target.value))}
+                placeholder="Please enter your annual retirement spending"
+                allowDecimals={false}
+                onValueChange={(value: string | undefined) => setRetirementSpending(value ? Number(value) : 0)}
                 className="border rounded px-3 py-2 w-full dark:bg-slate-800 dark:border-slate-700"
               />
             </div>
@@ -187,7 +197,7 @@ export default function RetirementProjectionCalculatorPage() {
               {results.yearsSavingsLast >= 30 && (
                 <li className="text-green-600 dark:text-green-400">• Excellent! You're on track for a comfortable retirement</li>
               )}
-              <li>• Consider maximizing employer 401(k) matching</li>
+              <li>• Consider maximizing employer RRSP matching</li>
               <li>• Review and adjust your asset allocation as you age</li>
             </ul>
           </div>

@@ -29,7 +29,7 @@ export function CookieConsent() {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 100 }}
@@ -69,7 +69,7 @@ export function CookieConsent() {
                </Link>
              </div>
           </div>
-        </motion.div>
+        </m.div>
       )}
     </AnimatePresence>
   );

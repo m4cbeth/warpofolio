@@ -13,7 +13,7 @@ import HeroCTA from "@/components/HeroCTA";
 
 export default function Page() {
   return (    
-    <motion.main>
+    <m.main>
       <Hero points={universalProblemPoints} />
       <WhoAMI whoamiBlurb={whoamiBlurb} />
       <ReasonsSection items={reasons} />
@@ -22,6 +22,6 @@ export default function Page() {
       {/* <CtaBanner /> commented out to avoid duplicate CTA */}
       <HeroCTA />
       <ContactSection />
-    </motion.main>      
+    </m.main>      
   );
 }
