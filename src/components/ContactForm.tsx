@@ -61,7 +61,7 @@ export function ContactForm() {
         {/* Form */}
         
         <div className="mx-auto mt-8 max-w-2xl">
-          <form onSubmit={onSubmit} className="rounded-xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+          <form onSubmit={onSubmit} className="rounded-xl p-4 mb-5 border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
           <div className="grid gap-4 sm:grid-cols-2">
               {/* Honeypot field */}
               <input
@@ -146,7 +146,7 @@ export function ContactForm() {
             {formSuccess && (
               <p className="mt-4 text-sm text-emerald-600 dark:text-emerald-400" role="status">{formSuccess}</p>
             )}
-            <div className="mt-6 flex items-center gap-3">
+            <div className="mt-6 sm:flex items-center gap-3">
               <button
                 type="submit"
                 disabled={submitting}
@@ -154,7 +154,7 @@ export function ContactForm() {
               >
                 {submitting ? "Sending..." : "Send Request"}
               </button>
-              <p className="text-xs text-slate-500 dark:text-slate-400">{`Or email: `} 
+              <p className="text-xs pt-5 text-slate-500 dark:text-slate-400">{`Or email: `} 
                 <EmailLink />
               </p>
             </div>

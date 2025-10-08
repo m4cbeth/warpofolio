@@ -12,9 +12,12 @@ const fadeIn = {
 
 export default function HeroChallenger() {  
   return (
-  <section className="flex flex-col items-center text-center border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
+  <section className="flex flex-col mx-6 items-center text-center border-t border-slate-100 py-16 dark:border-slate-900 md:py-20">
     <m.h1 variants={fadeIn} className="text-4xl md:text-6xl font-bold max-w-3xl">
-      If Your Website Were a Salesperson, You’d Have Fired It Already.
+      If Your Website <br/>
+      Were a Salesperson, <br/>
+      You’d Have <br/>
+      Fired It Already.
     </m.h1>
     <m.p variants={fadeIn} transition={{ delay: 0.2 }} className="mt-6 text-lg max-w-2xl ">
       Let’s fix that. Get your free 48-Hour Audit — I’ll pinpoint the dead weight, prioritize what matters, and map out the wins that move the needle.
