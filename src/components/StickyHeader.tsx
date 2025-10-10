@@ -2,7 +2,7 @@
 
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { MainNav } from "@/components/MainNav";
-import { JwBadge } from "@/components/JWBadge";
+import { JwBadge } from "@/components/BadgeJW";
 import { UserProfile } from "@/components/UserProfile";
 import Link from "next/link";
 import { useState } from "react";
