@@ -10,15 +10,14 @@ export function UserProfile() {
 
   if (!user) return null;
 
-  const userImage = user.image || "";
-//   || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name || user.email || 'User')}&background=0f172a&color=fff&size=40`;
+  const userImage = user.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name || user.email || 'User')}&background=0f172a&color=fff&size=40`;
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button className="flex items-center gap-2 rounded-full p-1 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
           <div className="relative h-8 w-8 rounded-full overflow-hidden">
-            <Image
+            <img
               src={userImage}
               alt={user.name || user.email || 'User'}
               width={32}
