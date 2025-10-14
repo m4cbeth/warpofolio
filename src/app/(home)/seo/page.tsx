@@ -72,6 +72,15 @@ const actuallyWorksPoints = [
     }
 ];
 
+// Content Engine Features data
+const contentEngineFeatures = [
+    "A modern, fast website that works perfectly on mobile",
+    "Copy that positions you clearly—not generic platitudes",
+    "Consistent content creation that answers real questions",
+    "Distribution across LinkedIn and other platforms",
+    "Backlink building with legitimate local sources"
+];
+
 // Myth Card Component
 function MythCard({ title, description }: { title: string; description: string }) {
     return (
@@ -136,6 +145,16 @@ function ActuallyWorksCard({
     );
 }
 
+// Feature Card Component
+function FeatureCard({ text }: { text: string }) {
+    return (
+        <div className="flex items-start gap-4 bg-green-300/50 dark:bg-green-900/50 p-4 rounded-lg border-2 border-green-500">
+            <span className="text-2xl text-green-400 flex-shrink-0">✓</span>
+            <p className="text-gray-900 dark:text-gray-200 text-lg">{text}</p>
+        </div>
+    );
+}
+
 export default function SEOPage() {
     return (
         <div className="min-h-screen max-w-3xl mx-auto bg-white dark:bg-slate-950">
@@ -153,7 +172,7 @@ export default function SEOPage() {
 
             {/* The Myth Section */}
             <section className="mx-auto max-w-4xl px-6 ">
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10">
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-10 mt-10">
                     {`What You've Been Told`}
                 </h2>
 
@@ -168,7 +187,7 @@ export default function SEOPage() {
                         This is what most "SEO experts" will sell you. One-time optimization. Technical tweaks. And vague promises about "algorithmic ranking factors."
                     </p>
                     <p className="text-lg text-gray-900 dark:text-white mt-4 font-semibold">
-                    {`It's about 5% of what actually works.`}
+                        {`It's about 5% of what actually works.`}
                     </p>
                 </div>
             </section>
@@ -232,37 +251,20 @@ export default function SEOPage() {
             </section>
 
             {/* The Content Engine CTA */}
-            <section className="bg-gradient-to-br from-slate-900 to-blue-950 dark:from-black dark:to-slate-950 border-y border-slate-700 dark:border-slate-800">
+            <section className="bg-white dark:bg-black border-y border-slate-700 dark:border-slate-800">
                 <div className="mx-auto max-w-4xl px-6 py-16 lg:py-24">
-                    <h2 className="text-3xl font-bold text-white mb-6">
+                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                         You Need a Content Engine
                     </h2>
 
-                    <p className="text-xl text-gray-200 dark:text-gray-300 leading-relaxed mb-10">
+                    <p className="text-xl text-gray-800 dark:text-gray-300 leading-relaxed mb-10">
                         Not a one-time optimization. Not a checklist. A systematic approach to building authority online—the same way you built authority as an advisor.
                     </p>
 
                     <div className="space-y-4 mb-12">
-                        <div className="flex items-start gap-4 bg-white/5 dark:bg-white/5 p-4 rounded-lg border border-white/10">
-                            <span className="text-2xl text-green-400 flex-shrink-0">✓</span>
-                            <p className="text-gray-100 dark:text-gray-200 text-lg">A modern, fast website that works perfectly on mobile</p>
-                        </div>
-                        <div className="flex items-start gap-4 bg-white/5 dark:bg-white/5 p-4 rounded-lg border border-white/10">
-                            <span className="text-2xl text-green-400 flex-shrink-0">✓</span>
-                            <p className="text-gray-100 dark:text-gray-200 text-lg">Copy that positions you clearly—not generic platitudes</p>
-                        </div>
-                        <div className="flex items-start gap-4 bg-white/5 dark:bg-white/5 p-4 rounded-lg border border-white/10">
-                            <span className="text-2xl text-green-400 flex-shrink-0">✓</span>
-                            <p className="text-gray-100 dark:text-gray-200 text-lg">Consistent content creation that answers real questions</p>
-                        </div>
-                        <div className="flex items-start gap-4 bg-white/5 dark:bg-white/5 p-4 rounded-lg border border-white/10">
-                            <span className="text-2xl text-green-400 flex-shrink-0">✓</span>
-                            <p className="text-gray-100 dark:text-gray-200 text-lg">Distribution across LinkedIn and other platforms</p>
-                        </div>
-                        <div className="flex items-start gap-4 bg-white/5 dark:bg-white/5 p-4 rounded-lg border border-white/10">
-                            <span className="text-2xl text-green-400 flex-shrink-0">✓</span>
-                            <p className="text-gray-100 dark:text-gray-200 text-lg">Backlink building with legitimate local sources</p>
-                        </div>
+                        {contentEngineFeatures.map((feature, index) => (
+                            <FeatureCard key={index} text={feature} />
+                        ))}
                     </div>
 
                     <div className="flex justify-center flex-col sm:flex-row gap-4">
@@ -280,7 +282,7 @@ export default function SEOPage() {
                         </a>
                     </div>
 
-                    <p className="text-lg text-center mt-20 text-gray-300 dark:text-gray-400 mt-8">
+                    <p className="text-lg text-center mt-20 text-gray-300 dark:text-gray-400">
                         We handle the work. You stay the financial advisor.
                     </p>
                 </div>
@@ -301,11 +303,14 @@ export default function SEOPage() {
                         {`The advisors who succeeded weren't the ones with the fanciest websites. They were the ones who consistently showed up, published valuable insights, and built trust over time.`}
                     </p>
 
-                    <p className="text-gray-700 dark:text-gray-200 leading-relaxed">
-                        {`That's what SEO actually is: showing up consistently with valuable information until you become the obvious choice.`}
-                    </p>
+                    <div className="flex items-start gap-4 p-6 rounded-xl bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 border-2 border-green-300 dark:border-green-700 shadow-md">
+                        <span className="text-3xl flex-shrink-0">💡</span>
+                        <p className="italic text-xl font-semibold text-gray-900 dark:text-green-100 leading-relaxed">
+                            {`That's what SEO actually is: showing up consistently with valuable information until you become the obvious choice.`}
+                        </p>
+                    </div>
 
-                    <p className="text-gray-900 dark:text-white leading-relaxed font-semibold">
+                    <p className="text-gray-900 dark:text-white leading-relaxed">
                         {`The difference is, you don't have to do it yourself. That's what we're here for.`}
                     </p>
                 </div>
