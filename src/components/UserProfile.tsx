@@ -3,7 +3,6 @@
 import { useAuth } from "@/hooks/useAuth";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { User, Settings, LogOut, ChevronDown } from "lucide-react";
-import Image from "next/image";
 
 export function UserProfile() {
   const { user, logout } = useAuth();

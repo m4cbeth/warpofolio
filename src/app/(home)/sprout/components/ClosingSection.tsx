@@ -16,7 +16,7 @@ export default function ClosingSection() {
                     {`Help millions plant their Seeds wisely and watch their lives flourish`}
                 </p>
                 <p className="text-lg md:text-xl text-amber-600 dark:text-amber-400 font-semibold mb-8">
-                    I'd love to show you the live app and Sproutly in action.
+                    {`I'd love to show you the live app and Sproutly in action.`}
                 </p>
                 <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200">
                     {`[Your Name] • [Your Email]`}
