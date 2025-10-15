@@ -163,10 +163,10 @@ export default function SEOPage() {
             <section className=" relative overflow-hidden border-b-4 border-gray-200 dark:border-gray-800">
                 <div className="mx-auto max-w-4xl px-6 py-20 lg:py-28">
                     <h1 className="text-4xl text-center mt-10 font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
-                        Why Most Advisor Websites <br /> {`Don't Get Leads`}
+                        {`Why Most Advisor Websites`} <br /> {`Don't Get Leads`}
                     </h1>
                     <p className="mt-6 text-center text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl">
-                        {`You've been sold a myth about SEO.`} <br /> The truth is simpler—and harder—than you think.
+                        {`You've been sold a myth about SEO.`} <br /> {`The truth is simpler—and harder—than you think.`}
                     </p>
                 </div>
             </section>
@@ -185,7 +185,7 @@ export default function SEOPage() {
 
                 <div className="mt-10  p-8 rounded-xl bg-slate-200 dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 shadow-md">
                     <p className="text-lg text-gray-700 dark:text-gray-100 italic leading-relaxed">
-                        This is what most "SEO experts" will sell you. One-time optimization. Technical tweaks. And vague promises about "algorithmic ranking factors."
+                        {`This is what most "SEO experts" will sell you. One-time optimization. Technical tweaks. And vague promises about "algorithmic ranking factors."`}
                     </p>
                     <p className="text-lg text-gray-900 dark:text-white mt-4 font-semibold">
                         {`It's about 5% of what actually works.`}
@@ -197,7 +197,7 @@ export default function SEOPage() {
             <section className=" border-blue-200 dark:border-blue-900/30 mt-10">
                 <div className="mx-auto max-w-4xl px-6 ">
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                        What Actually Works
+                        {`What Actually Works`}
                     </h2>
                     <p className="text-xl text-gray-700 dark:text-gray-200 mb-12 leading-relaxed">
                         {`Modern SEO isn't about tricks. It's about being genuinely helpful at scale.`}
@@ -234,7 +234,7 @@ export default function SEOPage() {
 
                 <div className="mt-12 space-y-6">
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                        The Problem with One-Time SEO
+                        {`The Problem with One-Time SEO`}
                     </h3>
 
                     <p className="text-gray-700 dark:text-gray-200 leading-relaxed text-lg">
@@ -255,11 +255,11 @@ export default function SEOPage() {
             <section className="bg-white dark:bg-black border-y border-slate-700 dark:border-slate-800">
                 <div className="mx-auto max-w-4xl px-6 py-16 lg:py-24">
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                        You Need a Content Engine
+                        {`You Need a Content Engine`}
                     </h2>
 
                     <p className="text-xl text-gray-800 dark:text-gray-300 leading-relaxed mb-10">
-                        Not a one-time optimization. Not a checklist. A systematic approach to building authority online—the same way you built authority as an advisor.
+                        {`Not a one-time optimization. Not a checklist. A systematic approach to building authority online—the same way you built authority as an advisor.`}
                     </p>
 
                     <div className="space-y-4 mb-12">
@@ -273,18 +273,18 @@ export default function SEOPage() {
                             href="/content-engine"
                             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-gray-900 bg-white hover:bg-gray-100 rounded-lg transition-all shadow-lg hover:shadow-xl"
                         >
-                            Learn About the Content Engine
+                            {`Learn About the Content Engine`}
                         </a>
                         <a
                             href="/contact"
                             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-all shadow-lg hover:shadow-xl"
                         >
-                            Request a Free Audit
+                            {`Request a Free Audit`}
                         </a>
                     </div>
 
                     <p className="text-lg text-center mt-20 text-black dark:text-gray-400">
-                        We handle the work. You stay the financial advisor.
+                        {`We handle the work. You stay the financial advisor.`}
                     </p>
                 </div>
             </section>
@@ -292,7 +292,7 @@ export default function SEOPage() {
             {/* Final Why Section */}
             <section className="mx-auto max-w-4xl px-6 py-16 lg:py-24">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-                    Why This Approach Works
+                    {`Why This Approach Works`}
                 </h2>
 
                 <div className="space-y-6 text-lg">
@@ -309,7 +309,7 @@ export default function SEOPage() {
                             <span className="text-4xl flex-shrink-0">💡</span>
                             <div>
                                 <h3 className="text-2xl font-bold text-gray-900 dark:text-green-100 mb-4">
-                                    Here's the Key Insight
+                                    {`Here's the Key Insight`}
                                 </h3>
                                 <p className="italic text-xl font-semibold text-gray-900 dark:text-green-100 leading-relaxed mb-6">
                                     {`That's what SEO actually is: showing up consistently with valuable information until you become the obvious choice.`}
@@ -325,7 +325,7 @@ export default function SEOPage() {
                                 href="/content-engine"
                                 className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
                             >
-                                Learn More About the Content Engine →
+                                {`Learn More About the Content Engine →`}
                             </Link>
                         </div>
                     </div>
