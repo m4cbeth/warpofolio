@@ -85,11 +85,11 @@ const contentEngineFeatures = [
 // Myth Card Component
 function MythCard({ title, description }: { title: string; description: string }) {
     return (
-        <div className="flex items-start gap-4 p-6 rounded-xl bg-red-800 border-2 border-red-400 shadow-sm">
+        <div className="flex items-start gap-4 p-6 rounded-xl bg-red-300 dark:bg-red-950 border-2 border-red-400 shadow-sm">
             <span className="text-2xl flex-shrink-0">❌</span>
             <div>
                 <p className="font-semibold text-gray-900 dark:text-white text-lg">{title}</p>
-                <p className="text-gray-600 dark:text-gray-100 mt-1">{description}</p>
+                <p className="text-gray-900 dark:text-gray-100 mt-1">{description}</p>
             </div>
         </div>
     );
@@ -158,9 +158,9 @@ function FeatureCard({ text }: { text: string }) {
 
 export default function SEOPage() {
     return (
-        <div className="min-h-screen max-w-3xl mx-auto bg-white dark:bg-slate-950">
+        <div className="min-h-screen max-w-3xl mx-auto bg-gray-200 dark:bg-slate-950">
             {/* Hero Section */}
-            <section className=" relative overflow-hidden border-b border-gray-200 dark:border-gray-800">
+            <section className=" relative overflow-hidden border-b-4 border-gray-200 dark:border-gray-800">
                 <div className="mx-auto max-w-4xl px-6 py-20 lg:py-28">
                     <h1 className="text-4xl text-center mt-10 font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
                         Why Most Advisor Websites <br /> {`Don't Get Leads`}
@@ -183,7 +183,7 @@ export default function SEOPage() {
                     ))}
                 </div>
 
-                <div className="mt-10  p-8 rounded-xl bg-gradient-to-br from-slate-400 to-gray-100 dark:from-slate-800 dark:to-slate-900 border-2 border-gray-200 dark:border-slate-700 shadow-md">
+                <div className="mt-10  p-8 rounded-xl bg-slate-200 dark:bg-slate-800 border-2 border-gray-200 dark:border-slate-700 shadow-md">
                     <p className="text-lg text-gray-700 dark:text-gray-100 italic leading-relaxed">
                         This is what most "SEO experts" will sell you. One-time optimization. Technical tweaks. And vague promises about "algorithmic ranking factors."
                     </p>
@@ -194,8 +194,8 @@ export default function SEOPage() {
             </section>
 
             {/* What Actually Works */}
-            <section className=" border-y border-blue-200 dark:border-blue-900/30">
-                <div className="mx-auto max-w-4xl px-6 py-20">
+            <section className=" border-blue-200 dark:border-blue-900/30 mt-10">
+                <div className="mx-auto max-w-4xl px-6 ">
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                         What Actually Works
                     </h2>
@@ -279,11 +279,11 @@ export default function SEOPage() {
                             href="/contact"
                             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-all shadow-lg hover:shadow-xl"
                         >
-                            Book a Call
+                            Request a Free Audit
                         </a>
                     </div>
 
-                    <p className="text-lg text-center mt-20 text-gray-300 dark:text-gray-400">
+                    <p className="text-lg text-center mt-20 text-black dark:text-gray-400">
                         We handle the work. You stay the financial advisor.
                     </p>
                 </div>
@@ -304,19 +304,31 @@ export default function SEOPage() {
                         {`The advisors who succeeded weren't the ones with the fanciest websites. They were the ones who consistently showed up, published valuable insights, and built trust over time.`}
                     </p>
 
-                    <div className="flex items-start gap-4 p-6 rounded-xl bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 border-2 border-green-300 dark:border-green-700 shadow-md">
-                        <span className="text-3xl flex-shrink-0">💡</span>
-                        <p className="italic text-xl font-semibold text-gray-900 dark:text-green-100 leading-relaxed">
-                            {`That's what SEO actually is: showing up consistently with valuable information until you become the obvious choice.`}
-                        </p>
-                    </div>
+                    <div className="p-8 rounded-xl bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 border-2 border-green-300 dark:border-green-700 shadow-lg">
+                        <div className="flex items-start gap-4 mb-6">
+                            <span className="text-4xl flex-shrink-0">💡</span>
+                            <div>
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-green-100 mb-4">
+                                    Here's the Key Insight
+                                </h3>
+                                <p className="italic text-xl font-semibold text-gray-900 dark:text-green-100 leading-relaxed mb-6">
+                                    {`That's what SEO actually is: showing up consistently with valuable information until you become the obvious choice.`}
+                                </p>
+                            </div>
+                        </div>
 
-                    <p className="text-gray-900 dark:text-white leading-relaxed">
-                        {`The difference is, you don't have to do it yourself. That's what we're here for.`}
-                    </p>
-                    <Link href="/content-engine" className="text-blue-600 hover:text-blue-700">
-                        Learn More About the Content Engine
-                    </Link>
+                        <div className="bg-white/50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-600">
+                            <p className="text-lg text-gray-800 dark:text-green-100 leading-relaxed mb-4">
+                                {`The difference is, you don't have to do it yourself. That's what we're here for.`}
+                            </p>
+                            <Link
+                                href="/content-engine"
+                                className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+                            >
+                                Learn More About the Content Engine →
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
