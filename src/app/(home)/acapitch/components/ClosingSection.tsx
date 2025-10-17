@@ -21,11 +21,11 @@ export default function ClosingSection() {
                                 The Content Reality
                             </h3>
                             <p className="text-gray-700 dark:text-gray-300 mb-4">
-                                SEO and content success = consistent, valuable publishing. Most advisors fail because it's too hard and risky to do consistently.
+                                {`SEO and content success = consistent, valuable publishing. Most advisors fail because it's too hard and risky to do consistently.`}
                             </p>
                             <div className="bg-blue-50 dark:bg-blue-800 p-4 rounded-lg">
                                 <p className="text-sm text-blue-900 dark:text-blue-100 italic">
-                                    "The advisors who succeeded weren't the ones with the fanciest websites. They were the ones who consistently showed up, published valuable insights, and built trust over time."
+                                    {`"The advisors who succeeded weren't the ones with the fanciest websites. They were the ones who consistently showed up, published valuable insights, and built trust over time."`}
                                 </p>
                             </div>
                         </div>
@@ -88,7 +88,7 @@ export default function ClosingSection() {
                         <div className="bg-white/10 p-6 rounded-lg">
                             <h4 className="font-semibold mb-3 text-lg">Not Just AI Writing</h4>
                             <p className="text-blue-100">
-                                It's a systematized process that takes YOUR expertise and amplifies it across platforms—consistently, compliantly, and in your voice.
+                                {`It's a systematized process that takes YOUR expertise and amplifies it across platforms—consistently, compliantly, and in your voice.`}
                             </p>
                         </div>
 

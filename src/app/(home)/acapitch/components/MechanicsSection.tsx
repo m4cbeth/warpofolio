@@ -118,7 +118,7 @@ export default function MechanicsSection() {
 
                 <div className="mt-8 p-6 bg-green-50 dark:bg-green-950/20 rounded-2xl border border-green-200 dark:border-green-900 max-w-4xl mx-auto">
                     <p className="text-lg text-gray-700 dark:text-gray-300 text-center">
-                        <strong className="text-gray-900 dark:text-white">Could you do this yourself? Absolutely.</strong> Just like your clients could theoretically manage their own portfolios. But they don't. Because it's time-consuming, requires multiple areas of expertise, and one mistake can cost more than outsourcing it.
+                        {`<strong className="text-gray-900 dark:text-white">Could you do this yourself? Absolutely.</strong> Just like your clients could theoretically manage their own portfolios. But they don't. Because it's time-consuming, requires multiple areas of expertise, and one mistake can cost more than outsourcing it.`}
                     </p>
                 </div>
             </div>

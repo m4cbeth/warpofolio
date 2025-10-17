@@ -64,7 +64,7 @@ export default function SolutionSection() {
                         The Content Engine Philosophy
                     </h3>
                     <p className="text-lg mb-6 text-center">
-                        "SEO isn't complicated. It's just hard work. Most advisors would rather pay someone to 'optimize' their site once than commit to writing every week. That's why most advisors don't rank."
+                        {`"SEO isn't complicated. It's just hard work. Most advisors would rather pay someone to 'optimize' their site once than commit to writing every week. That's why most advisors don't rank."`}
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="bg-white/10 p-4 rounded-lg">

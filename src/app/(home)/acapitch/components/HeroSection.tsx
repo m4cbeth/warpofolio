@@ -59,7 +59,7 @@ export default function HeroSection() {
 
             <div className="mt-12 p-6 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl text-white max-w-2xl">
                 <p className="text-lg font-semibold">
-                    "You didn't become a CFP to run a media empire. But that's what Google rewards."
+                    {`"You didn't become a CFP to run a media empire. But that's what Google rewards."`}
                 </p>
                 <p className="text-blue-100 mt-2">
                     — The Content Engine Philosophy

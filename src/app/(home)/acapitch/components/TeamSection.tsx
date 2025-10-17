@@ -54,7 +54,7 @@ export default function TeamSection() {
                                         <div>
                                             <p className="font-semibold text-gray-900 dark:text-white">Compliance Advocate</p>
                                             <p className="text-sm text-gray-600 dark:text-gray-400">
-                                                Understands that compliance isn't just a checkbox—it's about protecting advisors' livelihoods.
+                                                {`Understands that compliance isn't just a checkbox—it's about protecting advisors' livelihoods.`}
                                             </p>
                                         </div>
                                     </div>
@@ -192,7 +192,7 @@ export default function TeamSection() {
                         The Vision for the Team
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300">
-                        We're not building just another SaaS company. We're creating a platform that empowers financial advisors to build authority and attract clients through consistent, valuable content. Every team member will share this mission and understand the unique challenges of our industry.
+                        {`We're not building just another SaaS company. We're creating a platform that empowers financial advisors to build authority and attract clients through consistent, valuable content. Every team member will share this mission and understand the unique challenges of our industry.`}
                     </p>
                 </div>
             </div>

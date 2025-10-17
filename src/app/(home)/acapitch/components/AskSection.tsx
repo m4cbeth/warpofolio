@@ -155,7 +155,7 @@ export default function AskSection() {
 
                 <div className="bg-gradient-to-br from-blue-600 to-indigo-600 p-8 rounded-2xl text-white max-w-4xl mx-auto mb-12">
                     <h3 className="text-2xl font-bold mb-6 text-center">
-                        What We're Looking For
+                        {`What We're Looking For`}
                     </h3>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

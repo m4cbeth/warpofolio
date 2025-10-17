@@ -106,7 +106,7 @@ export default function TractionSection() {
                                 <Star className="w-5 h-5 text-yellow-500 fill-current" />
                             </div>
                             <p className="text-gray-700 dark:text-gray-300 mb-3 italic">
-                                "Finally, content that doesn't keep me up at night worrying about compliance. The quality is exactly what I'd write myself, but I get a month's worth in the time it used to take me to write one post."
+                                {`"Finally, content that doesn't keep me up at night worrying about compliance. The quality is exactly what I'd write myself, but I get a month's worth in the time it used to take me to write one post."`}
                             </p>
                             <p className="text-sm text-gray-600 dark:text-gray-400 font-semibold">
                                 — Sarah M., CFP, Calgary
@@ -122,7 +122,7 @@ export default function TractionSection() {
                                 <Star className="w-5 h-5 text-yellow-500 fill-current" />
                             </div>
                             <p className="text-gray-700 dark:text-gray-300 mb-3 italic">
-                                "I've tried other AI tools, but they're either too generic or too risky for our industry. This actually sounds like me and addresses the specific concerns my clients have."
+                                {`"I've tried other AI tools, but they're either too generic or too risky for our industry. This actually sounds like me and addresses the specific concerns my clients have."`}
                             </p>
                             <p className="text-sm text-gray-600 dark:text-gray-400 font-semibold">
                                 — Michael T., Investment Advisor, Calgary

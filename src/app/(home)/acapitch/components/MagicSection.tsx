@@ -15,7 +15,7 @@ export default function MagicSection() {
 
                 <div className="mb-12">
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-                        Not Just "AI Writing" - It's a Systematic Process
+                        {`Not Just "AI Writing" - It's a Systematic Process`}
                     </h3>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -118,7 +118,7 @@ export default function MagicSection() {
                         n8n Workflow Orchestration Ensures Quality at Scale
                     </h3>
                     <p className="text-lg mb-6 text-center">
-                        Think of it like this: Anyone can use TurboTax. But a good accountant isn't just data entry—they know which questions to ask, what to look for, and how to optimize.
+                        {`Think of it like this: Anyone can use TurboTax. But a good accountant isn't just data entry—they know which questions to ask, what to look for, and how to optimize.`}
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="bg-white/10 p-4 rounded-lg">
@@ -141,7 +141,7 @@ export default function MagicSection() {
                         Your Insights Amplified, Not Replaced
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300 text-center">
-                        The AdvisorContent AI isn't just "AI writing." It's a systematized process that takes YOUR expertise and amplifies it across platforms—the same way you systematize financial planning for your clients.
+                        {`The AdvisorContent AI isn't just "AI writing." It's a systematized process that takes YOUR expertise and amplifies it across platforms—the same way you systematize financial planning for your clients.`}
                     </p>
                 </div>
             </div>
