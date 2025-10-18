@@ -80,7 +80,7 @@ export function BetaApplicationForm() {
                         Beta Application Form
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                        Fill out the form below and I'll personally contact you within 24 hours
+                        {`Fill out the form below and I'll personally contact you within 24 hours`}
                     </p>
                 </div>
 

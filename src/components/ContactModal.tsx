@@ -107,7 +107,7 @@ export default function ContactModal() {
                                 {/* Header */}
                                 <div className="flex items-center justify-between p-6 pb-4">
                                     <h2 className="text-lg font-semibold text-slate-900 dark:text-white">
-                                        Let's Discuss Your Needs
+                                        {`Let's Discuss Your Needs`}
                                     </h2>
                                     <button
                                         type="button"

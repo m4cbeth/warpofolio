@@ -28,7 +28,7 @@ export default function MagicSection() {
                             <div className="space-y-3">
                                 <div className="flex items-start gap-2">
                                     <span className="text-red-600 dark:text-red-400 mt-1">→</span>
-                                    <p className="text-gray-700 dark:text-gray-300">One prompt: "Write a blog post about RRSPs"</p>
+                                    <p className="text-gray-700 dark:text-gray-300">One prompt: {`"Write a blog post about RRSPs"`}</p>
                                 </div>
                                 <div className="flex items-start gap-2">
                                     <span className="text-red-600 dark:text-red-400 mt-1">→</span>

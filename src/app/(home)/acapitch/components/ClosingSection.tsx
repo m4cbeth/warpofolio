@@ -40,7 +40,7 @@ export default function ClosingSection() {
                             </p>
                             <div className="bg-green-50 dark:bg-green-800 p-4 rounded-lg">
                                 <p className="text-sm text-green-900 dark:text-green-100 italic">
-                                    "Most AI content tools are generic and dangerous for regulated professionals. Ours is different—compliance-first from day one."
+                                    {`"Most AI content tools are generic and dangerous for regulated professionals. Ours is different—compliance-first from day one."`}
                                 </p>
                             </div>
                         </div>
@@ -57,7 +57,7 @@ export default function ClosingSection() {
                             </p>
                             <div className="bg-purple-50 dark:bg-purple-800 p-4 rounded-lg">
                                 <p className="text-sm text-purple-900 dark:text-purple-100 italic">
-                                    "Most advisors are paying $100,000+ annually in opportunity cost when they could spend $6,000 and get better results."
+                                    {`"Most advisors are paying $100,000+ annually in opportunity cost when they could spend $6,000 and get better results."`}
                                 </p>
                             </div>
                         </div>
@@ -72,7 +72,7 @@ export default function ClosingSection() {
                             </p>
                             <div className="bg-orange-50 dark:bg-orange-800 p-4 rounded-lg">
                                 <p className="text-sm text-orange-900 dark:text-orange-100 italic">
-                                    "Transform content creation from a burden into a competitive advantage for every advisor."
+                                    {`"Transform content creation from a burden into a competitive advantage for every advisor."`}
                                 </p>
                             </div>
                         </div>

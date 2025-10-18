@@ -16,6 +16,7 @@ export function UserProfile() {
       <DropdownMenuTrigger asChild>
         <button className="flex items-center gap-2 rounded-full p-1 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
           <div className="relative h-8 w-8 rounded-full overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={userImage}
               alt={user.name || user.email || 'User'}
@@ -46,7 +47,7 @@ export function UserProfile() {
           <span>Settings</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem 
+        <DropdownMenuItem
           className="cursor-pointer text-red-600 dark:text-red-400 focus:text-red-600 dark:focus:text-red-400"
           onClick={logout}
         >

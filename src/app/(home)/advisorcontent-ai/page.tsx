@@ -20,10 +20,10 @@ export default function AdvisorContentAIPage() {
                             Again
                         </h1>
                         <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-8 max-w-3xl mx-auto">
-                            You know you need to post on LinkedIn to attract clients, but between finding time, generating ideas, and worrying about compliance violations, it's easier to just not post.
+                            {`You know you need to post on LinkedIn to attract clients, but between finding time, generating ideas, and worrying about compliance violations, it's easier to just not post.`}
                         </p>
                         <p className="text-2xl font-semibold text-gray-900 dark:text-gray-50 mb-8">
-                            What if you could generate a month's worth of compliant content ideas in minutes?
+                            {`What if you could generate a month's worth of compliant content ideas in minutes?`}
                         </p>
                         <a
                             href="#beta-form"
@@ -44,7 +44,7 @@ export default function AdvisorContentAIPage() {
                     <div className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 p-8 rounded-2xl border border-green-200 dark:border-green-900">
                         <div className="max-w-2xl mx-auto">
                             <p className="text-xl font-semibold text-gray-900 dark:text-gray-50 mb-4">
-                                My name is <span className="text-blue-600 dark:text-blue-400">Jaren Whitehouse</span>. I'm a former Investment Associate who now builds tools for financial advisors. I've lived the compliance nightmare firsthand.
+                                My name is <span className="text-blue-600 dark:text-blue-400">Jaren Whitehouse</span>. {`I'm a former Investment Associate who now builds tools for financial advisors. I've lived the compliance nightmare firsthand.`}
                             </p>
                             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                                 Most AI content tools are generic and dangerous for regulated professionals. Ours is different.
@@ -72,7 +72,7 @@ export default function AdvisorContentAIPage() {
                                     Input Your Topic
                                 </h3>
                                 <p className="text-gray-600 dark:text-gray-400">
-                                    Give us a core concept like "fee vs commission" or "market volatility planning"
+                                    Give us a core concept like {`"fee vs commission"`} or {`"market volatility planning"`}
                                 </p>
                             </div>
                         </div>
@@ -133,7 +133,7 @@ export default function AdvisorContentAIPage() {
                         BETA PROGRAM: BE ONE OF OUR FIRST 3 CALGARY ADVISORS
                     </div>
                     <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-6">
-                        We're looking for 3 advisors to test this system for 60 days
+                        {`We're looking for 3 advisors to test this system for 60 days`}
                     </h2>
                 </div>
 
@@ -196,7 +196,7 @@ export default function AdvisorContentAIPage() {
                             LIMITED TO 3 CALGARY ADVISORS
                         </div>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                            Fill out the form below and I'll personally contact you within 24 hours to see if you're a good fit for our beta program.
+                            {`Fill out the form below and I'll personally contact you within 24 hours to see if you're a good fit for our beta program.`}
                         </p>
                     </div>
 
@@ -216,7 +216,7 @@ export default function AdvisorContentAIPage() {
                             Q: Is this fully automated?
                         </h3>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                            A: Currently, it's a hands-on service. I run the AI systems personally and deliver the content to you. This ensures quality and allows for customization.
+                            A: {`Currently, it's a hands-on service. I run the AI systems personally and deliver the content to you. This ensures quality and allows for customization.`}
                         </p>
                     </div>
 
@@ -234,7 +234,7 @@ export default function AdvisorContentAIPage() {
                             Q: What if I need to customize the content?
                         </h3>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                            A: That's included! Part of the beta program is working directly with you to tailor the output to your voice and specialty.
+                            A: {`That's included! Part of the beta program is working directly with you to tailor the output to your voice and specialty.`}
                         </p>
                     </div>
 
@@ -243,7 +243,7 @@ export default function AdvisorContentAIPage() {
                             Q: Why only 3 advisors?
                         </h3>
                         <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                            A: I want to provide exceptional service and gather detailed feedback. This limited rollout ensures I can focus on making the system perfect for you.
+                            A: {`I want to provide exceptional service and gather detailed feedback. This limited rollout ensures I can focus on making the system perfect for you.`}
                         </p>
                     </div>
                 </div>
@@ -257,7 +257,7 @@ export default function AdvisorContentAIPage() {
                             Be One of Our First 3 Calgary Advisors
                         </h2>
                         <p className="text-xl text-gray-300 leading-relaxed mb-8 max-w-2xl mx-auto">
-                            Don't let another month pass without consistent, compliant content that builds your authority and attracts ideal clients.
+                            {`Don't let another month pass without consistent, compliant content that builds your authority and attracts ideal clients.`}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
