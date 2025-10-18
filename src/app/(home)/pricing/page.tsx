@@ -9,7 +9,7 @@ import ContactModal from "@/components/ContactModal";
 type PricingTier = {
     name: string;
     price: string;
-    priceRange: string;
+    quarterlyPrice: string;
     description: string;
     features: string[];
     excludedFeatures: string[];
@@ -22,19 +22,21 @@ const pricingTiers: PricingTier[] = [
     {
         name: "Foundational Presence",
         price: "$497",
-        priceRange: "$497 - $797/month",
+        quarterlyPrice: "$400",
         description: "For newer advisors or those new to digital marketing",
         features: [
             "1 flagship LinkedIn article per month",
             "8-12 supporting social posts (LinkedIn, X)",
             "Basic content scheduling & publishing",
             "Monthly performance report",
-            "All content compliant & on-brand"
+            "All content compliant & on-brand",
+            "SEO optimization for Calgary-focused terms",
         ],
         excludedFeatures: [
             "Advanced strategy calls",
+            "Booking functionality",
+            "Interactive client tools",
             "Email newsletter integration",
-            "SEO optimization",
             "Priority support"
         ],
         websiteDescription: "Basic modern site with contact forms (if migration desired)",
@@ -44,7 +46,7 @@ const pricingTiers: PricingTier[] = [
     {
         name: "Authority Builder",
         price: "$1,297",
-        priceRange: "$1,297 - $1,997/month",
+        quarterlyPrice: "$1040",
         description: "For ambitious advisors wanting to become thought leaders",
         features: [
             "2 flagship articles per month",
@@ -53,13 +55,15 @@ const pricingTiers: PricingTier[] = [
             "Enhanced content strategy & planning",
             "Website hosting & maintenance included",
             "Enhanced reporting & insights",
-            "All content compliant & on-brand"
+            "All content compliant & on-brand",
+            "SEO optimization for Calgary-focused terms",
         ],
         excludedFeatures: [
             "Email newsletter campaigns",
-            "Advanced SEO optimization",
             "Bi-weekly strategy sessions",
-            "Dedicated priority support"
+            "Interactive client tools",
+            "Email newsletter campaigns",
+            "Dedicated priority support",
         ],
         websiteDescription: "Enhanced site with chat, forms, booking functionality",
         ctaText: "Get Started",
@@ -68,7 +72,7 @@ const pricingTiers: PricingTier[] = [
     {
         name: "Market Dominance",
         price: "$2,997",
-        priceRange: "$2,997+/month",
+        quarterlyPrice: "$2400",
         description: "For established teams wanting to dominate their market",
         features: [
             "2 flagship articles per month",
@@ -146,7 +150,7 @@ function PricingCard({ tier }: { tier: PricingTier }) {
     return (
         <div className={`relative rounded-2xl border p-8 shadow-sm transition-all duration-300 hover:shadow-lg glow-card ${tier.isPopular
             ? 'border-blue-500 bg-white dark:bg-slate-900 ring-2 ring-blue-500/20'
-            : 'border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900'
+            : 'border-pink-500 bg-white dark:border-violet-300 dark:bg-slate-900 border-2'
             }`}>
             {/* Popular Badge */}
             {tier.isPopular && (
@@ -177,11 +181,8 @@ function PricingCard({ tier }: { tier: PricingTier }) {
                         </span>
                     </div>
                     <div className="flex items-center justify-center gap-2 mt-1">
-                        <span className="text-sm text-slate-500 dark:text-slate-400">
-                            {tier.priceRange}
-                        </span>
-                        <span className="text-xs text-slate-400 dark:text-slate-500">
-                            • $497/mo annual
+                        <span className="text-sm bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent font-medium">
+                            {tier.quarterlyPrice}/month (billed quarterly)
                         </span>
                     </div>
                 </div>
