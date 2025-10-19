@@ -1,7 +1,7 @@
 "use client";
 
 import { useAtom } from 'jotai';
-import { 
+import {
   currentAgeAtom,
   retirementAgeAtom,
   currentSavingsAtom,
@@ -9,7 +9,8 @@ import {
   annualReturnAtom,
   inflationRateAtom,
   retirementSpendingAtom,
-  retirementProjectionAtom
+  retirementProjectionAtom,
+  retirementAgeNumberAtom
 } from '@/data/atoms/retirement-atoms';
 import CurrencyInput from 'react-currency-input-field';
 
@@ -22,6 +23,7 @@ export default function RetirementProjectionCalculatorPage() {
   const [inflationRate, setInflationRate] = useAtom(inflationRateAtom);
   const [retirementSpending, setRetirementSpending] = useAtom(retirementSpendingAtom);
   const [results] = useAtom(retirementProjectionAtom);
+  const [retirementAgeNumber] = useAtom(retirementAgeNumberAtom);
 
   return (
     <main className="max-w-6xl mx-auto p-6">
@@ -33,7 +35,7 @@ export default function RetirementProjectionCalculatorPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="space-y-6">
           <h2 className="text-xl font-semibold">Your Information</h2>
-          
+
           <div className="bg-slate-50 dark:bg-slate-900 rounded-lg p-6 space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
@@ -44,7 +46,7 @@ export default function RetirementProjectionCalculatorPage() {
                   id="current-age"
                   type="number"
                   value={currentAge}
-                  onChange={(e) => setCurrentAge(Number(e.target.value))}
+                  onChange={(e) => setCurrentAge(e.target.value)}
                   className="border rounded px-3 py-2 w-full dark:bg-slate-800 dark:border-slate-700"
                 />
               </div>
@@ -57,7 +59,7 @@ export default function RetirementProjectionCalculatorPage() {
                   id="retirement-age"
                   type="number"
                   value={retirementAge}
-                  onChange={(e) => setRetirementAge(Number(e.target.value))}
+                  onChange={(e) => setRetirementAge(e.target.value)}
                   className="border rounded px-3 py-2 w-full dark:bg-slate-800 dark:border-slate-700"
                 />
               </div>
@@ -74,7 +76,7 @@ export default function RetirementProjectionCalculatorPage() {
                 value={currentSavings}
                 placeholder="Please enter your current retirement savings"
                 allowDecimals={false}
-                onValueChange={(value: string | undefined) => setCurrentSavings(value ? Number(value) : 0)}
+                onValueChange={(value: string | undefined) => setCurrentSavings(value || '')}
                 className="border rounded px-3 py-2 w-full dark:bg-slate-800 dark:border-slate-700"
               />
             </div>
@@ -90,7 +92,7 @@ export default function RetirementProjectionCalculatorPage() {
                 value={monthlyContribution}
                 placeholder="Please enter your monthly contribution"
                 allowDecimals={false}
-                onValueChange={(value: string | undefined) => setMonthlyContribution(value ? Number(value) : 0)}
+                onValueChange={(value: string | undefined) => setMonthlyContribution(value || '')}
                 className="border rounded px-3 py-2 w-full dark:bg-slate-800 dark:border-slate-700"
               />
             </div>
@@ -104,7 +106,7 @@ export default function RetirementProjectionCalculatorPage() {
                 type="number"
                 step="0.1"
                 value={annualReturn}
-                onChange={(e) => setAnnualReturn(Number(e.target.value))}
+                onChange={(e) => setAnnualReturn(e.target.value)}
                 className="border rounded px-3 py-2 w-full dark:bg-slate-800 dark:border-slate-700"
               />
             </div>
@@ -118,7 +120,7 @@ export default function RetirementProjectionCalculatorPage() {
                 type="number"
                 step="0.1"
                 value={inflationRate}
-                onChange={(e) => setInflationRate(Number(e.target.value))}
+                onChange={(e) => setInflationRate(e.target.value)}
                 className="border rounded px-3 py-2 w-full dark:bg-slate-800 dark:border-slate-700"
               />
             </div>
@@ -134,7 +136,7 @@ export default function RetirementProjectionCalculatorPage() {
                 value={retirementSpending}
                 placeholder="Please enter your annual retirement spending"
                 allowDecimals={false}
-                onValueChange={(value: string | undefined) => setRetirementSpending(value ? Number(value) : 0)}
+                onValueChange={(value: string | undefined) => setRetirementSpending(value || '')}
                 className="border rounded px-3 py-2 w-full dark:bg-slate-800 dark:border-slate-700"
               />
             </div>
@@ -143,21 +145,21 @@ export default function RetirementProjectionCalculatorPage() {
 
         <div className="space-y-6">
           <h2 className="text-xl font-semibold">Retirement Projection</h2>
-          
+
           <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 space-y-4">
             <div className="text-center">
-              <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">Retirement Savings at Age {retirementAge}</div>
+              <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">Retirement Savings at Age {retirementAgeNumber}</div>
               <div className="text-3xl font-bold text-green-600 dark:text-green-400">
                 ${results.retirementSavings.toLocaleString()}
               </div>
             </div>
-            
+
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
                 <span className="text-slate-600 dark:text-slate-400">Total Contributions:</span>
                 <div className="font-medium">${results.totalContributions.toLocaleString()}</div>
               </div>
-              
+
               <div>
                 <span className="text-slate-600 dark:text-slate-400">Total Investment Gains:</span>
                 <div className="font-medium text-green-600 dark:text-green-400">
@@ -169,14 +171,14 @@ export default function RetirementProjectionCalculatorPage() {
 
           <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 space-y-4">
             <h3 className="font-semibold">Retirement Sustainability</h3>
-            
+
             <div className="text-center">
               <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">Annual Spending (Inflation-Adjusted)</div>
               <div className="text-xl font-bold text-blue-600 dark:text-blue-400">
                 ${results.futureSpending.toLocaleString()}
               </div>
             </div>
-            
+
             <div className="text-center">
               <div className="text-sm text-slate-600 dark:text-slate-400 mb-1">Years Savings Will Last</div>
               <div className={`text-xl font-bold ${results.yearsSavingsLast >= 30 ? 'text-green-600 dark:text-green-400' : 'text-yellow-600 dark:text-yellow-400'}`}>

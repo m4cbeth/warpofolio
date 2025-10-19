@@ -1,12 +1,12 @@
 "use client";
 
 import { useAtom } from 'jotai';
-import { 
-  selectedProfileAtom, 
-  allocationsAtom, 
-  updateAllocationAtom, 
+import {
+  selectedProfileAtom,
+  allocationsAtom,
+  updateAllocationAtom,
   selectProfileAtom,
-  riskProfiles 
+  riskProfiles
 } from '@/data/atoms/asset-allocation-atoms';
 
 export default function AssetAllocationOptimizerPage() {
@@ -19,11 +19,14 @@ export default function AssetAllocationOptimizerPage() {
     selectProfile(e.target.value);
   }
 
-  function handleAllocationChange(index: number, value: number) {
-    updateAllocation({ index, percentage: Math.max(0, Math.min(100, value)) });
+  function handleAllocationChange(index: number, value: string) {
+    updateAllocation({ index, percentage: value });
   }
 
-  const total = allocations.reduce((sum, a) => sum + Number(a.percentage), 0);
+  const total = allocations.reduce((sum, a) => {
+    const percentage = a.percentage === '' ? 0 : Number(a.percentage) || 0;
+    return sum + percentage;
+  }, 0);
 
   return (
     <main className="max-w-xl mx-auto p-6">
@@ -65,7 +68,7 @@ export default function AssetAllocationOptimizerPage() {
               max={100}
               value={a.percentage}
               onChange={(e) =>
-                handleAllocationChange(i, Number(e.target.value))
+                handleAllocationChange(i, e.target.value)
               }
               className="border rounded px-2 py-1 w-20 dark:bg-slate-900 dark:border-slate-700"
             />
