@@ -100,7 +100,7 @@ export default function RootLayout({
         </LazyMotion>
         <Analytics />
         <SpeedInsights />
-        <GoogleAnalytics gaId="G-SH89CT3HJG" />
+        <GoogleAnalytics gaId="G-RPDGXS3WCB" />
         <CookieConsent />
       </body>
     </html>
