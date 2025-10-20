@@ -16,6 +16,7 @@ type PricingTier = {
     websiteDescription: string;
     ctaText: string;
     isPopular?: boolean;
+    isPopularText?: string;
 };
 
 const pricingTiers: PricingTier[] = [
@@ -41,7 +42,8 @@ const pricingTiers: PricingTier[] = [
         ],
         websiteDescription: "Basic modern site with contact forms (if migration desired)",
         ctaText: "Get Started",
-        isPopular: false
+        isPopular: true,
+        isPopularText: "Start Slow"
     },
     {
         name: "Authority Builder",
@@ -49,9 +51,9 @@ const pricingTiers: PricingTier[] = [
         quarterlyPrice: "$1040",
         description: "For ambitious advisors wanting to become thought leaders",
         features: [
-            "2 flagship articles per month",
+            "1 flagship article per month",
             "15-20 supporting social posts (LinkedIn, X, Instagram)",
-            "15-minute monthly strategy calls",
+            "Monthly strategy call",
             "Enhanced content strategy & planning",
             "Website hosting & maintenance included",
             "Enhanced reporting & insights",
@@ -67,7 +69,8 @@ const pricingTiers: PricingTier[] = [
         ],
         websiteDescription: "Enhanced site with chat, forms, booking functionality",
         ctaText: "Get Started",
-        isPopular: true
+        isPopular: true,
+        isPopularText: "Most Popular"
     },
     {
         name: "Market Dominance",
@@ -87,7 +90,8 @@ const pricingTiers: PricingTier[] = [
         excludedFeatures: [],
         websiteDescription: "Full-featured site with interactive client tools (retirement projections, calculators)",
         ctaText: "Contact Us",
-        isPopular: false
+        isPopular: true,
+        isPopularText: "Scale Up"
     }
 ];
 
@@ -148,15 +152,15 @@ export default function PricingPage() {
 
 function PricingCard({ tier }: { tier: PricingTier }) {
     return (
-        <div className={`relative rounded-2xl border p-8 shadow-sm transition-all duration-300 hover:shadow-lg glow-card ${tier.isPopular
-            ? 'border-blue-500 bg-white dark:bg-slate-900 ring-2 ring-blue-500/20'
-            : 'border-pink-500 bg-white dark:border-violet-300 dark:bg-slate-900 border-2'
+        <div className={`relative rounded-2xl border p-8 shadow-sm transition-all duration-300 hover:shadow-lg glow-card ${tier.isPopularText === "Most Popular"
+            ? 'border-fuchsia-500 bg-white dark:border-fuchsia-300 dark:bg-slate-900 border-2' 
+            : tier.isPopularText === "Start Slow" ? 'border-violet-500 bg-white dark:border-violet-300 dark:bg-slate-900 border-2' : 'border-blue-500 bg-white dark:bg-slate-900 ring-2 ring-blue-500/20'
             }`}>
             {/* Popular Badge */}
             {tier.isPopular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="inline-flex items-center rounded-full bg-blue-600 px-4 py-1 text-sm font-medium text-white">
-                        Most Popular
+                    <span className={`inline-flex items-center rounded-full ${tier.isPopularText === "Most Popular" ? 'bg-fuchsia-600' : tier.isPopularText === "Start Slow" ? 'bg-violet-600' : 'bg-blue-600'} px-4 py-1 text-sm font-medium text-white`}>
+                        {tier.isPopularText}
                     </span>
                 </div>
             )}
