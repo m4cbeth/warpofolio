@@ -2,6 +2,7 @@ import { m } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
 import type { Reasons } from "@/data/content-data";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export function ReasonsSection({ items }: { items: Reasons[] }) {
@@ -53,6 +54,11 @@ export function ReasonsSection({ items }: { items: Reasons[] }) {
                 <p className="mt-2 text-md text-slate-950 dark:text-slate-300">
                   {improvement.explain}
                 </p>
+                { improvement.link && (
+                  <Link href={improvement.link} className="mt-8 inline-flex items-center px-6 py-3 bg-green-900 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg text-md text-slate-950 dark:text-slate-300"> 
+                    Learn more →
+                  </Link>
+                )}
               </m.article>
             </div>
           ))}

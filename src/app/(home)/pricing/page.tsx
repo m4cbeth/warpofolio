@@ -24,7 +24,7 @@ const pricingTiers: PricingTier[] = [
         name: "Foundational Presence",
         price: "$597",
         quarterlyPrice: "$480",
-        description: "For newer advisors or those new to digital marketing",
+        description: "For those starting small but serious about building momentum — steady growth, professional polish, and consistent presence.",
         features: [
             "1 flagship LinkedIn article per month",
             "8-12 supporting social posts",
@@ -51,7 +51,7 @@ const pricingTiers: PricingTier[] = [
         name: "Authority Builder",
         price: "$1,297",
         quarterlyPrice: "$1040",
-        description: "For ambitious advisors wanting to become thought leaders",
+        description: "For those ready to invest more for stronger results — deeper storytelling, faster growth, and expanding visibility.",
         features: [
             "1 flagship article per month",
             "10-15 supporting social posts",
@@ -78,7 +78,7 @@ const pricingTiers: PricingTier[] = [
         name: "Market Dominance",
         price: "$2,997",
         quarterlyPrice: "$2499",
-        description: "For established teams wanting to dominate their market",
+        description: "For those who want maximum reach and refinement — high-volume content, rapid iteration, and total brand authority.",
         features: [
             "$300 Google Ads credit per month",
             "2 flagship articles per month",
@@ -133,6 +133,7 @@ export default function PricingPage() {
                         <span className="font-medium">
                             {/* ✨ Every tier includes total website integration OR a complete website rebuild if you want to migrate to our platform */}
                             ✨ Every tier includes a custom-built website. No templates. No Wordpress. No Squarespace. Built from scratch, blazing fast, ultra-secure, and 100% yours.
+                            {/* ✨ Every tier includes a custom-built website and ongoing care to keep it evolving — so your online presence stays authentic, current, and uniquely yours. */}
                         </span>
                     </div>
                 </m.div>

@@ -143,6 +143,7 @@ export type Reasons = {
   explain: string;
   image: string;
   imgalt: string;
+  link?: string;
 };
 export const reasons: Reasons[] = [
   { 
@@ -158,7 +159,7 @@ export const reasons: Reasons[] = [
     explain: "As search shifts to AI, the voices that win are the ones with authority. Long-form, useful content establishes you as the expert algorithms recommend first." ,
     image: "/brain-digital.jpg",
     imgalt: "Digital brain symbolizing SEO and AI-driven content strategy",
-
+    link: "/seo",
   },
   { 
     title: "🌱 Evergreen Content Systems", 
@@ -166,7 +167,7 @@ export const reasons: Reasons[] = [
     explain: "Consistent publishing builds trust and momentum. With the right structure, one idea becomes a pipeline of consults, requests, and inbound leads." ,
     image: "/plant.jpg",
     imgalt: "Sprouting plant illustrating consistent, long-term content growth",
-
+    link: "/content-engine",
   },
 ];
 
