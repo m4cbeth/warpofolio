@@ -85,6 +85,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      {/* <ManualGoogleAnalytics GA_TRACKING_ID="G-RPDGXS3WCB" /> */}
+      <GoogleAnalytics gaId={"G-RPDGXS3WCB"} />
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Script id="ld-json" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify(jsonLd)}
@@ -103,8 +105,6 @@ export default function RootLayout({
         <SpeedInsights />
         <CookieConsent />
       </body>
-        {/* <ManualGoogleAnalytics GA_TRACKING_ID="G-RPDGXS3WCB" /> */}
-      <GoogleAnalytics gaId={"G-RPDGXS3WCB"} />
     </html>
   );
 }
