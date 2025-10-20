@@ -9,6 +9,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { CookieConsent } from "@/components/CookieConsent";
 import { AuthProvider } from "@/components/AuthProvider";
 import { LazyMotion, domAnimation } from "framer-motion";
+import ManualGoogleAnalytics from "@/components/GoogleAnalytics";
 
 
 const geistSans = Geist({
@@ -100,7 +101,8 @@ export default function RootLayout({
         </LazyMotion>
         <Analytics />
         <SpeedInsights />
-        <GoogleAnalytics gaId="G-RPDGXS3WCB" />
+        {/* <GoogleAnalytics gaId="G-RPDGXS3WCB" /> */}
+        <ManualGoogleAnalytics GA_TRACKING_ID="G-RPDGXS3WCB" />
         <CookieConsent />
       </body>
     </html>
