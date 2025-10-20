@@ -22,10 +22,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteTitle = "Calgary Web Dev + SEO for Advisors | JW";
+const siteTitle = "Calgary Web Dev + SEO for Financial Advisors | JW";
 const siteDescription =
-  "Fix your website, Win more clients. I modernize, optimize, and turn traffic into booked calls for Calgary financial advisors.";
-const siteUrl = "https://www.jarenwhitehouse.com/";
+  "Modernize your website, Win more clients. I modernize, optimize, and turn traffic into booked calls for Calgary financial advisors.";
+const siteUrl = "https://jarenwhitehouse.com/";
 const ogImage = "https://www.jarenwhitehouse.com/brain-digital.jpg";
 
 export const metadata: Metadata = {
@@ -85,7 +85,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* <ManualGoogleAnalytics GA_TRACKING_ID="G-RPDGXS3WCB" /> */}
       <GoogleAnalytics gaId={"G-RPDGXS3WCB"} />
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Script id="ld-json" type="application/ld+json" strategy="afterInteractive">

@@ -45,7 +45,7 @@ export function StickyHeader() {
         {/* USER PROFILE */}
         <div className="flex items-center mr-5">
         {isAuthenticated && <UserProfile />}
-        {!isAuthenticated && <Link href="/login">Login</Link>}
+        {!isAuthenticated && <Link href="/login" className="bg-slate-900 dark:bg-white dark:text-slate-900 text-white px-4 py-2 rounded-md">Login</Link>}
           {/* {JSON.stringify(user)} */}
         </div>
         {/* THEME TOGGLE */}

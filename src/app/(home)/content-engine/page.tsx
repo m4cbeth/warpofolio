@@ -10,7 +10,7 @@ export default function ContentEnginePage() {
             {`The Content Engine`}
           </h1>
           <p className="mt-6 text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-            {`You didn't become a CFP to run a media empire. But that's what Google rewards.`}
+            {`You didn't become a portfolio manager to run a media empire. But that's what Google rewards.`}
           </p>
         </div>
       </section>
@@ -49,7 +49,7 @@ export default function ContentEnginePage() {
         </p>
 
         <div className="mt-10 p-6 rounded-lg bg-blue-50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-900">
-          <p className="text-xl font-semibold text-gray-900 dark:text-gray-50">
+          <p className="text-center text-xl font-semibold text-gray-900 dark:text-gray-50">
             {`That's where the Content Engine comes in.`}
           </p>
         </div>
@@ -142,44 +142,44 @@ export default function ContentEnginePage() {
           {`When someone comes to you with $500k in their corporation, you don't just say "invest it." You run it through a process:`}
         </p>
 
-        <div className="space-y-4 mb-10">
+        <div className="space-y-4 mb-10 max-w-md mx-auto">
           <div className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-950 flex items-center justify-center">
-              <span className="text-sm font-bold text-blue-600 dark:text-blue-400">1</span>
+            <div className="mt-3 flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-950 flex items-center justify-center">
+              <span className=" font-bold text-blue-600 dark:text-blue-400">1</span>
             </div>
             <div>
-              <p className="font-semibold text-gray-900 dark:text-gray-50">{`Tax analysis`}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{`(accountant brain)`}</p>
+              <p className="text-2xl font-semibold text-gray-900 dark:text-gray-50">{`Tax analysis`}</p>
+              <p className="text-lg text-gray-600 dark:text-gray-400">{`(accountant brain)`}</p>
             </div>
           </div>
 
           <div className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-950 flex items-center justify-center">
-              <span className="text-sm font-bold text-blue-600 dark:text-blue-400">2</span>
+            <div className="mt-3 flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-950 flex items-center justify-center">
+              <span className=" font-bold text-blue-600 dark:text-blue-400">2</span>
             </div>
             <div>
-              <p className="font-semibold text-gray-900 dark:text-gray-50">{`Risk assessment`}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{`(planning brain)`}</p>
+              <p className="text-2xl font-semibold text-gray-900 dark:text-gray-50">{`Risk assessment`}</p>
+              <p className="text-lg text-gray-600 dark:text-gray-400">{`(planning brain)`}</p>
             </div>
           </div>
 
           <div className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-950 flex items-center justify-center">
-              <span className="text-sm font-bold text-blue-600 dark:text-blue-400">3</span>
+            <div className="mt-3 flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-950 flex items-center justify-center">
+              <span className=" font-bold text-blue-600 dark:text-blue-400">3</span>
             </div>
             <div>
-              <p className="font-semibold text-gray-900 dark:text-gray-50">{`Implementation`}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{`(execution brain)`}</p>
+              <p className="text-2xl font-semibold text-gray-900 dark:text-gray-50">{`Implementation`}</p>
+              <p className="text-lg text-gray-600 dark:text-gray-400">{`(execution brain)`}</p>
             </div>
           </div>
 
           <div className="flex items-start gap-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-950 flex items-center justify-center">
-              <span className="text-sm font-bold text-blue-600 dark:text-blue-400">4</span>
+            <div className="mt-3 flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-950 flex items-center justify-center">
+              <span className=" font-bold text-blue-600 dark:text-blue-400">4</span>
             </div>
             <div>
-              <p className="font-semibold text-gray-900 dark:text-gray-50">{`Monitoring`}</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">{`(ongoing relationship brain)`}</p>
+              <p className="text-2xl font-semibold text-gray-900 dark:text-gray-50">{`Monitoring`}</p>
+              <p className="text-lg text-gray-600 dark:text-gray-400">{`(ongoing relationship brain)`}</p>
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@ export default function ContentEnginePage() {
         </p>
 
         <div className="p-6 rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 border border-blue-200 dark:border-blue-900">
-          <p className="text-xl font-bold text-gray-900 dark:text-gray-50">
+          <p className="text-center text-xl font-bold text-gray-900 dark:text-gray-50">
             {`The Content Engine works the same way.`}
           </p>
         </div>
@@ -202,7 +202,7 @@ export default function ContentEnginePage() {
             {`We Take Your 15-Minute Insight and Run It Through a Systematic Workflow`}
           </h2>
 
-          <div className="space-y-8 mt-10">
+          <div className="space-y-8 mt-10 max-w-xl mx-auto">
             {/* Step 1 */}
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center">
@@ -247,7 +247,7 @@ export default function ContentEnginePage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="text-gray-400 dark:text-gray-600 mt-1">•</span>
-                    <p className="text-gray-600 dark:text-gray-400">{`Structure it for how people actually read online (scannable, digestible)`}</p>
+                    <p className="text-gray-600 dark:text-gray-400">{`Structure it for how people actually read online`}</p>
                   </div>
                   <div className="flex items-start gap-2">
                     <span className="text-gray-400 dark:text-gray-600 mt-1">•</span>
@@ -543,13 +543,13 @@ export default function ContentEnginePage() {
             </div>
           </div>
 
-          <div className="p-6 rounded-lg bg-blue-600 dark:bg-blue-700 mb-10">
-            <p className="text-xl font-semibold text-white mb-2">
+          <div className="p-6 rounded-lg bg-cyan-900 dark:bg-cyan-900 mb-10">
+            <p className="text-center text-xl font-semibold text-white mb-2">
               {`Just: Share your insights. We handle the rest.`}
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/#contact"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-gray-900 bg-white hover:bg-gray-100 rounded-lg transition-colors"
@@ -558,14 +558,14 @@ export default function ContentEnginePage() {
             </Link>
             <Link
               href="/pricing"
-              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-violet-900 hover:bg-gray-700 border border-gray-700 rounded-lg transition-colors"
             >
               {`View Pricing`}
             </Link>
           </div>
 
-          <p className="text-sm text-gray-400 mt-8">
-            {`We'll walk through one of your recent client conversations and show you what the Content Engine would produce from it.`}
+          <p className="text-center text-sm text-gray-400 mt-8">
+            {`We'll walk through your client process and show you what the Content Engine would produce.`}
           </p>
         </div>
       </section>

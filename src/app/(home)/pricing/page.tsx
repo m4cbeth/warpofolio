@@ -22,12 +22,12 @@ type PricingTier = {
 const pricingTiers: PricingTier[] = [
     {
         name: "Foundational Presence",
-        price: "$497",
-        quarterlyPrice: "$400",
+        price: "$597",
+        quarterlyPrice: "$480",
         description: "For newer advisors or those new to digital marketing",
         features: [
             "1 flagship LinkedIn article per month",
-            "8-12 supporting social posts (LinkedIn, X)",
+            "8-12 supporting social posts",
             "Basic content scheduling & publishing",
             "Monthly performance report",
             "All content compliant & on-brand",
@@ -38,7 +38,9 @@ const pricingTiers: PricingTier[] = [
             "Booking functionality",
             "Interactive client tools",
             "Email newsletter integration",
-            "Priority support"
+            "Monthly performance report",
+            "All content compliant & on-brand",
+            "SEO optimization for Calgary-focused terms",
         ],
         websiteDescription: "Basic modern site with contact forms (if migration desired)",
         ctaText: "Get Started",
@@ -52,11 +54,11 @@ const pricingTiers: PricingTier[] = [
         description: "For ambitious advisors wanting to become thought leaders",
         features: [
             "1 flagship article per month",
-            "15-20 supporting social posts (LinkedIn, X, Instagram)",
+            "10-15 supporting social posts",
             "Monthly strategy call",
             "Enhanced content strategy & planning",
-            "Website hosting & maintenance included",
             "Enhanced reporting & insights",
+            "Monthly performance report",
             "All content compliant & on-brand",
             "SEO optimization for Calgary-focused terms",
         ],
@@ -75,20 +77,22 @@ const pricingTiers: PricingTier[] = [
     {
         name: "Market Dominance",
         price: "$2,997",
-        quarterlyPrice: "$2400",
+        quarterlyPrice: "$2499",
         description: "For established teams wanting to dominate their market",
         features: [
+            "$300 Google Ads credit per month",
             "2 flagship articles per month",
-            "15-20 supporting social posts",
-            "Monthly email newsletter campaigns",
+            "20-30 supporting social posts",
+            "Quarterly email newsletter campaigns",
             "Bi-weekly strategic planning calls",
+            "Interactive articles & magnets",
+            "Monthly performance report",
+            "All content compliant & on-brand",
             "SEO optimization for Calgary-focused terms",
-            "Website hosting & maintenance included",
             "Priority dedicated support",
-            "All content compliant & on-brand"
         ],
         excludedFeatures: [],
-        websiteDescription: "Full-featured site with interactive client tools (retirement projections, calculators)",
+        websiteDescription: "Full-featured site with interactive client tools",
         ctaText: "Contact Us",
         isPopular: true,
         isPopularText: "Scale Up"
@@ -97,7 +101,7 @@ const pricingTiers: PricingTier[] = [
 
 export default function PricingPage() {
     return (
-        <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+        <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
                 {/* Header */}
                 <m.div
@@ -126,7 +130,10 @@ export default function PricingPage() {
                     className="text-center mb-12"
                 >
                     <div className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-900/20 px-4 py-2 text-sm text-blue-700 dark:text-blue-300">
-                        <span className="font-medium">✨ Every tier includes website integration support AND a complete website build if you want to migrate to our platform</span>
+                        <span className="font-medium">
+                            {/* ✨ Every tier includes total website integration OR a complete website rebuild if you want to migrate to our platform */}
+                            ✨ Every tier includes a custom-built website. No templates. No Wordpress. No Squarespace. Built from scratch, blazing fast, ultra-secure, and 100% yours.
+                        </span>
                     </div>
                 </m.div>
 
@@ -186,7 +193,7 @@ function PricingCard({ tier }: { tier: PricingTier }) {
                     </div>
                     <div className="flex items-center justify-center gap-2 mt-1">
                         <span className="text-sm bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent font-medium">
-                            {tier.quarterlyPrice}/month (billed quarterly)
+                            or {tier.quarterlyPrice}/month (billed quarterly)
                         </span>
                     </div>
                 </div>

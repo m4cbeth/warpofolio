@@ -21,16 +21,25 @@ export function MainNav({ orientation = "horizontal", onLinkClick }: MainNavProp
       <Link href="/demos" className={baseLink} onClick={onLinkClick}>
         Demos
       </Link>
+      <Link href="/seo" className={baseLink} onClick={onLinkClick}>
+        SEO
+      </Link>
+      <Link href="/content-engine" className={baseLink} onClick={onLinkClick}>
+        Content Engine
+      </Link>
+      <Link href="/pricing" className={baseLink} onClick={onLinkClick}>
+        Pricing
+      </Link>
       <Link href="/#contact" className={baseLink} onClick={onLinkClick}>
         Contact
       </Link>
-      <Link
+      {/* <Link
         href="#contact"
-        className="hidden sm:block rounded-md bg-slate-900 px-3 py-2 font-medium text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
+        className="hidden sm:hidden rounded-md bg-slate-900 px-3 py-2 font-medium text-white transition hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
         onClick={onLinkClick}
       >
         Get a Free Site Audit
-      </Link>
+      </Link> */}
     </nav>
   );
 }
