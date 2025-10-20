@@ -1,6 +1,6 @@
 # README
 
-Repushing
+Bezos!
 
 This is the source code for my sales first portfolio site. Realizing I've had years of experience in both sales in the financial services industry, and specific experience managing websites for that sector, I thought I might as well put those arguments into action for myself and see where it goes.
 
