@@ -1,65 +1,139 @@
 "use client"
 
-import { AnimatePresence, motion, usePresenceData, wrap } from "motion/react"
-import { forwardRef, SVGProps, useState } from "react"
+import { AnimatePresence, m, usePresenceData, wrap } from "motion/react"
+import { forwardRef, useState } from "react"
+
+type SlideData = {
+    number: number
+    bgColorClass: string
+    buttonColorClass: string
+    borderColorClass: string
+    textColorClass: string
+    motionColor: string
+    title: string
+    description: string
+}
+
+const slides: SlideData[] = [
+    {
+        number: 1,
+        bgColorClass: "bg-violet-500",
+        buttonColorClass: "bg-violet-600",
+        borderColorClass: "border-violet-500",
+        textColorClass: "text-violet-500",
+        motionColor: "#8b5cf6", // violet-500
+        title: "Start Slow",
+        description: "We focus on one tool per quarter, and build it out to a full-featured tool, documenting the process on social media.",
+    },
+    {
+        number: 2,
+        bgColorClass: "bg-fuchsia-500",
+        buttonColorClass: "bg-fuchsia-600",
+        borderColorClass: "border-fuchsia-500",
+        textColorClass: "text-fuchsia-500",
+        motionColor: "#d946ef", // fuchsia-500
+        title: "Build Momentum",
+        description: "Build momentum and grow your practice.",
+    },
+    {
+        number: 3,
+        bgColorClass: "bg-blue-500",
+        buttonColorClass: "bg-blue-600",
+        borderColorClass: "border-blue-500",
+        textColorClass: "text-blue-500",
+        motionColor: "#3b82f6", // blue-500
+        title: "Scale",
+        description: "Scale your practice and grow your business.",
+    },
+]
 
 export default function TierProcessSlides() {
-    const items = [1, 2, 3, 4, 5, 6]
-    const [selectedItem, setSelectedItem] = useState(items[0])
+    const [selectedIndex, setSelectedIndex] = useState(0)
     const [direction, setDirection] = useState<1 | -1>(1)
 
     function setSlide(newDirection: 1 | -1) {
-        const nextItem = wrap(1, items.length, selectedItem + newDirection)
-        setSelectedItem(nextItem)
+        const nextIndex = wrap(0, slides.length, selectedIndex + newDirection)
+        setSelectedIndex(nextIndex)
         setDirection(newDirection)
     }
 
-    const color = `var(--hue-${selectedItem})`
+    const currentSlide = slides[selectedIndex]
 
     return (
-        <div style={container}>
-            <motion.button
+        <div className="flex items-center justify-center gap-4 relative py-16">
+            <m.button
                 initial={false}
-                animate={{ backgroundColor: color }}
                 aria-label="Previous"
-                style={button}
+                className={`w-12 h-12 rounded-full flex items-center justify-center relative z-10 outline-offset-2 ${currentSlide.buttonColorClass}`}
                 onClick={() => setSlide(-1)}
-                whileFocus={{ outline: `2px solid ${color}` }}
+                whileFocus={{ outline: `2px solid ${currentSlide.motionColor}` }}
                 whileTap={{ scale: 0.9 }}
             >
-                <ArrowLeft />
-            </motion.button>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-white"
+                >
+                    <path d="m12 19-7-7 7-7" />
+                    <path d="M19 12H5" />
+                </svg>
+            </m.button>
+
             <AnimatePresence
                 custom={direction}
                 initial={false}
                 mode="popLayout"
             >
-                <Slide key={selectedItem} color={color} />
+                <Slide
+                    key={selectedIndex}
+                    slide={currentSlide}
+                />
             </AnimatePresence>
-            <motion.button
+
+            <m.button
                 initial={false}
-                animate={{ backgroundColor: color }}
                 aria-label="Next"
-                style={button}
+                className={`w-12 h-12 rounded-full flex items-center justify-center relative z-10 outline-offset-2 ${currentSlide.buttonColorClass}`}
                 onClick={() => setSlide(1)}
-                whileFocus={{ outline: `2px solid ${color}` }}
+                whileFocus={{ outline: `2px solid ${currentSlide.motionColor}` }}
                 whileTap={{ scale: 0.9 }}
             >
-                <ArrowRight />
-            </motion.button>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-white"
+                >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                </svg>
+            </m.button>
         </div>
     )
 }
 
 const Slide = forwardRef(function Slide(
-    { color }: { color: string },
+    { slide }: { slide: SlideData },
     ref: React.Ref<HTMLDivElement>
 ) {
     const direction = usePresenceData()
     return (
-        <motion.div
+        <m.div
             ref={ref}
-            initial={{ opacity: 0, x: direction * 50 }}
+            initial={{ opacity: 0, x: direction * 100 }}
             animate={{
                 opacity: 1,
                 x: 0,
@@ -70,73 +144,23 @@ const Slide = forwardRef(function Slide(
                     bounce: 0.4,
                 },
             }}
-            exit={{ opacity: 0, x: direction * -50 }}
-            style={{ ...box, backgroundColor: color }}
-        />
+            exit={{ opacity: 0, x: direction * -100 }}
+            className={`w-100 h-60 ${slide.bgColorClass} rounded-2xl flex items-center justify-center border-4 ${slide.borderColorClass}`}
+        >   <div className="flex">
+                <div className="flex-shrink-0">
+                    <span className="text-9xl font-black text-white drop-shadow-lg">
+                        {slide.number}
+                    </span>
+                </div>
+                <div className="flex-grow">
+                    <p className="text-2xl font-bold text-white">
+                        {slide.title}
+                    </p>
+                    <p className="text-sm text-white">
+                        {slide.description}
+                    </p>
+                </div>
+            </div>
+        </m.div>
     )
 })
-
-/**
- * ==============   Icons   ================
- */
-const iconsProps: SVGProps<SVGSVGElement> = {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24",
-    fill: "none",
-    stroke: "currentColor",
-    strokeWidth: "2",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-}
-
-function ArrowLeft() {
-    return (
-        <svg {...iconsProps}>
-            <path d="m12 19-7-7 7-7" />
-            <path d="M19 12H5" />
-        </svg>
-    )
-}
-
-function ArrowRight() {
-    return (
-        <svg {...iconsProps}>
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-        </svg>
-    )
-}
-
-/**
- * ==============   Styles   ================
- */
-
-const container: React.CSSProperties = {
-    display: "flex",
-    position: "relative",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 10,
-}
-
-const box: React.CSSProperties = {
-    width: 150,
-    height: 150,
-    backgroundColor: "#0cdcf7",
-    borderRadius: "10px",
-}
-
-const button: React.CSSProperties = {
-    backgroundColor: "#0cdcf7",
-    width: 40,
-    height: 40,
-    borderRadius: "50%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    position: "relative",
-    zIndex: 1,
-    outlineOffset: 2,
-}

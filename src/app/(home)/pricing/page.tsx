@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { m } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
 import ContactModal from "@/components/ContactModal";
+import TierProcessSlides from "./components/TiersOrProcess";
 
 type PricingTier = {
     name: string;
@@ -277,6 +279,7 @@ const pricingTiersForProjects: PricingTier[] = [
 // ];
 
 export default function PricingPage() {
+    const [step, setStep] = useState(0);
     return (
         <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -329,6 +332,32 @@ export default function PricingPage() {
                     ))}
                 </div>
             </div>
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 text-center">
+                The Same Process, Different Tiers
+            </h3>
+            <p className="text-center text-lg text-slate-600 dark:text-slate-300 mb-0 pb-0">
+                We use the same process for all tiers. The only difference is the pace.
+            </p>
+            <TierProcessSlides />
+
+            <div className="container mx-auto">
+            <div className="relative w-100 h-100">
+                <div
+                 style={{ transform: `rotate(${step}deg)` }}
+                 className={`flex w-100 h-100 relative border border-white mx-auto transform-gpu transition-transform duration-300`}>
+                    </div>
+                </div>
+            </div>
+
+
+           
+            {step}
+            <div className="flex justify-center gap-2">
+            <button className="text-white bg-blue-500 p-2 rounded-md" onClick={() => setStep(step => step + 90)}>Next</button>
+            <button className="text-white bg-blue-500 p-2 rounded-md" onClick={() => setStep(step => step - 90)}>Previous</button>
+            <button className="text-white bg-blue-500 p-2 rounded-md" onClick={() => setStep(0)}>Reset</button>
+            </div>
+
         </main>
     );
 }
