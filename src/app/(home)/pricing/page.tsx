@@ -4,106 +4,14 @@ import { m } from "framer-motion";
 import { fadeUp, sectionTransition } from "@/lib/animations";
 import ContactModal from "@/components/ContactModal";
 
-// type PricingTier = {
-//     name: string;
-//     price: string;
-//     quarterlyPrice: string;
-//     description: string;
-//     features: string[];
-//     excludedFeatures: string[];
-//     websiteDescription: string;
-//     ctaText: string;
-//     isPopular?: boolean;
-//     isPopularText?: string;
-// };
-
-// const pricingTiers: PricingTier[] = [
-//     {
-//         name: "Foundational Presence",
-//         price: "$597",
-//         quarterlyPrice: "$480",
-//         description: "For those starting small but serious about building momentum — steady growth, professional polish, and consistent presence.",
-//         features: [
-//             "1 flagship LinkedIn article per month",
-//             "8-12 supporting social posts",
-//             "Basic content scheduling & publishing",
-//             "Monthly performance report",
-//             "All content compliant & on-brand",
-//             "SEO optimization for Calgary-focused terms",
-//         ],
-//         excludedFeatures: [
-//             "Advanced strategy calls",
-//             "Booking functionality",
-//             "Interactive client tools",
-//             "Email newsletter integration",
-//             "Monthly performance report",
-//             "All content compliant & on-brand",
-//             "SEO optimization for Calgary-focused terms",
-//         ],
-//         websiteDescription: "Basic modern site with contact forms (if migration desired)",
-//         ctaText: "Get Started",
-//         isPopular: true,
-//         isPopularText: "Start Slow"
-//     },
-//     {
-//         name: "Authority Builder",
-//         price: "$1,297",
-//         quarterlyPrice: "$1040",
-//         description: "For those ready to invest more for stronger results — deeper storytelling, faster growth, and expanding visibility.",
-//         features: [
-//             "1 flagship article per month",
-//             "10-15 supporting social posts",
-//             "Monthly strategy call",
-//             "Enhanced content strategy & planning",
-//             "Enhanced reporting & insights",
-//             "Monthly performance report",
-//             "All content compliant & on-brand",
-//             "SEO optimization for Calgary-focused terms",
-//         ],
-//         excludedFeatures: [
-//             "Email newsletter campaigns",
-//             "Bi-weekly strategy sessions",
-//             "Interactive client tools",
-//             "Email newsletter campaigns",
-//             "Dedicated priority support",
-//         ],
-//         websiteDescription: "Enhanced site with chat, forms, booking functionality",
-//         ctaText: "Get Started",
-//         isPopular: true,
-//         isPopularText: "Most Popular"
-//     },
-//     {
-//         name: "Market Dominance",
-//         price: "$2,997",
-//         quarterlyPrice: "$2499",
-//         description: "For those who want maximum reach and refinement — high-volume content, rapid iteration, and total brand authority.",
-//         features: [
-//             "$300 Google Ads credit per month",
-//             "2 flagship articles per month",
-//             "20-30 supporting social posts",
-//             "Quarterly email newsletter campaigns",
-//             "Bi-weekly strategic planning calls",
-//             "Interactive articles & magnets",
-//             "Monthly performance report",
-//             "All content compliant & on-brand",
-//             "SEO optimization for Calgary-focused terms",
-//             "Priority dedicated support",
-//         ],
-//         excludedFeatures: [],
-//         websiteDescription: "Full-featured site with interactive client tools",
-//         ctaText: "Contact Us",
-//         isPopular: true,
-//         isPopularText: "Scale Up"
-//     }
-// ];
 type PricingTier = {
     name: string;
     price: string;
     quarterlyPrice: string;
     description: string;
     features: string[];
+    excludedFeatures: string[];
     websiteDescription: string;
-    toolsIncluded: string[];
     ctaText: string;
     isPopular?: boolean;
     isPopularText?: string;
@@ -111,74 +19,262 @@ type PricingTier = {
 
 const pricingTiers: PricingTier[] = [
     {
-        name: "Foundation",
-        price: "$1,497",
-        quarterlyPrice: "$1,197",
-        description: "Start building your web application. One custom tool per month, content strategy included.",
+        name: "Foundational Presence",
+        // price: "$597",
+        price: "$1,297",
+        quarterlyPrice: "$1037",
+        // description: "For those starting small but serious about building momentum — steady growth, professional polish, and consistent presence.",
+        description: "Start building your web application. One custom tool per quarter, content strategy included.",
+        // features: [
+        //     "1 flagship LinkedIn article per month",
+        //     "8-12 supporting social posts",
+        //     "Basic content scheduling & publishing",
+        //     "Monthly performance report",
+        //     "All content compliant & on-brand",
+        //     "SEO optimization for Calgary-focused terms",
+        // ],
         features: [
-            "1 custom calculator/tool per month",
-            "Content strategy around each tool",
-            "Monthly strategy call (30 min)",
+            "1 custom calculator per quarter",
+            "1 flagship article per month (about your tools/expertise)",
+            "8-12 social posts per month (LinkedIn, X)",
+            "Content scheduling & publishing",
+            "Modern Next.js website (no WordPress)",
+            "Analytics & conversion tracking",
+            "Monthly 30-min strategy call",
             "Hosting & maintenance included",
-            "Next.js web application (not a template)",
         ],
-        toolsIncluded: [
-            "Retirement projection calculator",
-            "Fee impact analyzer",
-            "RRSP vs TFSA optimizer",
+        // excludedFeatures: [
+        //     "Advanced strategy calls",
+        //     "Booking functionality",
+        //     "Interactive client tools",
+        //     "Email newsletter integration",
+        //     "Monthly performance report",
+        //     "All content compliant & on-brand",
+        //     "SEO optimization for Calgary-focused terms",
+        // ],
+        excludedFeatures: [
+            "Multiple tools per month",
+            "Email newsletter campaigns",
+            "Client portal features",
+            "Advanced integrations",
         ],
-        websiteDescription: "Modern Next.js site with 3 custom interactive tools after 3 months",
-        ctaText: "Start Building",
+        websiteDescription: "Web application that grows monthly with tools + content",
+        ctaText: "Get Started",
+        isPopular: true,
+        isPopularText: "Start Slow"
+    },
+    {
+        name: "Authority Builder",
+        price: "$2,497",
+        quarterlyPrice: "$1,997",
+        description: "For those ready to invest more for stronger results — deeper storytelling, faster growth, and expanding visibility.",
+        features: [
+            "1 flagship article per month",
+            "10-15 supporting social posts",
+            "Monthly strategy call",
+            "Enhanced content strategy & planning",
+            "Enhanced reporting & insights",
+            "Monthly performance report",
+            "All content compliant & on-brand",
+            "SEO optimization for Calgary-focused terms",
+        ],
+        excludedFeatures: [
+            "Email newsletter campaigns",
+            "Bi-weekly strategy sessions",
+            "Interactive client tools",
+            "Email newsletter campaigns",
+            "Dedicated priority support",
+        ],
+        websiteDescription: "Enhanced site with chat, forms, booking functionality",
+        ctaText: "Get Started",
         isPopular: true,
         isPopularText: "Most Popular"
     },
     {
-        name: "Growth",
-        price: "$2,497",
-        quarterlyPrice: "$1,997",
-        description: "Accelerate development. Two tools per month, deeper content integration, faster compounding.",
+        name: "Market Dominance",
+        price: "$2,997",
+        quarterlyPrice: "$2499",
+        description: "For those who want maximum reach and refinement — high-volume content, rapid iteration, and total brand authority.",
         features: [
-            "2 custom calculators/tools per month",
-            "Enhanced content engine (multi-platform)",
-            "Bi-weekly strategy calls (45 min)",
-            "Priority support & faster deployment",
-            "Email newsletter integration",
+            "$300 Google Ads credit per month",
+            "2 flagship articles per month",
+            "20-30 supporting social posts",
+            "Quarterly email newsletter campaigns",
+            "Bi-weekly strategic planning calls",
+            "Interactive articles & magnets",
+            "Monthly performance report",
+            "All content compliant & on-brand",
+            "SEO optimization for Calgary-focused terms",
+            "Priority dedicated support",
         ],
-        toolsIncluded: [
-            "All Foundation tools, plus:",
-            "Tax planning optimizer",
-            "Goal-based savings planner",
-            "Pension splitting calculator",
-            "Asset allocation analyzer",
-        ],
-        websiteDescription: "Full web application with 6+ interactive tools after 3 months",
-        ctaText: "Scale Faster",
-        isPopular: true,
-        isPopularText: "Grow Fast"
-    },
-    {
-        name: "Enterprise",
-        price: "Custom",
-        quarterlyPrice: "Custom",
-        description: "For teams or firms needing custom integrations, white-label solutions, or proprietary tools.",
-        features: [
-            "Custom development roadmap",
-            "API integrations (CRM, portfolio management)",
-            "Multi-advisor portal architecture",
-            "Dedicated development time",
-            "Weekly strategy & planning",
-        ],
-        toolsIncluded: [
-            "Custom tools built for your firm",
-            "Integration with existing systems",
-            "White-label options available",
-        ],
-        websiteDescription: "Full-scale web application tailored to firm needs",
+        excludedFeatures: [],
+        websiteDescription: "Full-featured site with interactive client tools",
         ctaText: "Contact Us",
         isPopular: true,
         isPopularText: "Scale Up"
     }
 ];
+
+const pricingTiersForProjects: PricingTier[] = [
+    {
+        name: "Foundational Presence",
+        price: "$4973",
+        quarterlyPrice: "plus $50 per month for hosting and maintenance",
+        description: "For those starting small but serious about building momentum — steady growth, professional polish, and consistent presence.",
+        features: [
+            ""
+        ],
+        excludedFeatures: [
+            "Advanced strategy calls",
+            "Booking functionality",
+            "Interactive client tools",
+            "Email newsletter integration",
+            "Monthly performance report",
+            "All content compliant & on-brand",
+            "SEO optimization for Calgary-focused terms",
+        ],
+        websiteDescription: "Basic modern site with contact forms (if migration desired)",
+        ctaText: "Get Started",
+        isPopular: true,
+        isPopularText: "Start Slow"
+    },
+    {
+        name: "Authority Builder",
+        price: "$1,297",
+        quarterlyPrice: "$1040",
+        description: "For those ready to invest more for stronger results — deeper storytelling, faster growth, and expanding visibility.",
+        features: [
+            "1 flagship article per month",
+            "10-15 supporting social posts",
+            "Monthly strategy call",
+            "Enhanced content strategy & planning",
+            "Enhanced reporting & insights",
+            "Monthly performance report",
+            "All content compliant & on-brand",
+            "SEO optimization for Calgary-focused terms",
+        ],
+        excludedFeatures: [
+            "Email newsletter campaigns",
+            "Bi-weekly strategy sessions",
+            "Interactive client tools",
+            "Email newsletter campaigns",
+            "Dedicated priority support",
+        ],
+        websiteDescription: "Enhanced site with chat, forms, booking functionality",
+        ctaText: "Get Started",
+        isPopular: true,
+        isPopularText: "Most Popular"
+    },
+    {
+        name: "Market Dominance",
+        price: "$2,997",
+        quarterlyPrice: "$2499",
+        description: "For those who want maximum reach and refinement — high-volume content, rapid iteration, and total brand authority.",
+        features: [
+            "$300 Google Ads credit per month",
+            "2 flagship articles per month",
+            "20-30 supporting social posts",
+            "Quarterly email newsletter campaigns",
+            "Bi-weekly strategic planning calls",
+            "Interactive articles & magnets",
+            "Monthly performance report",
+            "All content compliant & on-brand",
+            "SEO optimization for Calgary-focused terms",
+            "Priority dedicated support",
+        ],
+        excludedFeatures: [],
+        websiteDescription: "Full-featured site with interactive client tools",
+        ctaText: "Contact Us",
+        isPopular: true,
+        isPopularText: "Scale Up"
+    }
+
+]
+
+// type PricingTier = {
+//     name: string;
+//     price: string;
+//     quarterlyPrice: string;
+//     description: string;
+//     features: string[];
+//     websiteDescription: string;
+//     toolsIncluded: string[];
+//     ctaText: string;
+//     isPopular?: boolean;
+//     isPopularText?: string;
+// };
+
+
+// const pricingTiers: PricingTier[] = [
+//     {
+//         name: "Foundation",
+//         price: "$1,497",
+//         quarterlyPrice: "$1,197",
+//         description: "Start building your web application. One custom tool per month, content strategy included.",
+//         features: [
+//             "1 custom calculator/tool per month",
+//             "Content strategy around each tool",
+//             "Monthly strategy call (30 min)",
+//             "Hosting & maintenance included",
+//             "Next.js web application (not a template)",
+//         ],
+//         toolsIncluded: [
+//             "Retirement projection calculator",
+//             "Fee impact analyzer",
+//             "RRSP vs TFSA optimizer",
+//         ],
+//         websiteDescription: "Modern Next.js site with 3 custom interactive tools after 3 months",
+//         ctaText: "Start Building",
+//         isPopular: true,
+//         isPopularText: "Most Popular"
+//     },
+//     {
+//         name: "Growth",
+//         price: "$2,497",
+//         quarterlyPrice: "$1,997",
+//         description: "Accelerate development. Two tools per month, deeper content integration, faster compounding.",
+//         features: [
+//             "2 custom calculators/tools per month",
+//             "Enhanced content engine (multi-platform)",
+//             "Bi-weekly strategy calls (45 min)",
+//             "Priority support & faster deployment",
+//             "Email newsletter integration",
+//         ],
+//         toolsIncluded: [
+//             "All Foundation tools, plus:",
+//             "Tax planning optimizer",
+//             "Goal-based savings planner",
+//             "Pension splitting calculator",
+//             "Asset allocation analyzer",
+//         ],
+//         websiteDescription: "Full web application with 6+ interactive tools after 3 months",
+//         ctaText: "Scale Faster",
+//         isPopular: true,
+//         isPopularText: "Grow Fast"
+//     },
+//     {
+//         name: "Enterprise",
+//         price: "Custom",
+//         quarterlyPrice: "Custom",
+//         description: "For teams or firms needing custom integrations, white-label solutions, or proprietary tools.",
+//         features: [
+//             "Custom development roadmap",
+//             "API integrations (CRM, portfolio management)",
+//             "Multi-advisor portal architecture",
+//             "Dedicated development time",
+//             "Weekly strategy & planning",
+//         ],
+//         toolsIncluded: [
+//             "Custom tools built for your firm",
+//             "Integration with existing systems",
+//             "White-label options available",
+//         ],
+//         websiteDescription: "Full-scale web application tailored to firm needs",
+//         ctaText: "Contact Us",
+//         isPopular: true,
+//         isPopularText: "Scale Up"
+//     }
+// ];
 
 export default function PricingPage() {
     return (
@@ -315,7 +411,7 @@ function PricingCard({ tier }: { tier: PricingTier }) {
                 </div>
 
                 {/* Excluded Features */}
-                {/* {tier.excludedFeatures.map((feature, index) => (
+                {tier.excludedFeatures.map((feature, index) => (
                     <div key={index} className="flex items-start">
                         <div className="flex-shrink-0">
                             <svg className="h-5 w-5 text-slate-300 dark:text-slate-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -326,7 +422,7 @@ function PricingCard({ tier }: { tier: PricingTier }) {
                             {feature}
                         </p>
                     </div>
-                ))} */}
+                ))}
             </div>
 
             {/* CTA Button */}
