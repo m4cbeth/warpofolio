@@ -3,7 +3,7 @@
 import { AnimatePresence, motion, usePresenceData, wrap } from "motion/react"
 import { forwardRef, SVGProps, useState } from "react"
 
-export default function UsePresenceData() {
+export default function TierProcessSlides() {
     const items = [1, 2, 3, 4, 5, 6]
     const [selectedItem, setSelectedItem] = useState(items[0])
     const [direction, setDirection] = useState<1 | -1>(1)
