@@ -340,22 +340,33 @@ export default function PricingPage() {
             </p>
             <TierProcessSlides />
 
-            <div className="container mx-auto">
-            <div className="relative w-100 h-100">
-                <div
-                 style={{ transform: `rotate(${step}deg)` }}
-                 className={`flex w-100 h-100 relative border border-white mx-auto transform-gpu transition-transform duration-300`}>
-                    </div>
+            <div className="container h-128 border border-green-500 w-full mx-auto">
+                <div className="relative w-1/2 h-64 mx-auto border border-white left-1/2 -translate-x-1/2">
+                    <div
+                        className="absolute top-0 left-0 w-1/2 h-full bg-blue-500 origin-bottom-left transition-transform duration-300"
+                        style={{ transform: `rotate(${step}deg)`, zIndex: 1 }}
+                    >Step 1</div>
+                    <div
+                        className="absolute top-0 left-0 w-1/2 h-full bg-purple-500 origin-bottom-left transition-transform duration-300"
+                        style={{ transform: `rotate(${step - 90}deg)`, zIndex: 2 }}
+                    >Step 4</div>
+                    <div
+                        className="absolute top-0 left-0 w-1/2 h-full bg-green-500 origin-bottom-left transition-transform duration-300"
+                        style={{ transform: `rotate(${-180 + step}deg)`, zIndex: 3 }}
+                    >Step 3</div>
+                    <div
+                        className="absolute top-0 left-0 w-1/2 h-full bg-orange-500 origin-bottom-left transition-transform duration-300"
+                        style={{ transform: `rotate(${-270 + step}deg)`, zIndex: 4 }}
+                    >Step 2</div>
                 </div>
             </div>
 
 
-           
+
             {step}
             <div className="flex justify-center gap-2">
-            <button className="text-white bg-blue-500 p-2 rounded-md" onClick={() => setStep(step => step + 90)}>Next</button>
-            <button className="text-white bg-blue-500 p-2 rounded-md" onClick={() => setStep(step => step - 90)}>Previous</button>
-            <button className="text-white bg-blue-500 p-2 rounded-md" onClick={() => setStep(0)}>Reset</button>
+                <button className="text-white bg-blue-500 p-2 rounded-md" onClick={() => setStep(step => step + 90)}>Back</button>
+                <button className="text-white bg-blue-500 p-2 rounded-md" onClick={() => setStep(step => step - 90)}>Next  </button>
             </div>
 
         </main>
@@ -365,7 +376,7 @@ export default function PricingPage() {
 function PricingCard({ tier }: { tier: PricingTier }) {
     return (
         <div className={`relative rounded-2xl border p-8 shadow-sm transition-all duration-300 hover:shadow-lg glow-card ${tier.isPopularText === "Most Popular"
-            ? 'border-fuchsia-500 bg-white dark:border-fuchsia-300 dark:bg-slate-900 border-2' 
+            ? 'border-fuchsia-500 bg-white dark:border-fuchsia-300 dark:bg-slate-900 border-2'
             : tier.isPopularText === "Start Slow" ? 'border-violet-500 bg-white dark:border-violet-300 dark:bg-slate-900 border-2' : 'border-blue-500 bg-white dark:bg-slate-900 ring-2 ring-blue-500/20'
             }`}>
             {/* Popular Badge */}
