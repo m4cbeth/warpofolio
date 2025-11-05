@@ -18,14 +18,14 @@ export function MainNav({ orientation = "horizontal", onLinkClick }: MainNavProp
       <Link href="/services" className={baseLink} onClick={onLinkClick}>
         Services
       </Link>
-      <Link href="/demos" className={baseLink} onClick={onLinkClick}>
-        Demos
+      <Link href="/authority-engine" className={baseLink} onClick={onLinkClick}>
+        Authority Engine
       </Link>
-      <Link href="/seo" className={baseLink} onClick={onLinkClick}>
+      <Link href="/visibility-amplifier" className={baseLink} onClick={onLinkClick}>
         SEO
       </Link>
-      <Link href="/content-engine" className={baseLink} onClick={onLinkClick}>
-        Content Engine
+      <Link href="/demos" className={baseLink} onClick={onLinkClick}>
+        Demos
       </Link>
       <Link href="/pricing" className={baseLink} onClick={onLinkClick}>
         Pricing

@@ -2,8 +2,45 @@
 @import "tw-animate-css";
 
 * {
-    /* border: 1px solid green !important; */
+  /* border: 1px solid green !important; */
 }
+
+
+
+.ticker-set-first {
+  width: 100%;
+  animation: ticker-scroll-left 30s linear infinite;
+}
+
+.ticker-set-second {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 100%;
+  animation: ticker-scroll-left-second 30s linear infinite;
+}
+
+@keyframes ticker-scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes ticker-scroll-left-second {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -162,7 +199,8 @@
   background: conic-gradient(from var(--gradient-angle), #06b6d4, #3b82f6, #9333ea, #06b6d4);
   border-radius: inherit;
   z-index: -1;
-  opacity: 0; /* start hidden */
+  opacity: 0;
+  /* start hidden */
   transition: opacity 0.3s ease, filter 0.3s ease;
   animation: rotation 4s linear infinite;
 }
@@ -171,6 +209,7 @@
   from {
     --gradient-angle: 0deg;
   }
+
   to {
     --gradient-angle: 360deg;
   }
@@ -204,9 +243,11 @@
   html {
     scroll-behavior: smooth;
   }
+
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -221,6 +262,7 @@
   html {
     scroll-behavior: auto;
   }
+
   .glow-card::before,
   .glow-card::after {
     animation: none !important;

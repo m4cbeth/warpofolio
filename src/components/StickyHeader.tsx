@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useAuth } from "@/hooks/useAuth";
+import { StockTickerBanner } from "./StockTickerBanner";
 
 
 export function StickyHeader() {
@@ -52,6 +53,7 @@ export function StickyHeader() {
         <ThemeToggle />
 
       </div>
+      {/* <StockTickerBanner />  */}
     </header>
   );
 }

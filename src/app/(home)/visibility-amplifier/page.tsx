@@ -1,6 +1,6 @@
 export default function VisibilityAmplifier() {
     return (
-      <div className="min-h-screen bg-white dark:bg-gray-900">
+      <div className="min-h-screen bg-white dark:bg-slate-950">
         {/* Hero Section */}
         <section className="px-6 py-16 md:py-24 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -287,18 +287,18 @@ export default function VisibilityAmplifier() {
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
             They're not publishing on just their site. They're active on LinkedIn, maintaining a Google Business Profile, getting cited in local media, and building visibility everywhere their prospects look.
           </p>
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-            <p className="text-lg text-gray-900 dark:text-white font-semibold mb-3">
+          <div className="bg-emerald-300  p-6 rounded-lg">
+            <p className="text-lg text-gray-900  font-semibold mb-3">
               Google sees your LinkedIn presence, your Google Business Profile, your mentions on other sites. It's not just your website.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 ">
               The Visibility Amplifier ensures you're not just building tools—you're systematically building your reputation across every platform that matters.
             </p>
           </div>
         </section>
   
         {/* Why This Works */}
-        <section className="px-6 py-16 bg-blue-600 dark:bg-blue-700">
+        <section className="px-6 py-16 bg-cyan-600 dark:bg-cyan-700">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Why This Approach Works
@@ -326,29 +326,29 @@ export default function VisibilityAmplifier() {
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
             We take the tools you're building in your Explanation Library and make sure the right people find them at the right time. Not through tricks. Through strategic, consistent amplification of genuinely valuable resources.
           </p>
-          <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
-            <p className="text-xl text-gray-900 dark:text-white font-semibold mb-4">
+          <div className="bg-green-800 dark:bg-green-800 p-8 rounded-lg">
+            <p className="text-xl text-lime-300 font-semibold mb-4">
               The result?
             </p>
-            <p className="text-lg text-gray-700 dark:text-gray-300">
+            <p className="text-lg text-lime-100">
               When prospects find you—whether through Google, LinkedIn, or a referral—they don't see a generic website. They see a comprehensive library of proof that you're the obvious choice.
             </p>
           </div>
         </section>
   
         {/* CTA */}
-        <section className="px-6 py-16 bg-gray-50 dark:bg-gray-800">
+        <section className="px-6 py-16 bg-black">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Attract Prospects Who Are Already Convinced?
             </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
+            <p className="text-lg text-gray-300 mb-8">
               Let's build your Visibility Amplifier.
             </p>
             <button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors">
               Book a Free Visibility Audit
             </button>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+            <p className="text-sm text-gray-400 mt-4">
               We'll analyze your site and show you exactly how the Authority Engine would fill your pipeline.
             </p>
           </div>
