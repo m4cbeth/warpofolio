@@ -17,7 +17,7 @@
   top: 0;
   left: 5%;
   width: 100%;
-  animation: ticker-scroll-left-second 30s linear infinite;
+  animation: ticker-scroll-left-second 50s linear infinite;
 }
 
 @keyframes ticker-scroll-left {
