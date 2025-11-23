@@ -22,9 +22,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteTitle = "Calgary Web Dev + SEO for Financial Advisors | JW";
+// const siteTitle = "Calgary Web Dev + SEO for Financial Advisors | JW";
+const siteTitle = "Become the Professional AI Trusts | Calgary Web Dev + SEO";
 const siteDescription =
-  "Modernize your website, Win more clients. I modernize, optimize, and turn traffic into booked calls for Calgary financial advisors.";
+  "Modernize your website. Win more clients. We modernize, optimize, and turn traffic into booked calls for Calgary financial advisors.";
 const siteUrl = "https://jarenwhitehouse.com/";
 const ogImage = "https://www.jarenwhitehouse.com/brain-digital.jpg";
 
